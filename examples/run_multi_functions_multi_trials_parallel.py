@@ -5,61 +5,64 @@
 # --------------------------------------------------%
 
 import concurrent.futures as parallel
+import itertools
 from pathlib import Path
 from opfunu.cec_basic import cec2014_nobias
 from pandas import DataFrame
+
+from mealpy import get_all_optimizers, get_optimizer_by_name, get_all_optimizer_names
+from mealpy.bio_based.BBO import OriginalBBO
 from mealpy.evolutionary_based.DE import BaseDE
+from mealpy.evolutionary_based.ES import OriginalES
+from mealpy.evolutionary_based.GA import MultiGA
+from mealpy.evolutionary_based.MA import OriginalMA
+from mealpy.evolutionary_based.SHADE import OriginalSHADE
+from mealpy.swarm_based.MFO import OriginalMFO
+from mealpy.swarm_based.PSO import OriginalPSO
 
-
-model_name = "DE"
-N_TRIALS = 5
+N_TRIALS = 2
 LB = [-100, ] * 15
 UB = [100, ] * 15
-verbose = True
-epoch = 100
+verbose = False
+epoch = 10
 pop_size = 50
-wf = 0.8
-cr = 0.9
-func_names = ["F1", "F2", "F3"]
 
-PATH_ERROR = "history/error/" + model_name + "/"
-PATH_BEST_FIT = "history/best_fit/"
-Path(PATH_ERROR).mkdir(parents=True, exist_ok=True)
-Path(PATH_BEST_FIT).mkdir(parents=True, exist_ok=True)
+#func_names = ["F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12", "F13", "F14", "F15", "F16", "F17", "F18", "F19"]
+# Selecting Funcions which have a large stddev across multiple algorithms
+func_names = ["F1", "F2", "F7", "F9", "F10", "F11", "F12", "F13", "F18"]
+algo_names = ['OriginalBBO', 'OriginalBMO', 'OriginalEOA']
 
-def find_minimum(function_name):
+
+
+
+def find_minimum(input):
     """
     We can run multiple functions at the same time.
-    Each core (CPU) will handle a function, each function will run N_TRIALS times
     """
-    print(f"Start running: {function_name}")
-    error_full = {}
-    error_columns = []
-    best_fit_list = []
-    for id_trial in range(1, N_TRIALS + 1):
-        problem = {
-            "fit_func": getattr(cec2014_nobias, function_name),
-            "lb": LB,
-            "ub": UB,
-            "minmax": "min",
-            "log_to": "console",
-            "name": function_name
-        }
-        model = BaseDE(epoch=epoch, pop_size=pop_size, wf=wf, cr=cr, name=model_name)
-        _, best_fitness = model.solve(problem)
+    model_name, function_name, trial_number = input
 
-        temp = f"trial_{id_trial}"
-        error_full[temp] = model.history.list_global_best_fit
-        error_columns.append(temp)
-        best_fit_list.append(best_fitness)
-    df = DataFrame(error_full, columns=error_columns)
-    df.to_csv(f"{PATH_ERROR}{len(LB)}D_{model_name}_{function_name}_error.csv", header=True, index=False)
-    print(f"Finish function: {function_name}")
+
+    print(f"Start model: {model_name} || function: {function_name} || trial: {trial_number}")
+
+    problem = {
+        "fit_func": getattr(cec2014_nobias, function_name),
+        "lb": LB,
+        "ub": UB,
+        "minmax": "min",
+        "log_to": "console",
+        "name": function_name
+    }
+    # model = BaseDE(epoch=epoch, pop_size=pop_size, wf=wf, cr=cr, name=model_name)
+    model = get_optimizer_by_name(model_name)(epoch=epoch, pop_size=pop_size, name=model_name, sampling_method="LHS")
+    _, best_fitness = model.solve(problem)
+
+    print(f"Finish model: {model_name} || function: {function_name} || trial: {trial_number}")
 
     return {
+        "model_name": model_name,
         "func_name": function_name,
-        "best_fit_list": best_fit_list,
-        "model_name": model_name
+        "trial_number": trial_number,
+        "best_fitness": best_fitness
     }
 
 
@@ -68,12 +71,26 @@ if __name__ == '__main__':
     best_fit_full = {}
     best_fit_columns = []
 
-    with parallel.ProcessPoolExecutor() as executor:
-        results = executor.map(find_minimum, func_names)
+    #optimizers: set = get_all_optimizer_names()
+    optimizers: dict = {n: get_optimizer_by_name(n) for n in algo_names}
 
-    for result in results:
-        best_fit_full[result["func_name"]] = result["best_fit_list"]
-        best_fit_columns.append(result["func_name"])
+    trial_list = range(1, N_TRIALS + 1)
+    func_trials = list(itertools.product(optimizers.keys(), func_names, trial_list))
 
-    df = DataFrame(best_fit_full, columns=best_fit_columns)
-    df.to_csv(f"{PATH_BEST_FIT}/{len(LB)}D_{model_name}_best_fit.csv", header=True, index=False)
+    with parallel.ProcessPoolExecutor(8) as executor:
+        results = executor.map(find_minimum, func_trials)
+
+    result_df = DataFrame(results)
+
+    pivot_df = result_df.pivot(index='trial_number', columns=['model_name', 'func_name'], values='best_fitness')
+
+    mean_df = pivot_df.mean().reset_index().rename(columns={0: 'mean_fitness'})
+    mean_alt_df = mean_df.pivot(index='func_name', columns='model_name', values='mean_fitness')
+    mean_alt_df.index = mean_alt_df.index.map(lambda x: x[0] + x[1:].zfill(2))
+    mean_alt_df = mean_alt_df.sort_index()
+
+    path_best_fit = "history/best_fit/"
+    Path(path_best_fit).mkdir(parents=True, exist_ok=True)
+
+    mean_alt_df.to_csv(f"{path_best_fit}/{len(LB)}D_mean_fit.csv", header=True, index=True)
+    pivot_df.to_csv(f"{path_best_fit}/{len(LB)}D_best_fit.csv", header=True, index=True)

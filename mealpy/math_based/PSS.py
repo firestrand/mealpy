@@ -73,6 +73,8 @@ class OriginalPSS(Optimizer):
     def create_population(self, pop_size=None):
         if self.sampling_method == "MC":
             pop = np.random.rand(self.pop_size, self.problem.n_dims)
+        elif self.sampling_method == "P":
+            pop = []
         else:       # Default: "LHS"
             sampler = qmc.LatinHypercube(d=self.problem.n_dims)
             pop = sampler.random(n=pop_size)

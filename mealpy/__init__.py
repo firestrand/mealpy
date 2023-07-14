@@ -68,6 +68,21 @@ def get_all_optimizers():
     del cls['Optimizer']
     return cls
 
+def get_all_optimizer_names():
+    """
+    Get all available optimizer class names in Mealpy library
+
+    Returns:
+        (set): value is the string optimizer class name which can be used in combination with get_optimizer_by_name
+    """
+    cls = []
+    for name, obj in inspect.getmembers(sys.modules[__name__]):
+        if inspect.ismodule(obj) and (name not in __EXCLUDE_MODULES):
+            for cls_name, cls_obj in inspect.getmembers(obj):
+                if inspect.isclass(cls_obj) and issubclass(cls_obj, Optimizer):
+                    if cls_name != 'Optimizer':
+                        cls.append(cls_name)
+    return set(cls)
 
 def get_optimizer_by_name(name):
     """
@@ -80,7 +95,14 @@ def get_optimizer_by_name(name):
         optimizer (Optimizer): the actual optimizer class or None if the classname is not supported
     """
     try:
-        return get_all_optimizers()[name]
+        for obj_name, obj in inspect.getmembers(sys.modules[__name__]):
+            if inspect.ismodule(obj) and (obj_name not in __EXCLUDE_MODULES):
+                for cls_name, cls_obj in inspect.getmembers(obj):
+                    if inspect.isclass(cls_obj) and issubclass(cls_obj, Optimizer):
+                        if name == cls_name:
+                            return cls_obj
+        raise Exception("name not found")
+        #return get_all_optimizers()[name]
     except KeyError:
         print(f"Mealpy doesn't support optimizer named: {name}.\n"
               f"Please see the supported Optimizer name from here: https://mealpy.readthedocs.io/en/latest/pages/support.html#classification-table")
