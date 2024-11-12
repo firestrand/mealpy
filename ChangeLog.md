@@ -7,7 +7,46 @@ Different versions of mealpy in terms of passing hyper-parameters. So please car
   * mealpy == 2.2.0 
   * mealpy == 2.3.0 
   * 2.4.0 <= mealpy <= 2.4.2 (From this version, algorithms can solve discrete problem)
-  * mealpy >= 2.5.1 (Define model 1 time, solve multiple problems)
+  * mealpy >= 2.5.1 <= 2.5.4 (Define model 1 time, solve multiple problems)
+  * mealpy >= 3.0.0 (Everything is wrapped inside class and object)
+
+
+# Version 3.0.1
+
++ Add transfer function module (please read [this paper](https://www.sciencedirect.com/science/article/abs/pii/S2210650212000648) )
++ Add two new datatypes: `TransferBinaryVar` and `TransferBoolVar`.
++ Fix bug un-order variables in `PermutationVar` data type.
++ Update data type of encoded solution in `BoolVar` data type.
++ Update correct function in `BoolVar` and `BinaryVar`.
++ Fix bug reproduce results in `GA`, `WCA`, and `EHO` optimizers.
++ Fix bug higher probability of 0 value in `IntegerVar` data type.
+
+
+
+# Version 3.0.0
+
+**Based on our new proposed classes, solving continuous and discrete problems is never that easy.**
+
+### Add
++ `space` module with: FloatVar, IntegerVar, StringVar, BoolVar, PermutationVar, BinaryVar, and MixedSetVar classes
+  * **FloatVar**: handle problem with solution's format as float value
+  * **IntegerVar**: handle problem with solution's format as integer value
+  * **StringVar**: handle problem with solution's format as string value
+  * **BoolVar**: handle problem with solution's format as boolean value (True or False)
+  * **PermutationVar**: handle problem with solution's format as permutation value 
+  * **BinaryVar**: handle problem with solution's format as binary value (0 or 1)
+  * **MixedSetVar**: handle problem with solution's format as mixed discrete set
++ `target` module with **Target** class contains: 
+  * `objectives` (list), `weights` (list) to calculate fitness, and `fitness` (number)
++ `agent` module with: **Agent**te class that is a placeholder for a search agent, it contains at least two attributes: 
+  * `solution` (position - np.ndarray), and a `target` object
+
+### Update
++ Convert all optimizers to use new classes
++ Convert Tuner and MultiTask classes
++ Rename all un-official (developed by our team) optimizers to `DevOptimizerName`
++ Update tests and documents 
++ Update some examples, not all examples have converted yet (utils and applications folders)
 
 
 # Version 2.5.4
@@ -22,8 +61,8 @@ Different versions of mealpy in terms of passing hyper-parameters. So please car
   + bounded_position() from optimizer. This means for optimizer level (get in valid range of position)
   + amend_position() from problem. This means for problem level (transform to the correct solution)
 + Fix bugs coefficients in GWO-based optimizers.
-+ Fig bug self.epoch in SCSO optimizer.
-+ Fix bug self.dyn_pop_size when pop_size is small value
++ Fig bug cls.epoch in SCSO optimizer.
++ Fix bug cls.dyn_pop_size when pop_size is small value
 + Move SHADE-based optimizers from DE to SHADE module in evolutionary_based group
 + Add Improved Grey Wolf Optimization (IGWO) in GWO algorithm
 + Add Tabu Search (TS) to math-based group
@@ -33,6 +72,7 @@ Different versions of mealpy in terms of passing hyper-parameters. So please car
 + Update parameters in OriginalHC and SwarmHC
 + Update ParameterGrid class to produce the dict with same order as original input
 + Add export_figures() to Tuner class. It can draw the hyperparameter tuning process. 
++ Fix several bugs in docs folders. 
 
 
 # Version 2.5.3
@@ -93,7 +133,7 @@ Different versions of mealpy in terms of passing hyper-parameters. So please car
 
 + Evolutionary-based group:
   + Add CMA-ES and Simple-CMA-ES 
-    + Ref: Completely derandomized self-adaptation in evolution strategies.
+    + Ref: Completely derandomized cls-adaptation in evolution strategies.
 
 + Swarm-based group:
   + Add Wavelet Mutation and Quadratic Interpolation MRFO (WMQIMRFO)
@@ -188,7 +228,7 @@ Different versions of mealpy in terms of passing hyper-parameters. So please car
 
 + Add save and load model functionalities in mealpy.utils.io module.
 + Add object that hold global/current worst solution in history object
-+ Add method create_pop_group() in Optimizer class 
++ Add method generate_group_population() in Optimizer class 
 + Add method before_initialization() in Optimizer class
 + Refactor initialization() and after_initialization() in Optimizer class
 + Remove before_evolve(), after_evolve(), and levy_flight() in Optimizer class
@@ -865,7 +905,7 @@ Type: Sequential has 2 training modes
         + OriginalPSO: is the original version
         + PPSO: Phasor particle swarm optimization: a simple and efficient variant of PSO
         + PSO_W: A modified particle swarm optimizer
-        + HPSO_TVA: New self-organising  hierarchical PSO with jumping time-varying acceleration coefficients
+        + HPSO_TVA: New cls-organising  hierarchical PSO with jumping time-varying acceleration coefficients
     + ABC:
         + OriginalABC: my version and taken from Clever Algorithms
     + FA:
@@ -992,7 +1032,7 @@ Type: Sequential has 2 training modes
 + Added some variant version of PSO:
     + PPSO (Phasor particle swarm optimization: a simple and efficient variant of PSO)
     + PSO_W (A modified particle swarm optimizer)
-    + HPSO_TVA (New self-organising  hierarchical PSO with jumping time-varying acceleration coefficients)
+    + HPSO_TVA (New cls-organising  hierarchical PSO with jumping time-varying acceleration coefficients)
     
 + Added more algorithm in Swarm-based algorithm
     + SpaSA: Sparrow Search Algorithm (Same name SSA as Social Spider Algorithm --> I changed it to SpaSA)
