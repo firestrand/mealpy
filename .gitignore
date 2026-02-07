@@ -1,3 +1,10 @@
+# macOS
+.DS_Store
+
+# Claude Code
+CLAUDE.md
+.serena/
+
 run.py
 mealpy/swarm_based/ChOA.py
 mealpy/swarm_based/DSO.py
