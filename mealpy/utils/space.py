@@ -34,7 +34,19 @@ class LabelEncoder:
         y : list, tuple
             Labels to encode.
         """
-        self.unique_labels = sorted(set(y), key=lambda x: (isinstance(x, (int, float)), x))
+        def safe_key(val):
+            # Chuyển None -> 0, số -> 1, chuỗi -> 2, object khác -> 3
+            if val is None:
+                return (0, '')
+            elif isinstance(val, nb.Number):
+                return (1, val)
+            elif isinstance(val, str):
+                return (2, val)
+            else:
+                return (3, str(val))
+
+        # self.unique_labels = sorted(set(y), key=lambda x: (isinstance(x, (int, float)), x))
+        self.unique_labels = sorted(set(y), key=safe_key)
         self.label_to_index = {label: i for i, label in enumerate(self.unique_labels)}
         return self
 
@@ -210,36 +222,6 @@ class IntegerVar(BaseVar):
         return self.generator.integers(self.lb+0.5, self.ub+0.5+self.eps)
 
 
-class PermutationVar(BaseVar):
-    def __init__(self, valid_set=(1, 2), name="permutation"):
-        super().__init__(name)
-        self.eps = 1e-4
-        self._set_bounds(valid_set)
-
-    def _set_bounds(self, valid_set):
-        if type(valid_set) in self.SUPPORTED_ARRAY and len(valid_set) > 1:
-            self.valid_set = np.array(valid_set)
-            self.n_vars = len(valid_set)
-            self.le = LabelEncoder().fit(valid_set)
-            self.lb = np.zeros(self.n_vars)
-            self.ub = (self.n_vars - self.eps) * np.ones(self.n_vars)
-        else:
-            raise TypeError(f"Invalid valid_set. It should be {self.SUPPORTED_ARRAY} and contains at least 2 variables")
-
-    def encode(self, x):
-        return np.array(self.le.transform(x), dtype=float)
-
-    def decode(self, x):
-        x = self.correct(x)
-        return self.le.inverse_transform(x)
-
-    def correct(self, x):
-        return np.argsort(x)
-
-    def generate(self):
-        return self.generator.permutation(self.valid_set)
-
-
 class StringVar(BaseVar):
     def __init__(self, valid_sets=(("",),), name="string"):
         super().__init__(name)
@@ -253,7 +235,7 @@ class StringVar(BaseVar):
                 self.valid_sets = (tuple(valid_sets),)
                 le = LabelEncoder().fit(valid_sets)
                 self.list_le = (le,)
-                self.lb = np.array([0, ])
+                self.lb = np.array([0., ])
                 self.ub = np.array([len(valid_sets) - self.eps, ])
             else:
                 self.n_vars = len(valid_sets)
@@ -287,14 +269,74 @@ class StringVar(BaseVar):
         return [self.generator.choice(np.array(vl_set, dtype=str)) for vl_set in self.valid_sets]
 
 
-class MixedSetVar(StringVar):
-    def __init__(self, valid_sets=(("",),), name="mixed-set-var"):
+class CategoricalVar(StringVar):
+    def __init__(self, valid_sets=(("",),), name="categorical"):
         super().__init__(valid_sets, name)
-        self.eps = 1e-4
-        self._set_bounds(valid_sets)
 
     def generate(self):
         return [self.generator.choice(np.array(vl_set, dtype=object)) for vl_set in self.valid_sets]
+
+
+class SequenceVar(BaseVar):
+    def __init__(self, valid_sets, return_type=tuple, name="sequence"):
+        super().__init__(name)
+        self.eps = 1e-4
+        self.valid_sets = [tuple(v) for v in valid_sets]  # Normalize to tuples for hashing
+        self.return_type = return_type
+        self.label_to_index = {val: i for i, val in enumerate(self.valid_sets)}
+        self.index_to_label = {i: val for i, val in enumerate(self.valid_sets)}
+        self.n_vars = 1
+        self.lb = np.array([0., ])
+        self.ub = np.array([len(valid_sets) - self.eps, ])
+
+    def encode(self, x):
+        x_tuple = tuple(x)
+        if x_tuple not in self.label_to_index:
+            raise ValueError(f"Unknown sequence for encoding: {x}")
+        return np.array([self.label_to_index[x_tuple]], dtype=float)
+
+    def decode(self, x):
+        x = self.correct(x)
+        val = self.index_to_label[x[0]]
+        return [self.return_type(val)]
+
+    def correct(self, x):
+        x = np.clip(x, self.lb, self.ub)
+        return np.array(x, dtype=int)
+
+    def generate(self):
+        idx = self.generator.integers(0, len(self.valid_sets))
+        return self.valid_sets[idx]
+
+
+class PermutationVar(BaseVar):
+    def __init__(self, valid_set=(1, 2), name="permutation"):
+        super().__init__(name)
+        self.eps = 1e-4
+        self._set_bounds(valid_set)
+
+    def _set_bounds(self, valid_set):
+        if type(valid_set) in self.SUPPORTED_ARRAY and len(valid_set) > 1:
+            self.valid_set = np.array(valid_set)
+            self.n_vars = len(valid_set)
+            self.le = LabelEncoder().fit(valid_set)
+            self.lb = np.zeros(self.n_vars)
+            self.ub = (self.n_vars - self.eps) * np.ones(self.n_vars)
+        else:
+            raise TypeError(f"Invalid valid_set. It should be {self.SUPPORTED_ARRAY} and contains at least 2 variables")
+
+    def encode(self, x):
+        return np.array(self.le.transform(x), dtype=float)
+
+    def decode(self, x):
+        x = self.correct(x)
+        return self.le.inverse_transform(x)
+
+    def correct(self, x):
+        return np.argsort(x)
+
+    def generate(self):
+        return self.generator.permutation(self.valid_set)
 
 
 class BinaryVar(BaseVar):
@@ -330,7 +372,7 @@ class TransferBinaryVar(BinaryVar):
             self.tf_func = getattr(transfer, tf_func)
         else:
             raise ValueError(f"Invalid transfer function! The supported TF funcs are: {self.SUPPORTED_TF_FUNCS}")
-        self.lb = lb * np.ones(self.n_vars)
+        self.lb = lb * np.zeros(self.n_vars)
         self.ub = ub * np.ones(self.n_vars)
         self.all_zeros = all_zeros
 
@@ -388,7 +430,7 @@ class TransferBoolVar(BoolVar):
             self.tf_func = getattr(transfer, tf_func)
         else:
             raise ValueError(f"Invalid transfer function! The supported TF funcs are: {self.SUPPORTED_TF_FUNCS}")
-        self.lb = lb * np.ones(self.n_vars)
+        self.lb = lb * np.zeros(self.n_vars)
         self.ub = ub * np.ones(self.n_vars)
 
     def correct(self, x):

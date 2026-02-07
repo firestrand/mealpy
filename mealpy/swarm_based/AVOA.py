@@ -91,8 +91,8 @@ class OriginalAVOA(Optimizer):
                     best_x1 = best_list[0].solution
                     best_x2 = best_list[1].solution
                     if self.generator.random() < self.p2:
-                        A = best_x1 - ((best_x1 * self.pop[idx].solution) / (best_x1 - self.pop[idx].solution**2))*F
-                        B = best_x2 - ((best_x2 * self.pop[idx].solution) / (best_x2 - self.pop[idx].solution**2))*F
+                        A = best_x1 - ((best_x1 * self.pop[idx].solution) / (best_x1 - self.pop[idx].solution**2 + self.EPSILON))*F
+                        B = best_x2 - ((best_x2 * self.pop[idx].solution) / (best_x2 - self.pop[idx].solution**2 + self.EPSILON))*F
                         pos_new = (A + B) / 2
                     else:
                         pos_new = rand_pos - np.abs(rand_pos - self.pop[idx].solution) * F * \

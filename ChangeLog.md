@@ -11,6 +11,84 @@ Different versions of mealpy in terms of passing hyper-parameters. So please car
   * mealpy >= 3.0.0 (Everything is wrapped inside class and object)
 
 
+
+# Version 3.0.3
+
+## General Updates
+- Updated project configuration files: `setup.py`, `requirements.txt`, and `MANIFEST.in`.
+- Restructured `README` for better clarity.
+- Updated `examples` and `docs` with new usage guides.
+- Changed license from **GPL GNU v3** to **MIT**.
+
+## Bug Fixes
+- Fixed `n_workers` bug in the `Optimizer` class.
+- Fixed bug in parallel mode when passing `starting_positions` in `Optimizer`.
+- Fixed incorrect handling of `fitness` as `position` in `AO` class.
+
+## New Features
+
+### 1. New Algorithm Categories
+- **`sota_based` group**: A new category for state-of-the-art algorithms from CEC competitions.
+  - Added **`LSHADEcnEpSin`** (`OriginalLSHADEcnEpSin` class).
+  - Added **`IMOTE`** (`OriginalIMOTE` class).
+
+### 2. New Modules
+- Added **`chaotic`** module.
+- Added **`fuzzy`** module.
+
+### 3. Swarm-Based Algorithms
+- **Grey Wolf Optimizer (GWO) module**: Added multiple variants:
+  - `GWO_WOA`, `IGWO`, `ChaoticGWO`, `FuzzyGWO`, `IncrementalGWO`, `ExGWO`,
+    `DS_GWO`, `IOBL_GWO`, `OGWO`, `ER_GWO`, `CG_GWO`.
+- **Aquila Optimizer (AO) module**:
+  - Added **Adaptive Aquila Optimizer (AAO)**.
+- Added new standalone algorithms:
+  - **Emperor Penguins Colony (EPC)**.
+  - **Spider Monkey Optimization (SMO)**.
+  - **Squirrel Search Algorithm (SquirrelSA)**.
+  - **Fitness Dependent Optimizer (FDO)** (`FDO` module).
+
+### 4. Physics-Based Algorithms
+- Added **Electrical Storm Optimization (ESO)** module with `OriginalESO` class.
+
+#### 5. Human-Based Algorithms
+- Added **Ali Baba and the Forty Thieves (AFT)** (`AFT` module).
+- Added **Child Drawing Development Optimization (CCDO)** (`CCDO` module).
+
+
+✅ This release focuses on:
+- Expanding algorithm coverage (swarm-based, physics-based, human-based, and sota-based groups).
+- Improving documentation and examples.
+- Fixing critical bugs in the optimizer core.
+- Transitioning license to MIT for broader usage.
+
+
+---
+
+
+# Version 3.0.2
+
++ Fix bug infinite loop in `JADE`, `OriginalSHADE`, and `L_SHADE` optimizers.
++ Fig bug check input conditions in `Validator` class.
++ Fig bug set up __init__ function in `Problem` class.
++ Fix bug in `get_roulette_wheel_selection_index()` function in `Optimizer` class.
++ Fix bug counting number of function evaluation in `Optimizer` class.
++ Fix bug divide by zero in `FLA`, `BeesA`, `DMOA`, `ESOA`, `FA`, `SSpiderO`, `GCO` , `MRFO`, and `AVOA`.
++ Fix bug compare `np.all` in `NRO`.
++ Fix bug random number verse random vector in `MFO`.
++ Fix bug epoch in `MGO`.
++ Fix bug parallelization in `CL-PSO`.
++ Fix bug compare fitness with Agent in `Agent` class.
++ Replace `MixSetVar` by `CategoricalVar` in `space` module.
++ Add `SequenceVar` to `space` module for handling tuple, list, and set variables.
++ Update `get_optimizer_by_class()` and `get_optimizer_by_name()` functions in `mealpy` module to support new classes.
++ Fix bug lower bound in `TransferBinaryVar` and `TransferBoolVar` classes.
++ Fix bug out of range for choice in `GSKA` optimizer.
++ Update example comment in `IWO`, `SBO`, `SMA`, `SA`, `GTO`, `GWO`, `HGS` optimizers.
++ Update docs and examples.
+
+
+
 # Version 3.0.1
 
 + Add transfer function module (please read [this paper](https://www.sciencedirect.com/science/article/abs/pii/S2210650212000648) )
@@ -20,7 +98,6 @@ Different versions of mealpy in terms of passing hyper-parameters. So please car
 + Update correct function in `BoolVar` and `BinaryVar`.
 + Fix bug reproduce results in `GA`, `WCA`, and `EHO` optimizers.
 + Fix bug higher probability of 0 value in `IntegerVar` data type.
-
 
 
 # Version 3.0.0

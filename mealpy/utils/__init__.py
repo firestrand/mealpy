@@ -11,3 +11,5 @@ from . import visualize
 from . import validator
 from . import io
 from . import logger
+from . import chaotic
+from . import fuzzy

@@ -7,49 +7,52 @@ alt="MEALPY"/>
 ---
 
 
-[![GitHub release](https://img.shields.io/badge/release-3.0.1-yellow.svg)](https://github.com/thieu1995/mealpy/releases)
+[![GitHub release](https://img.shields.io/badge/release-3.0.3-yellow.svg)](https://github.com/thieu1995/mealpy/releases)
 [![Wheel](https://img.shields.io/pypi/wheel/gensim.svg)](https://pypi.python.org/pypi/mealpy) 
 [![PyPI version](https://badge.fury.io/py/mealpy.svg)](https://badge.fury.io/py/mealpy)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/mealpy.svg)
-![PyPI - Status](https://img.shields.io/pypi/status/mealpy.svg)
-![PyPI - Downloads](https://img.shields.io/pypi/dm/mealpy.svg)
 [![Downloads](https://static.pepy.tech/badge/mealpy)](https://pepy.tech/project/mealpy)
 [![Tests & Publishes to PyPI](https://github.com/thieu1995/mealpy/actions/workflows/publish-package.yaml/badge.svg)](https://github.com/thieu1995/mealpy/actions/workflows/publish-package.yaml)
 ![GitHub Release Date](https://img.shields.io/github/release-date/thieu1995/mealpy.svg)
-[![Documentation Status](https://readthedocs.org/projects/mealpy/badge/?version=latest)](https://mealpy.readthedocs.io/en/latest/?badge=latest)
 [![Chat](https://img.shields.io/badge/Chat-on%20Telegram-blue)](https://t.me/+fRVCJGuGJg1mNDg1)
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/thieu1995/mealpy.svg)](http://isitmaintained.com/project/thieu1995/mealpy "Average time to resolve an issue")
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/thieu1995/mealpy.svg)](http://isitmaintained.com/project/thieu1995/mealpy "Percentage of issues still open")
-![GitHub contributors](https://img.shields.io/github/contributors/thieu1995/mealpy.svg)
-[![GitTutorial](https://img.shields.io/badge/PR-Welcome-%23FF8300.svg?)](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project)
+[![Documentation Status](https://readthedocs.org/projects/mealpy/badge/?version=latest)](https://mealpy.readthedocs.io/en/latest/?badge=latest)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3711948.svg)](https://doi.org/10.1016/j.sysarc.2023.102871)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+---
 
-# Introduction 
+MEALPY is the world's largest Python library, offering a comprehensive collection of cutting-edge meta-heuristic algorithms. 
+These include nature-inspired algorithms, bio-inspired algorithms, black-box optimization, global search optimizers, iterative learning algorithms, 
+continuous optimization, derivative-free optimization, gradient-free optimization, zeroth-order optimization, 
+stochastic search optimization, and random search optimization. All these methods fall under the category of 
+population-based metaheuristics (PBMs), which are among the most popular algorithms in the field of approximate optimization. 
+For detailed updates in each new version, please refer to the [ChangeLog](/ChangeLog.md) file.
 
-MEALPY is the largest python library in the world for most of the cutting-edge meta-heuristic algorithms 
-(nature-inspired algorithms, black-box optimization, global search optimizers, iterative learning algorithms, 
-continuous optimization, derivative free optimization, gradient free optimization, zeroth order optimization, 
-stochastic search optimization, random search optimization). These algorithms belong to population-based algorithms 
-(PMA), which are the most popular algorithms in the field of approximate optimization.
-
-* **Free software:** GNU General Public License (GPL) V3 license
-* **Total algorithms**: 215 (190 official (original, hybrid, variants), 25 developed)
+* **Free software:** MIT license
+* **Total algorithms**: 233 (206 official (original, hybrid, variants), 27 developed)
 * **Documentation:** https://mealpy.readthedocs.io/en/latest/
-* **Python versions:** >=3.7x
-* **Dependencies:** numpy, scipy, pandas, matplotlib
+* **Python versions:** >=3.8x
+* **Dependencies:** numpy, scipy, pandas, matplotlib, tqdm
 
 
-![MEALPY3-0-0](.github/img/mealpy-classification.png)
+## 📌 Goals
+
+Our goals are to implement all classical as well as the state-of-the-art nature-inspired algorithms, create a simple interface that helps researchers access optimization algorithms as quickly as possible, and share knowledge of the optimization field with everyone without a fee. What you can do with mealpy:
+
+- Analyse parameters of meta-heuristic algorithms.
+- Perform Qualitative and Quantitative Analysis of algorithms.
+- Analyse rate of convergence of algorithms.
+- Test and Analyse the scalability and the robustness of algorithms.
+- Save results in various formats (csv, json, pickle, png, pdf, jpeg)
+- Export and import models can also be done with Mealpy.
+- **Solve any optimization problem**
 
 
-
-### Citation Request
+## 📄 Citation Request
 
 Please include these citations if you plan to use this library:
 
-```code 
+```bibtex 
 @article{van2023mealpy,
   title={MEALPY: An open-source library for latest meta-heuristic algorithms in Python},
   author={Van Thieu, Nguyen and Mirjalili, Seyedali},
@@ -80,56 +83,38 @@ Please include these citations if you plan to use this library:
   publisher={Elsevier},
   doi={10.1016/j.asoc.2021.107282}
 }
-
 ```
 
 
-# Usage 
+# ⚙️ Usage
 
-
-<details><summary><h2>Goals</h2></summary>
-
-Our goals are to implement all classical as well as the state-of-the-art nature-inspired algorithms, create a simple interface that helps researchers access optimization algorithms as quickly as possible, and share knowledge of the optimization field with everyone without a fee. What you can do with mealpy:
-
-- Analyse parameters of meta-heuristic algorithms.
-- Perform Qualitative and Quantitative Analysis of algorithms.
-- Analyse rate of convergence of algorithms.
-- Test and Analyse the scalability and the robustness of algorithms.
-- Save results in various formats (csv, json, pickle, png, pdf, jpeg)
-- Export and import models can also be done with Mealpy.
-- **Solve any optimization problem**
-
-</details>
-
-
-
-<details><summary><h2>Installation</h2></summary>
+<details><summary><h2>🛠️ Installation</h2></summary>
 
 * Install the stable (latest) version from [PyPI release](https://pypi.python.org/pypi/mealpy):
-```sh
-$ pip install mealpy==3.0.1
+```bash
+$ pip install mealpy --upgrade
 ```
 
 * Install the alpha/beta version from PyPi
-```sh
+```bash
 $ pip install mealpy==2.5.4a6
 ```
 
 * Install the pre-release version directly from the source code:
-```sh
+```bash
 $ git clone https://github.com/thieu1995/mealpy.git
 $ cd mealpy
 $ python setup.py install
 ```
 
 * In case, you want to install the development version from Github:
-```sh
-$ pip install git+https://github.com/thieu1995/permetrics 
+```bash
+$ pip install git+https://github.com/thieu1995/mealpy 
 ```
 
-After installation, you can import Mealpy as any other Python module:
+After installation, check the version to ensure successful installation:
 
-```sh
+```bash
 $ python
 >>> import mealpy
 >>> mealpy.__version__
@@ -141,1224 +126,2277 @@ $ python
 </details>
 
 
+## 💬 Decision Variables
 
-## Examples
+Before we dive into some examples, let's briefly consider the type of problem you're aiming to solve with MEALPY. 
+Understanding your specific problem and its desired solution can help you select the most appropriate approach.
 
-Before dive into some examples, let me ask you a question. What type of problem are you trying to solve? 
-Additionally, what would be the solution for your specific problem? 
-Based on the table below, you can select an appropriate type of decision variables to use.
-
+To assist you in choosing the right tools, refer to the table below. It outlines different types of **decision variables** available in MEALPY, 
+along with their syntax and common problem applications. This will guide you in defining your search space effectively.
 
 <div align="center">
 
-| Class           | Syntax                                                                                                       | Problem Types               |
-|-----------------|--------------------------------------------------------------------------------------------------------------|-----------------------------|
-| FloatVar        | `FloatVar(lb=(-10., )*7, ub=(10., )*7, name="delta")`                                                        | Continuous Problem          |
-| IntegerVar      | `IntegerVar(lb=(-10., )*7, ub=(10., )*7, name="delta")`                                                      | LP, IP, NLP, QP, MIP        |
-| StringVar       | `StringVar(valid_sets=(("auto", "backward", "forward"), ("leaf", "branch", "root")), name="delta")`          | ML, AI-optimize             |
-| BinaryVar       | `BinaryVar(n_vars=11, name="delta")`                                                                         | Networks                    |
-| BoolVar         | `BoolVar(n_vars=11, name="delta")`                                                                           | ML, AI-optimize             |
-| PermutationVar  | `PermutationVar(valid_set=(-10, -4, 10, 6, -2), name="delta")`                                               | Combinatorial Optimization  |
-| MixedSetVar     | `MixedSetVar(valid_sets=(("auto", 2, 3, "backward", True), (0, "tournament", "round-robin")), name="delta")` | MIP,  MILP                  |
-| TransferBoolVar | `TransferBoolVar(n_vars=11, name="delta", tf_func="sstf_02")`                                                | ML, AI-optimize, Feature    |
-|TransferBinaryVar| `TransferBinaryVar(n_vars=11, name="delta", tf_func="vstf_04")`                                              | Networks, Feature Selection |
+| Class             | Syntax                                                                                                          | Problem Types               |
+|-------------------|-----------------------------------------------------------------------------------------------------------------|-----------------------------|
+| FloatVar          | `FloatVar(lb=(-10., )*7, ub=(10., )*7, name="delta")`                                                           | Continuous Problem          |
+| IntegerVar        | `IntegerVar(lb=(-10., )*7, ub=(10., )*7, name="delta")`                                                         | LP, IP, NLP, QP, MIP        |
+| StringVar         | `StringVar(valid_sets=(("auto", "backward", "forward"), ("leaf", "branch", "root")), name="delta")`             | ML, AI-optimize             |
+| BinaryVar         | `BinaryVar(n_vars=11, name="delta")`                                                                            | Networks                    |
+| BoolVar           | `BoolVar(n_vars=11, name="delta")`                                                                              | ML, AI-optimize             |
+| PermutationVar    | `PermutationVar(valid_set=(-10, -4, 10, 6, -2), name="delta")`                                                  | Combinatorial Optimization  |
+| CategoricalVar    | `CategoricalVar(valid_sets=(("auto", 2, 3, "backward", True), (0, "tournament", "round-robin")), name="delta")` | MIP,  MILP                  |
+| SequenceVar       | `SequenceVar(valid_sets=((1, ), {2, 3}, [3, 5, 1]), return_type=list, name='delta')`                            | Hyper-parameter tuning      |
+| TransferBoolVar   | `TransferBoolVar(n_vars=11, name="delta", tf_func="sstf_02")`                                                   | ML, AI-optimize, Feature    |
+| TransferBinaryVar | `TransferBinaryVar(n_vars=11, name="delta", tf_func="vstf_04")`                                                 | Networks, Feature Selection |
 
 </div>
 
-Let's go through a basic and advanced example.
 
-
-### Simple Benchmark Function
-
-**Using Problem dict**
-
-```python
-from mealpy import FloatVar, SMA
-import numpy as np
-
-def objective_function(solution):
-    return np.sum(solution**2)
-
-problem = {
-    "obj_func": objective_function,
-    "bounds": FloatVar(lb=(-100., )*30, ub=(100., )*30),
-    "minmax": "min",
-    "log_to": None,
-}
-
-## Run the algorithm
-model = SMA.OriginalSMA(epoch=100, pop_size=50, pr=0.03)
-g_best = model.solve(problem)
-print(f"Best solution: {g_best.solution}, Best fitness: {g_best.target.fitness}")
-```
-
-**Define a custom Problem class**
-
-
-**Please note that, there is no more `generate_position`, `amend_solution`, and `fitness_function` in Problem class.**
-We take care everything under the DataType Class above. Just choose which one fit for your problem.
-**We recommend you define a custom class that inherit `Problem` class if your decision variable is not FloatVar**
-
-
-```python
-from mealpy import Problem, FloatVar, BBO 
-import numpy as np
-
-# Our custom problem class
-class Squared(Problem):
-    def __init__(self, bounds=None, minmax="min", data=None, **kwargs):
-        self.data = data 
-        super().__init__(bounds, minmax, **kwargs)
-
-    def obj_func(self, solution):
-        x = self.decode_solution(solution)["my_var"]
-        return np.sum(x ** 2)
-
-## Now, we define an algorithm, and pass an instance of our *Squared* class as the problem argument. 
-bound = FloatVar(lb=(-10., )*20, ub=(10., )*20, name="my_var")
-problem = Squared(bounds=bound, minmax="min", name="Squared", data="Amazing")
-model = BBO.OriginalBBO(epoch=100, pop_size=20)
-g_best = model.solve(problem)
-```
-
-
-### Set Seed for Optimizer (So many people asking for this feature)
-
-You can set random seed number for each run of single optimizer.
-
-```python
-model = SMA.OriginalSMA(epoch=100, pop_size=50, pr=0.03)
-g_best = model.solve(problem=problem, seed=10)  # Default seed=None
-```
-
-
-### Large-Scale Optimization
-
-```python
-from mealpy import FloatVar, SHADE
-import numpy as np
-
-def objective_function(solution):
-    return np.sum(solution**2)
-
-problem = {
-    "obj_func": objective_function,
-    "bounds": FloatVar(lb=(-1000., )*10000, ub=(1000.,)*10000),     # 10000 dimensions
-    "minmax": "min",
-    "log_to": "console",
-}
-
-## Run the algorithm
-optimizer = SHADE.OriginalSHADE(epoch=10000, pop_size=100)
-g_best = optimizer.solve(problem)
-print(f"Best solution: {g_best.solution}, Best fitness: {g_best.target.fitness}")
-```
-
-
-
-### Distributed Optimization / Parallelization Optimization
-
-Please read the article titled [MEALPY: An open-source library for latest meta-heuristic algorithms in Python](https://doi.org/10.1016/j.sysarc.2023.102871) to 
-gain a clear understanding of the concept of parallelization (distributed 
-optimization) in metaheuristics. Not all metaheuristics can be run in parallel.
-
-
-```python
-from mealpy import FloatVar, SMA
-import numpy as np
-
-
-def objective_function(solution):
-    return np.sum(solution**2)
-
-problem = {
-    "obj_func": objective_function,
-    "bounds": FloatVar(lb=(-100., )*100, ub=(100., )*100),
-    "minmax": "min",
-    "log_to": "console",
-}
-
-## Run distributed SMA algorithm using 10 threads
-optimizer = SMA.OriginalSMA(epoch=10000, pop_size=100, pr=0.03)
-optimizer.solve(problem, mode="thread", n_workers=10)        # Distributed to 10 threads
-print(f"Best solution: {optimizer.g_best.solution}, Best fitness: {optimizer.g_best.target.fitness}")
-
-## Run distributed SMA algorithm using 8 CPUs (cores)
-optimizer.solve(problem, mode="process", n_workers=8)        # Distributed to 8 cores
-print(f"Best solution: {optimizer.g_best.solution}, Best fitness: {optimizer.g_best.target.fitness}")
-```
-
-
-
-## The Benefit Of Using Custom Problem Class (BEST PRACTICE)
-
-### Optimize Machine Learning model
-
-In this example, we use SMA optimize to optimize the hyper-parameters of SVC model.
-
-```python
-from sklearn.svm import SVC
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn import datasets, metrics
-
-from mealpy import FloatVar, StringVar, IntegerVar, BoolVar, MixedSetVar, SMA, Problem
-
-
-# Load the data set; In this example, the breast cancer dataset is loaded.
-X, y = datasets.load_breast_cancer(return_X_y=True)
-
-# Create training and test split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1, stratify=y)
-
-sc = StandardScaler()
-X_train_std = sc.fit_transform(X_train)
-X_test_std = sc.transform(X_test)
-
-data = {
-    "X_train": X_train_std,
-    "X_test": X_test_std,
-    "y_train": y_train,
-    "y_test": y_test
-}
-
-
-class SvmOptimizedProblem(Problem):
-    def __init__(self, bounds=None, minmax="max", data=None, **kwargs):
-        self.data = data
-        super().__init__(bounds, minmax, **kwargs)
-
-    def obj_func(self, x):
-        x_decoded = self.decode_solution(x)
-        C_paras, kernel_paras = x_decoded["C_paras"], x_decoded["kernel_paras"]
-        degree, gamma, probability = x_decoded["degree_paras"], x_decoded["gamma_paras"], x_decoded["probability_paras"]
-
-        svc = SVC(C=C_paras, kernel=kernel_paras, degree=degree, 
-                  gamma=gamma, probability=probability, random_state=1)
-        # Fit the model
-        svc.fit(self.data["X_train"], self.data["y_train"])
-        # Make the predictions
-        y_predict = svc.predict(self.data["X_test"])
-        # Measure the performance
-        return metrics.accuracy_score(self.data["y_test"], y_predict)
-
-my_bounds = [
-    FloatVar(lb=0.01, ub=1000., name="C_paras"),
-    StringVar(valid_sets=('linear', 'poly', 'rbf', 'sigmoid'), name="kernel_paras"),
-    IntegerVar(lb=1, ub=5, name="degree_paras"),
-    MixedSetVar(valid_sets=('scale', 'auto', 0.01, 0.05, 0.1, 0.5, 1.0), name="gamma_paras"),
-    BoolVar(n_vars=1, name="probability_paras"),
-]
-problem = SvmOptimizedProblem(bounds=my_bounds, minmax="max", data=data)
-model = SMA.OriginalSMA(epoch=100, pop_size=20)
-model.solve(problem)
-
-print(f"Best agent: {model.g_best}")
-print(f"Best solution: {model.g_best.solution}")
-print(f"Best accuracy: {model.g_best.target.fitness}")
-print(f"Best parameters: {model.problem.decode_solution(model.g_best.solution)}")
-```
-
-
-
-### Solving Combinatorial Problems
-
-
-**Traveling Salesman Problem (TSP)**
-
-In the context of the Mealpy for the Traveling Salesman Problem (TSP), a solution is a possible route that 
-represents a tour of visiting all the cities exactly once and returning to the starting city. The solution is 
-typically represented as a permutation of the cities, where each city appears exactly once in the permutation.
-
-
-For example, let's consider a TSP instance with 5 cities labeled as A, B, C, D, and E. A possible solution could be 
-represented as the permutation `[A, B, D, E, C]`, which indicates the order in which the cities are visited. This 
-solution suggests that the tour starts at city A, then moves to city B, then D, E, and finally C before returning to city A.
-
-
-```python
-import numpy as np
-from mealpy import PermutationVar, WOA, Problem
-
-# Define the positions of the cities
-city_positions = np.array([[60, 200], [180, 200], [80, 180], [140, 180], [20, 160],
-                           [100, 160], [200, 160], [140, 140], [40, 120], [100, 120],
-                           [180, 100], [60, 80], [120, 80], [180, 60], [20, 40],
-                           [100, 40], [200, 40], [20, 20], [60, 20], [160, 20]])
-num_cities = len(city_positions)
-data = {
-    "city_positions": city_positions,
-    "num_cities": num_cities,
-}
-
-class TspProblem(Problem):
-    def __init__(self, bounds=None, minmax="min", data=None, **kwargs):
-        self.data = data
-        super().__init__(bounds, minmax, **kwargs)
-
-    @staticmethod
-    def calculate_distance(city_a, city_b):
-        # Calculate Euclidean distance between two cities
-        return np.linalg.norm(city_a - city_b)
-
-    @staticmethod
-    def calculate_total_distance(route, city_positions):
-        # Calculate total distance of a route
-        total_distance = 0
-        num_cities = len(route)
-        for idx in range(num_cities):
-            current_city = route[idx]
-            next_city = route[(idx + 1) % num_cities]  # Wrap around to the first city
-            total_distance += TspProblem.calculate_distance(city_positions[current_city], city_positions[next_city])
-        return total_distance
-
-    def obj_func(self, x):
-        x_decoded = self.decode_solution(x)
-        route = x_decoded["per_var"]
-        fitness = self.calculate_total_distance(route, self.data["city_positions"])
-        return fitness
-
-
-bounds = PermutationVar(valid_set=list(range(0, num_cities)), name="per_var")
-problem = TspProblem(bounds=bounds, minmax="min", data=data)
-
-model = WOA.OriginalWOA(epoch=100, pop_size=20)
-model.solve(problem)
-
-print(f"Best agent: {model.g_best}")                    # Encoded solution
-print(f"Best solution: {model.g_best.solution}")        # Encoded solution
-print(f"Best fitness: {model.g_best.target.fitness}")
-print(f"Best real scheduling: {model.problem.decode_solution(model.g_best.solution)}")      # Decoded (Real) solution
-```
-
-
-
-**Job Shop Scheduling Problem Using Woa Optimizer**
-
-Note that this implementation assumes that the job times and machine times are provided as 2D lists, where 
-`job_times[i][j]` represents the processing time of job `i` on machine `j`.
-
-Keep in mind that this is a simplified implementation, and you may need to modify it according to the specific 
- requirements and constraints of your Job Shop Scheduling problem.
-
-
-```python
-import numpy as np
-from mealpy import PermutationVar, WOA, Problem
-
-
-job_times = [[2, 1, 3], [4, 2, 1], [3, 3, 2]]
-machine_times = [[3, 2, 1], [1, 4, 2], [2, 3, 2]]
-
-n_jobs = len(job_times)
-n_machines = len(machine_times)
-
-data = {
-    "job_times": job_times,
-    "machine_times": machine_times,
-    "n_jobs": n_jobs,
-    "n_machines": n_machines
-}
-
-class JobShopProblem(Problem):
-    def __init__(self, bounds=None, minmax="min", data=None, **kwargs):
-        self.data = data
-        super().__init__(bounds, minmax, **kwargs)
-
-    def obj_func(self, x):
-        x_decoded = self.decode_solution(x)
-        x = x_decoded["per_var"]
-        makespan = np.zeros((self.data["n_jobs"], self.data["n_machines"]))
-        for gene in x:
-            job_idx = gene // self.data["n_machines"]
-            machine_idx = gene % self.data["n_machines"]
-            if job_idx == 0 and machine_idx == 0:
-                makespan[job_idx][machine_idx] = job_times[job_idx][machine_idx]
-            elif job_idx == 0:
-                makespan[job_idx][machine_idx] = makespan[job_idx][machine_idx - 1] + job_times[job_idx][machine_idx]
-            elif machine_idx == 0:
-                makespan[job_idx][machine_idx] = makespan[job_idx - 1][machine_idx] + job_times[job_idx][machine_idx]
-            else:
-                makespan[job_idx][machine_idx] = max(makespan[job_idx][machine_idx - 1], makespan[job_idx - 1][machine_idx]) + job_times[job_idx][machine_idx]
-        return np.max(makespan)
-
-
-bounds = PermutationVar(valid_set=list(range(0, n_jobs*n_machines)), name="per_var")
-problem = JobShopProblem(bounds=bounds, minmax="min", data=data)
-
-model = WOA.OriginalWOA(epoch=100, pop_size=20)
-model.solve(problem)
-
-print(f"Best agent: {model.g_best}")                    # Encoded solution
-print(f"Best solution: {model.g_best.solution}")        # Encoded solution
-print(f"Best fitness: {model.g_best.target.fitness}")
-print(f"Best real scheduling: {model.problem.decode_solution(model.g_best.solution)}")      # Decoded (Real) solution
-```
-
-
-
-**Shortest Path Problem**
-
-In this example, the graph is represented as a NumPy array where each element represents the cost or distance between two nodes.
-
-Note that this implementation assumes that the graph is represented by a symmetric matrix, where `graph[i,j]` 
-represents the distance between nodes `i` and `j`. If your graph representation is different, you may need to modify 
-the code accordingly.
-
-Please keep in mind that this implementation is a basic example and may not be optimized for large-scale problems. 
-Further modifications and optimizations may be required depending on your specific use case.
-
-
-```python
-import numpy as np
-from mealpy import PermutationVar, WOA, Problem
-
-# Define the graph representation
-graph = np.array([
-    [0, 2, 4, 0, 7, 9],
-    [2, 0, 1, 4, 2, 8],
-    [4, 1, 0, 1, 3, 0],
-    [6, 4, 5, 0, 3, 2],
-    [0, 2, 3, 3, 0, 2],
-    [9, 0, 4, 2, 2, 0]
-])
-
-
-class ShortestPathProblem(Problem):
-    def __init__(self, bounds=None, minmax="min", data=None, **kwargs):
-        self.data = data
-        self.eps = 1e10         # Penalty function for vertex with 0 connection
-        super().__init__(bounds, minmax, **kwargs)
-
-    # Calculate the fitness of an individual
-    def obj_func(self, x):
-        x_decoded = self.decode_solution(x)
-        individual = x_decoded["path"]
-
-        total_distance = 0
-        for idx in range(len(individual) - 1):
-            start_node = individual[idx]
-            end_node = individual[idx + 1]
-            weight = self.data[start_node, end_node]
-            if weight == 0:
-                return self.eps
-            total_distance += weight
-        return total_distance
-
-
-num_nodes = len(graph)
-bounds = PermutationVar(valid_set=list(range(0, num_nodes)), name="path")
-problem = ShortestPathProblem(bounds=bounds, minmax="min", data=graph)
-
-model = WOA.OriginalWOA(epoch=100, pop_size=20)
-model.solve(problem)
-
-print(f"Best agent: {model.g_best}")                    # Encoded solution
-print(f"Best solution: {model.g_best.solution}")        # Encoded solution
-print(f"Best fitness: {model.g_best.target.fitness}")
-print(f"Best real scheduling: {model.problem.decode_solution(model.g_best.solution)}")      # Decoded (Real) solution
-```
-
-
-
-
-**Location Optimization**
-
-
-Let's consider an example of location optimization in the context of a retail company that wants to open a certain 
-number of new stores in a region to maximize market coverage while minimizing operational costs.
-
-A company wants to open five new stores in a region with several potential locations. The objective is to 
-determine the optimal locations for these stores while considering factors such as population density and 
-transportation costs. The goal is to maximize market coverage by locating stores in areas with high demand while 
-minimizing the overall transportation costs required to serve customers.
-
-By applying location optimization techniques, the retail company can make informed decisions about where to open new 
-stores, considering factors such as population density and transportation costs. This approach allows the company to 
-maximize market coverage, make efficient use of resources, and ultimately improve customer service and profitability.
-
-Note that this example is a simplified illustration, and in real-world scenarios, location optimization problems can 
-involve more complex constraints, additional factors, and larger datasets. However, the general process remains 
-similar, involving data analysis, mathematical modeling, and optimization techniques to determine the optimal 
-locations for facilities.
-
-
-```python
-import numpy as np
-from mealpy import BinaryVar, WOA, Problem
-
-# Define the coordinates of potential store locations
-locations = np.array([
-    [2, 4],
-    [5, 6],
-    [9, 3],
-    [7, 8],
-    [1, 10],
-    [3, 2],
-    [5, 5],
-    [8, 2],
-    [7, 6],
-    [1, 9]
-])
-# Define the transportation costs matrix based on the Euclidean distance between locations
-distance_matrix = np.linalg.norm(locations[:, np.newaxis] - locations, axis=2)
-
-# Define the number of stores to open
-num_stores = 5
-
-# Define the maximum distance a customer should travel to reach a store
-max_distance = 10
-
-data = {
-    "num_stores": num_stores,
-    "max_distance": max_distance,
-    "penalty": 1e10
-}
-
-
-class LocationOptProblem(Problem):
-    def __init__(self, bounds=None, minmax=None, data=None, **kwargs):
-        self.data = data
-        self.eps = 1e10
-        super().__init__(bounds, minmax, **kwargs)
-
-    # Define the fitness evaluation function
-    def obj_func(self, x):
-        x_decoded = self.decode_solution(x)
-        x = x_decoded["placement_var"]
-        total_coverage = np.sum(x)
-        total_dist = np.sum(x[:, np.newaxis] * distance_matrix)
-        if total_dist == 0:                 # Penalize solutions with fewer stores
-            return self.eps
-        if total_coverage < self.data["num_stores"]:    # Penalize solutions with fewer stores
-            return self.eps
-        return total_dist
-
-
-bounds = BinaryVar(n_vars=len(locations), name="placement_var")
-problem = LocationOptProblem(bounds=bounds, minmax="min", data=data)
-
-model = WOA.OriginalWOA(epoch=50, pop_size=20)
-model.solve(problem)
-
-print(f"Best agent: {model.g_best}")                    # Encoded solution
-print(f"Best solution: {model.g_best.solution}")        # Encoded solution
-print(f"Best fitness: {model.g_best.target.fitness}")
-print(f"Best real scheduling: {model.problem.decode_solution(model.g_best.solution)}")      # Decoded (Real) solution
-
-```
-
-
-**Supply Chain Optimization**
-
-Let's assume we have a supply chain network with 5 distribution centers (DC1, DC2, DC3, DC4, DC5) and 10 products 
-(P1, P2, P3, ..., P10). Our goal is to determine the optimal allocation of products to the distribution centers in 
-a way that minimizes the total transportation cost.
-
-Each solution represents an allocation of products to distribution centers. We can use a binary matrix with 
-dimensions `(10, 5)` where each element `(i, j)` represents whether product `i` is allocated to distribution center `j`. 
-For example, a chromosome `[1, 0, 1, 0, 1]` would mean that product `1` is allocated to `DC1`, `DC3`, `DC5`.
-
-We can add the maximum capacity of each distribution center, therefor we need penalty term to the fitness 
-evaluation function to penalize solutions that violate this constraint. The penalty can be based on the degree of 
-violation or a fixed penalty value.
-
-
-```python
-import numpy as np
-from mealpy import BinaryVar, WOA, Problem
-
-# Define the problem parameters
-num_products = 10
-num_distribution_centers = 5
-
-# Define the transportation cost matrix (randomly generated for the example)
-transportation_cost = np.random.randint(1, 10, size=(num_products, num_distribution_centers))
-
-data = {
-    "num_products": num_products,
-    "num_distribution_centers": num_distribution_centers,
-    "transportation_cost": transportation_cost,
-    "max_capacity": 4,      # Maximum capacity of each distribution center
-    "penalty": 1e10         # Define a penalty value for maximum capacity of each distribution center
-}
-
-
-class SupplyChainProblem(Problem):
-    def __init__(self, bounds=None, minmax=None, data=None, **kwargs):
-        self.data = data
-        super().__init__(bounds, minmax, **kwargs)
-
-    def obj_func(self, x):
-        x_decoded = self.decode_solution(x)
-        x = x_decoded["placement_var"].reshape((self.data["num_products"], self.data["num_distribution_centers"]))
-
-        if np.any(np.all(x==0, axis=1)):    
-        # If any row has all 0 value, it indicates that this product is not allocated to any distribution center.
-            return 0
-
-        total_cost = np.sum(self.data["transportation_cost"] * x)
-        # Penalty for violating maximum capacity constraint
-        excess_capacity = np.maximum(np.sum(x, axis=0) - self.data["max_capacity"], 0)
-        penalty = np.sum(excess_capacity)
-        # Calculate fitness value as the inverse of the total cost plus the penalty
-        fitness = 1 / (total_cost + penalty)
-        return fitness
-
-
-bounds = BinaryVar(n_vars=num_products * num_distribution_centers, name="placement_var")
-problem = SupplyChainProblem(bounds=bounds, minmax="max", data=data)
-
-model = WOA.OriginalWOA(epoch=50, pop_size=20)
-model.solve(problem)
-
-print(f"Best agent: {model.g_best}")                    # Encoded solution
-print(f"Best solution: {model.g_best.solution}")        # Encoded solution
-print(f"Best fitness: {model.g_best.target.fitness}")
-print(f"Best real scheduling: {model.problem.decode_solution(model.g_best.solution)['placement_var'].reshape((num_products, num_distribution_centers))}")
-```
-
-
-**Healthcare Workflow Optimization Problem**
-
-Define a chromosome representation that encodes the allocation of resources and patient flow in the emergency 
-department. This could be a binary matrix where each row represents a patient and each column represents a resource 
-(room). If the element is 1, it means the patient is assigned to that particular room, and if the element is 0, it 
-means the patient is not assigned to that room
-
-Please note that this implementation is a basic template and may require further customization based on the specific 
-objectives, constraints, and evaluation criteria of your healthcare workflow optimization problem. You'll need to 
-define the specific fitness function and optimization objectives based on the factors you want to optimize, such as 
-patient waiting times, resource utilization, and other relevant metrics in the healthcare workflow context.
-
-
-```python
-import numpy as np
-from mealpy import BinaryVar, WOA, Problem
-
-# Define the problem parameters
-num_patients = 50  # Number of patients
-num_resources = 10  # Number of resources (room)
-
-# Define the patient waiting time matrix (randomly generated for the example)
-# Why? May be, doctors need time to prepare tools,...
-waiting_matrix = np.random.randint(1, 10, size=(num_patients, num_resources))
-
-data = {
-    "num_patients": num_patients,
-    "num_resources": num_resources,
-    "waiting_matrix": waiting_matrix,
-    "max_resource_capacity": 10,        # Maximum capacity of each room
-    "max_waiting_time": 60,             # Maximum waiting time
-    "penalty_value": 1e2,         # Define a penalty value
-    "penalty_patient": 1e10
-}
-
-
-class SupplyChainProblem(Problem):
-    def __init__(self, bounds=None, minmax=None, data=None, **kwargs):
-        self.data = data
-        super().__init__(bounds, minmax, **kwargs)
-
-    def obj_func(self, x):
-        x_decoded = self.decode_solution(x)
-        x = x_decoded["placement_var"].reshape(self.data["num_patients"], self.data["num_resources"])
-
-        # If any row has all 0 value, it indicates that this patient is not allocated to any room.
-        # If a patient a assigned to more than 3 room, not allow
-        if np.any(np.all(x==0, axis=1)) or np.any(np.sum(x>3, axis=1)):
-            return self.data["penalty_patient"]
-
-        # Calculate fitness based on optimization objectives
-        room_used = np.sum(x, axis=0)
-        wait_time = np.sum(x * self.data["waiting_matrix"], axis=1)
-        violated_constraints = np.sum(room_used > self.data["max_resource_capacity"]) + np.sum(wait_time > self.data["max_waiting_time"])
-
-        # Calculate the fitness value based on the objectives
-        resource_utilization_fitness = 1 - np.mean(room_used) / self.data["max_resource_capacity"]
-        waiting_time_fitness = 1 - np.mean(wait_time) / self.data["max_waiting_time"]
-
-        fitness = resource_utilization_fitness + waiting_time_fitness + self.data['penalty_value'] * violated_constraints
-        return fitness
-
-
-bounds = BinaryVar(n_vars=num_patients * num_resources, name="placement_var")
-problem = SupplyChainProblem(bounds=bounds, minmax="min", data=data)
-
-model = WOA.OriginalWOA(epoch=50, pop_size=20)
-model.solve(problem)
-
-print(f"Best agent: {model.g_best}")                    # Encoded solution
-print(f"Best solution: {model.g_best.solution}")        # Encoded solution
-print(f"Best fitness: {model.g_best.target.fitness}")
-print(f"Best real scheduling: {model.problem.decode_solution(model.g_best.solution)['placement_var'].reshape((num_patients, num_resources))}")
-```
-
-
-**Production Optimization Problem**
-
-Let's consider a simplified example of production optimization in the context of a manufacturing company that 
-produces electronic devices, such as smartphones. The objective is to maximize production output while minimizing 
-production costs.
-
-This example uses binary representations for production configurations, assuming each task can be assigned to a 
-resource (1) or not (0). You may need to adapt the representation and operators to suit your specific production 
-optimization problem.
-
-
-```python
-import numpy as np
-from mealpy import BinaryVar, WOA, Problem
-
-# Define the problem parameters
-num_tasks = 10
-num_resources = 5
-
-# Example task processing times
-task_processing_times = np.array([2, 3, 4, 2, 3, 2, 3, 4, 2, 3])
-
-# Example resource capacity
-resource_capacity = np.array([10, 8, 6, 12, 15])
-
-# Example production costs and outputs
-production_costs = np.array([5, 6, 4, 7, 8, 9, 5, 6, 7, 8])
-production_outputs = np.array([20, 18, 16, 22, 25, 24, 20, 18, 19, 21])
-
-# Example maximum total production time
-max_total_time = 50
-
-# Example maximum defect rate
-max_defect_rate = 0.2
-
-# Penalty for invalid solution
-penalty = -1000
-
-data = {
-    "num_tasks": num_tasks,
-    "num_resources": num_resources,
-    "task_processing_times": task_processing_times,
-    "resource_capacity": resource_capacity,
-    "production_costs": production_costs,
-    "production_outputs": production_outputs,
-    "max_defect_rate": max_defect_rate,
-    "penalty": penalty
-}
-
-
-class SupplyChainProblem(Problem):
-    def __init__(self, bounds=None, minmax=None, data=None, **kwargs):
-        self.data = data
-        super().__init__(bounds, minmax, **kwargs)
-
-    def obj_func(self, x):
-        x_decoded = self.decode_solution(x)
-        x = x_decoded["placement_var"].reshape((self.data["num_tasks"], self.data["num_resources"]))
-
-        # If any row has all 0 value, it indicates that this task is not allocated to any resource
-        if np.any(np.all(x==0, axis=1)) or np.any(np.all(x==0, axis=0)):
-            return self.data["penalty"]
-
-        # Check violated constraints
-        violated_constraints = 0
-
-        # Calculate resource utilization
-        resource_utilization = np.sum(x, axis=0)
-        # Resource capacity constraint
-        if np.any(resource_utilization > self.data["resource_capacity"]):
-            violated_constraints += 1
-
-        # Time constraint
-        total_time = np.sum(np.dot(self.data["task_processing_times"].reshape(1, -1), x))
-        if total_time > max_total_time:
-            violated_constraints += 1
-
-        # Quality constraint
-        defect_rate = np.dot(self.data["production_costs"].reshape(1, -1), x) / np.dot(self.data["production_outputs"], x)
-        if np.any(defect_rate > max_defect_rate):
-            violated_constraints += 1
-
-        # Calculate the fitness value based on the objectives and constraints
-        profit = np.sum(np.dot(self.data["production_outputs"].reshape(1, -1), x)) - np.sum(np.dot(self.data["production_costs"].reshape(1, -1), x))
-        if violated_constraints > 0:
-            return profit + self.data["penalty"] * violated_constraints       # Penalize solutions with violated constraints
-        return profit
-
-
-bounds = BinaryVar(n_vars=num_tasks * num_resources, name="placement_var")
-problem = SupplyChainProblem(bounds=bounds, minmax="max", data=data)
-
-model = WOA.OriginalWOA(epoch=50, pop_size=20)
-model.solve(problem)
-
-print(f"Best agent: {model.g_best}")                    # Encoded solution
-print(f"Best solution: {model.g_best.solution}")        # Encoded solution
-print(f"Best fitness: {model.g_best.target.fitness}")
-print(f"Best real scheduling: {model.problem.decode_solution(model.g_best.solution)['placement_var'].reshape((num_tasks, num_resources))}")
-```
-
-
-
-
-**Employee Rostering Problem Using Woa Optimizer**
-
-The goal is to create an optimal schedule that assigns employees to shifts while satisfying various 
-constraints and objectives. Note that this implementation assumes that shift_requirements array 
-has dimensions (num_employees, num_shifts), and shift_costs is a 1D array of length num_shifts.
-
-Please keep in mind that this is a simplified implementation, and you may need to modify it according to the 
-specific requirements and constraints of your employee rostering problem. Additionally, you might want to 
-introduce additional mechanisms or constraints such as fairness, employee preferences, or shift 
-dependencies to enhance the model's effectiveness in real-world scenarios.
-
-For example, if you have 5 employees and 3 shifts, a chromosome could be represented as [2, 1, 0, 2, 0], 
-where employee 0 is assigned to shift 2, employee 1 is assigned to shift 1, 
-employee 2 is assigned to shift 0, and so on.
-
-```python
-import numpy as np
-from mealpy import IntegerVar, WOA, Problem
-
-
-shift_requirements = np.array([[2, 1, 3], [4, 2, 1], [3, 3, 2]])
-shift_costs = np.array([10, 8, 12])
-
-num_employees = shift_requirements.shape[0]
-num_shifts = shift_requirements.shape[1]
-
-data = {
-    "shift_requirements": shift_requirements,
-    "shift_costs": shift_costs,
-    "num_employees": num_employees,
-    "num_shifts": num_shifts
-}
-
-class EmployeeRosteringProblem(Problem):
-    def __init__(self, bounds=None, minmax="min", data=None, **kwargs):
-        self.data = data
-        super().__init__(bounds, minmax, **kwargs)
-
-    def obj_func(self, x):
-        x_decoded = self.decode_solution(x)
-        x = x_decoded["shift_var"]
-
-        shifts_covered = np.zeros(self.data["num_shifts"])
-        total_cost = 0
-        for idx in range(self.data["num_employees"]):
-            shift_idx = x[idx]
-            shifts_covered[shift_idx] += 1
-            total_cost += self.data["shift_costs"][shift_idx]
-        coverage_diff = self.data["shift_requirements"] - shifts_covered
-        coverage_penalty = np.sum(np.abs(coverage_diff))
-        return total_cost + coverage_penalty
-
-
-bounds = IntegerVar(lb=[0, ]*num_employees, ub=[num_shifts-1, ]*num_employees, name="shift_var")
-problem = EmployeeRosteringProblem(bounds=bounds, minmax="min", data=data)
-
-model = WOA.OriginalWOA(epoch=50, pop_size=20)
-model.solve(problem)
-
-print(f"Best agent: {model.g_best}")                    # Encoded solution
-print(f"Best solution: {model.g_best.solution}")        # Encoded solution
-print(f"Best fitness: {model.g_best.target.fitness}")
-print(f"Best real scheduling: {model.problem.decode_solution(model.g_best.solution)}")      # Decoded (Real) solution
-```
-
-**Maintenance Scheduling**
-
-In maintenance scheduling, the goal is to optimize the schedule for performing maintenance tasks on
-various assets or equipment. The objective is to minimize downtime and maximize the utilization of
-assets while considering various constraints such as resource availability, task dependencies, and time constraints.
-
-Each element in the solution represents whether a task is assigned to an asset (1) or not (0). The schedule 
-specifies when each task should start and which asset it is assigned to, aiming to minimize the total downtime.
-
-By using the Mealpy, you can find an efficient maintenance schedule that minimizes downtime,
-maximizes asset utilization, and satisfies various constraints, ultimately optimizing 
-the maintenance operations for improved reliability and productivity.
-
-```python
-
-import numpy as np
-from mealpy import BinaryVar, WOA, Problem
-
-
-num_tasks = 10
-num_assets = 5
-task_durations = np.random.randint(1, 10, size=(num_tasks, num_assets))
-
-data = {
-    "num_tasks": num_tasks,
-    "num_assets": num_assets,
-    "task_durations": task_durations,
-    "unassigned_penalty": -100         # Define a penalty value for no task is assigned to asset
-}
-
-
-class MaintenanceSchedulingProblem(Problem):
-    def __init__(self, bounds=None, minmax=None, data=None, **kwargs):
-        self.data = data
-        super().__init__(bounds, minmax, **kwargs)
-
-    def obj_func(self, x):
-        x_decoded = self.decode_solution(x)
-        x = x_decoded["task_var"]
-        downtime = -np.sum(x.reshape((self.data["num_tasks"], self.data["num_assets"])) * self.data["task_durations"])
-        if np.sum(x) == 0:
-            downtime += self.data["unassigned_penalty"]
-        return downtime
-
-
-bounds = BinaryVar(n_vars=num_tasks * num_assets, name="task_var")
-problem = MaintenanceSchedulingProblem(bounds=bounds, minmax="max", data=data)
-
-model = WOA.OriginalWOA(epoch=50, pop_size=20)
-model.solve(problem)
-
-print(f"Best agent: {model.g_best}")                    # Encoded solution
-print(f"Best solution: {model.g_best.solution}")        # Encoded solution
-print(f"Best fitness: {model.g_best.target.fitness}")
-print(f"Best real scheduling: {model.problem.decode_solution(model.g_best.solution).reshape((num_tasks, num_assets))}")      # Decoded (Real) solution
-```
-
-
-<details><summary><h3>Constrained Benchmark Function</h3></summary>
-
-```python
-from mealpy import FloatVar, SMA
-import numpy as np
-
-## Link: https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119136507.app2
-def objective_function(solution):
-    def g1(x):
-        return 2*x[0] + 2*x[1] + x[9] + x[10] - 10
-    def g2(x):
-        return 2 * x[0] + 2 * x[2] + x[9] + x[10] - 10
-    def g3(x):
-        return 2 * x[1] + 2 * x[2] + x[10] + x[11] - 10
-    def g4(x):
-        return -8*x[0] + x[9]
-    def g5(x):
-        return -8*x[1] + x[10]
-    def g6(x):
-        return -8*x[2] + x[11]
-    def g7(x):
-        return -2*x[3] - x[4] + x[9]
-    def g8(x):
-        return -2*x[5] - x[6] + x[10]
-    def g9(x):
-        return -2*x[7] - x[8] + x[11]
-
-    def violate(value):
-        return 0 if value <= 0 else value
-
-    fx = 5 * np.sum(solution[:4]) - 5*np.sum(solution[:4]**2) - np.sum(solution[4:13])
-
-    ## Increase the punishment for g1 and g4 to boost the algorithm (You can choice any constraint instead of g1 and g4)
-    fx += violate(g1(solution))**2 + violate(g2(solution)) + violate(g3(solution)) + \
-            2*violate(g4(solution)) + violate(g5(solution)) + violate(g6(solution))+ \
-            violate(g7(solution)) + violate(g8(solution)) + violate(g9(solution))
-    return fx
-
-problem = {
-    "obj_func": objective_function,
-    "bounds": FloatVar(lb=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], ub=[1, 1, 1, 1, 1, 1, 1, 1, 1, 100, 100, 100, 1]),
-    "minmax": "min",
-}
-
-## Run the algorithm
-optimizer = SMA.OriginalSMA(epoch=100, pop_size=50, pr=0.03)
-optimizer.solve(problem)
-print(f"Best solution: {optimizer.g_best.solution}, Best fitness: {optimizer.g_best.target.fitness}")
-```
-
-</details>
-
-
-
-<details><summary><h3>Multi-objective Benchmark Function</h3></summary>
-
-```python
-from mealpy import FloatVar, SMA 
-import numpy as np
-
-
-## Link: https://en.wikipedia.org/wiki/Test_functions_for_optimization
-def objective_function(solution):
-
-    def booth(x, y):
-        return (x + 2*y - 7)**2 + (2*x + y - 5)**2
-
-    def bukin(x, y):
-        return 100 * np.sqrt(np.abs(y - 0.01 * x**2)) + 0.01 * np.abs(x + 10)
-
-    def matyas(x, y):
-        return 0.26 * (x**2 + y**2) - 0.48 * x * y
-
-    return [booth(solution[0], solution[1]), bukin(solution[0], solution[1]), matyas(solution[0], solution[1])]
-
-
-problem = {
-    "obj_func": objective_function,
-    "bounds": FloatVar(lb=(-10, -10), ub=(10, 10)),
-    "minmax": "min",
-    "obj_weights": [0.4, 0.1, 0.5]               # Define it or default value will be [1, 1, 1]
-}
-
-## Run the algorithm
-optimizer = SMA.OriginalSMA(epoch=100, pop_size=50, pr=0.03)
-optimizer.solve(problem)
-print(f"Best solution: {optimizer.g_best.solution}, Best fitness: {optimizer.g_best.target.fitness}")
-
-## You can access all of available figures via object "history" like this:
-optimizer.history.save_global_objectives_chart(filename="hello/goc")
-optimizer.history.save_local_objectives_chart(filename="hello/loc")
-optimizer.history.save_global_best_fitness_chart(filename="hello/gbfc")
-optimizer.history.save_local_best_fitness_chart(filename="hello/lbfc")
-optimizer.history.save_runtime_chart(filename="hello/rtc")
-optimizer.history.save_exploration_exploitation_chart(filename="hello/eec")
-optimizer.history.save_diversity_chart(filename="hello/dc")
-optimizer.history.save_trajectory_chart(list_agent_idx=[3, 5], selected_dimensions=[2], filename="hello/tc")
-```
-
-</details>
-
-
-
-<details><summary><h3>Custom Problem </h3></summary>
-
-
-For our custom problem, we can create a class and inherit from the `Problem` class, named the child class the  
-'Squared' class. In the initialization method of the 'Squared' class, we have to set the `bounds`, and `minmax`  
-of the problem (bounds: a problem's type, and minmax: a string specifying whether the problem is a 'min' or 'max' problem). 
-
-Afterwards, we have to override the abstract method `obj_func()`, which takes a parameter 'solution' (the solution 
-to be evaluated) and returns the function value. The resulting code should look something like the code snippet 
-below. 'Name' is an additional parameter we want to include in this class, and you can include any other additional 
-parameters you need. But remember to set up all additional parameters before super() called.
-
-
-```python
-from mealpy import Problem, FloatVar, BBO 
-import numpy as np
-
-# Our custom problem class
-class Squared(Problem):
-    def __init__(self, bounds=None, minmax="min", data=None, **kwargs):
-        self.data = data 
-        super().__init__(bounds, minmax, **kwargs)
-
-    def obj_func(self, solution):
-        return np.sum(solution ** 2)
-
+## 📚 Optimizer Classification Table
+
+* Meta-heuristic Categories: ([Based on this article](https://doi.org/10.1016/j.procs.2020.09.075))
+    + Evolutionary-based: Algorithms inspired by Darwin's law of natural selection and evolutionary computing principles
+    + Swarm-based: Algorithms drawing inspiration from the collective movement and interaction of swarms (e.g., birds, social insects).
+    + Physics-based: Algorithms derived from physical laws and phenomena (e.g., Newton's law of universal gravitation, black holes, multiverse theory).
+    + Human-based: Algorithms inspired by human interactions and behaviors (e.g., queuing search, teaching-learning processes).
+    + Biology-based: Algorithms based on biological creatures or microorganisms.
+    + System-based:  Algorithms inspired by ecological systems, immune systems, or network systems.
+    + Math-based: Algorithms developed from mathematical forms or laws (e.g., sine-cosine functions).
+    + Music-based: Algorithms drawing inspiration from musical instruments or compositions.
+
+![MEALPY3-0-0](.github/img/mealpy-classification.png)
+
+
+* Difficulty - Difficulty Level (Personal Opinion): **Objective observation from author**. Depend on the number of 
+  parameters, number of equations, the original ideas, time spend for coding, source lines of code (SLOC).
+    + Easy: A few paras, few equations, SLOC very short
+    + Medium: more equations than Easy level, SLOC longer than Easy level
+    + Hard: Lots of equations, SLOC longer than Medium level, the paper hard to read.
+    + Hard* - Very hard: Lots of equations, SLOC too long, the paper is very hard to read.
     
-## Now, we define an algorithm, and pass an instance of our *Squared* class as the problem argument. 
-problem = Squared(bounds=FloatVar(lb=(-10., )*20, ub=(10., )*20), minmax="min", name="Squared", data="Amazing")
-model = BBO.OriginalBBO(epoch=10, pop_size=50)
-g_best = model.solve(problem)
-
-## Show some attributes
-print(g_best.solution)
-print(g_best.target.fitness)
-print(g_best.target.objectives)
-print(g_best)
-print(model.get_parameters())
-print(model.get_name())
-print(model.get_attributes()["g_best"])
-print(model.problem.get_name())
-print(model.problem.n_dims)
-print(model.problem.bounds)
-print(model.problem.lb)
-print(model.problem.ub)
-```
-
-</details>
+** For newbie, we recommend to read the paper of algorithms which difficulty is "easy" or "medium" difficulty level.
 
 
+[//]: # (<table><thead><tr><th>Group</th><th>Name</th><th>Module</th><th>Class</th><th>Year</th><th>Paras</th><th>Difficulty</th></tr></thead><tbody><tr><th>Evolutionary</th><td>Evolutionary Programming</td><td>EP</td><td>OriginalEP</td><td>1964</td><td>3</td><td>easy</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>LevyEP</td><td>*</td><td>3</td><td>easy</td></tr><tr><th>Evolutionary</th><td>Evolution Strategies</td><td>ES</td><td>OriginalES</td><td>1971</td><td>3</td><td>easy</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>LevyES</td><td>*</td><td>3</td><td>easy</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>CMA_ES</td><td>2003</td><td>2</td><td>hard</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>Simple_CMA_ES</td><td>2023</td><td>2</td><td>medium</td></tr><tr><th>Evolutionary</th><td>Memetic Algorithm</td><td>MA</td><td>OriginalMA</td><td>1989</td><td>7</td><td>easy</td></tr><tr><th>Evolutionary</th><td>Genetic Algorithm</td><td>GA</td><td>BaseGA</td><td>1992</td><td>4</td><td>easy</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>SingleGA</td><td>*</td><td>7</td><td>easy</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>MultiGA</td><td>*</td><td>7</td><td>easy</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>EliteSingleGA</td><td>*</td><td>10</td><td>easy</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>EliteMultiGA</td><td>*</td><td>10</td><td>easy</td></tr><tr><th>Evolutionary</th><td>Differential Evolution</td><td>DE</td><td>BaseDE</td><td>1997</td><td>5</td><td>easy</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>JADE</td><td>2009</td><td>6</td><td>medium</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>SADE</td><td>2005</td><td>2</td><td>medium</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>SAP_DE</td><td>2006</td><td>3</td><td>medium</td></tr><tr><th>Evolutionary</th><td>Success-History Adaptation Differential Evolution</td><td>SHADE</td><td>OriginalSHADE</td><td>2013</td><td>4</td><td>medium</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>L_SHADE</td><td>2014</td><td>4</td><td>medium</td></tr><tr><th>Evolutionary</th><td>Flower Pollination Algorithm</td><td>FPA</td><td>OriginalFPA</td><td>2014</td><td>4</td><td>medium</td></tr><tr><th>Evolutionary</th><td>Coral Reefs Optimization</td><td>CRO</td><td>OriginalCRO</td><td>2014</td><td>11</td><td>medium</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>OCRO</td><td>2019</td><td>12</td><td>medium</td></tr><tr><th>***</th><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td></tr><tr><th>Swarm</th><td>Particle Swarm Optimization</td><td>PSO</td><td>OriginalPSO</td><td>1995</td><td>6</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>PPSO</td><td>2019</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>HPSO_TVAC</td><td>2017</td><td>4</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>C_PSO</td><td>2015</td><td>6</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>CL_PSO</td><td>2006</td><td>6</td><td>medium</td></tr><tr><th>Swarm</th><td>Bacterial Foraging Optimization</td><td>BFO</td><td>OriginalBFO</td><td>2002</td><td>10</td><td>hard</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>ABFO</td><td>2019</td><td>8</td><td>medium</td></tr><tr><th>Swarm</th><td>Bees Algorithm</td><td>BeesA</td><td>OriginalBeesA</td><td>2005</td><td>8</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>ProbBeesA</td><td>2015</td><td>5</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>CleverBookBeesA</td><td>2006</td><td>8</td><td>medium</td></tr><tr><th>Swarm</th><td>Cat Swarm Optimization</td><td>CSO</td><td>OriginalCSO</td><td>2006</td><td>11</td><td>hard</td></tr><tr><th>Swarm</th><td>Artificial Bee Colony</td><td>ABC</td><td>OriginalABC</td><td>2007</td><td>8</td><td>medium</td></tr><tr><th>Swarm</th><td>Ant Colony Optimization</td><td>ACOR</td><td>OriginalACOR</td><td>2008</td><td>5</td><td>easy</td></tr><tr><th>Swarm</th><td>Cuckoo Search Algorithm</td><td>CSA</td><td>OriginalCSA</td><td>2009</td><td>3</td><td>medium</td></tr><tr><th>Swarm</th><td>Firefly Algorithm </td><td>FFA</td><td>OriginalFFA</td><td>2009</td><td>8</td><td>easy</td></tr><tr><th>Swarm</th><td>Fireworks Algorithm</td><td>FA</td><td>OriginalFA</td><td>2010</td><td>7</td><td>medium</td></tr><tr><th>Swarm</th><td>Bat Algorithm</td><td>BA</td><td>OriginalBA</td><td>2010</td><td>6</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>AdaptiveBA</td><td>2010</td><td>8</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>ModifiedBA</td><td>*</td><td>5</td><td>medium</td></tr><tr><th>Swarm</th><td>Fruit-fly Optimization Algorithm</td><td>FOA</td><td>OriginalFOA</td><td>2012</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>BaseFOA</td><td>*</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>WhaleFOA</td><td>2020</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>Social Spider Optimization</td><td>SSpiderO</td><td>OriginalSSpiderO</td><td>2018</td><td>4</td><td>hard*</td></tr><tr><th>Swarm</th><td>Grey Wolf Optimizer</td><td>GWO</td><td>OriginalGWO</td><td>2014</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>RW_GWO</td><td>2019</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Social Spider Algorithm</td><td>SSpiderA</td><td>OriginalSSpiderA</td><td>2015</td><td>5</td><td>medium</td></tr><tr><th>Swarm</th><td>Ant Lion Optimizer</td><td>ALO</td><td>OriginalALO</td><td>2015</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>BaseALO</td><td>*</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Moth Flame Optimization</td><td>MFO</td><td>OriginalMFO</td><td>2015</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>BaseMFO</td><td>*</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Elephant Herding Optimization</td><td>EHO</td><td>OriginalEHO</td><td>2015</td><td>5</td><td>easy</td></tr><tr><th>Swarm</th><td>Jaya Algorithm</td><td>JA</td><td>OriginalJA</td><td>2016</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>BaseJA</td><td>*</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>LevyJA</td><td>2021</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Whale Optimization Algorithm</td><td>WOA</td><td>OriginalWOA</td><td>2016</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>HI_WOA</td><td>2019</td><td>3</td><td>medium</td></tr><tr><th>Swarm</th><td>Dragonfly Optimization</td><td>DO</td><td>OriginalDO</td><td>2016</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>Bird Swarm Algorithm</td><td>BSA</td><td>OriginalBSA</td><td>2016</td><td>9</td><td>medium</td></tr><tr><th>Swarm</th><td>Spotted Hyena Optimizer</td><td>SHO</td><td>OriginalSHO</td><td>2017</td><td>4</td><td>medium</td></tr><tr><th>Swarm</th><td>Salp Swarm Optimization</td><td>SSO</td><td>OriginalSSO</td><td>2017</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Swarm Robotics Search And Rescue</td><td>SRSR</td><td>OriginalSRSR</td><td>2017</td><td>2</td><td>hard*</td></tr><tr><th>Swarm</th><td>Grasshopper Optimisation Algorithm</td><td>GOA</td><td>OriginalGOA</td><td>2017</td><td>4</td><td>easy</td></tr><tr><th>Swarm</th><td>Coyote Optimization Algorithm</td><td>COA</td><td>OriginalCOA</td><td>2018</td><td>3</td><td>medium</td></tr><tr><th>Swarm</th><td>Moth Search Algorithm</td><td>MSA</td><td>OriginalMSA</td><td>2018</td><td>5</td><td>easy</td></tr><tr><th>Swarm</th><td>Sea Lion Optimization</td><td>SLO</td><td>OriginalSLO</td><td>2019</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>ModifiedSLO</td><td>*</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>ImprovedSLO</td><td>2022</td><td>4</td><td>medium</td></tr><tr><th>Swarm</th><td>Nake Mole*Rat Algorithm</td><td>NMRA</td><td>OriginalNMRA</td><td>2019</td><td>3</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>ImprovedNMRA</td><td>*</td><td>4</td><td>medium</td></tr><tr><th>Swarm</th><td>Pathfinder Algorithm</td><td>PFA</td><td>OriginalPFA</td><td>2019</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>Sailfish Optimizer</td><td>SFO</td><td>OriginalSFO</td><td>2019</td><td>5</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>ImprovedSFO</td><td>*</td><td>3</td><td>medium</td></tr><tr><th>Swarm</th><td>Harris Hawks Optimization</td><td>HHO</td><td>OriginalHHO</td><td>2019</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>Manta Ray Foraging Optimization</td><td>MRFO</td><td>OriginalMRFO</td><td>2020</td><td>3</td><td>medium</td></tr><tr><th>Swarm</th><td>Bald Eagle Search</td><td>BES</td><td>OriginalBES</td><td>2020</td><td>7</td><td>easy</td></tr><tr><th>Swarm</th><td>Sparrow Search Algorithm</td><td>SSA</td><td>OriginalSSA</td><td>2020</td><td>5</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>BaseSSA</td><td>*</td><td>5</td><td>medium</td></tr><tr><th>Swarm</th><td>Hunger Games Search</td><td>HGS</td><td>OriginalHGS</td><td>2021</td><td>4</td><td>medium</td></tr><tr><th>Swarm</th><td>Aquila Optimizer</td><td>AO</td><td>OriginalAO</td><td>2021</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Hybrid Grey Wolf * Whale Optimization Algorithm</td><td>GWO</td><td>GWO_WOA</td><td>2022</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Marine Predators Algorithm</td><td>MPA</td><td>OriginalMPA</td><td>2020</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>Honey Badger Algorithm</td><td>HBA</td><td>OriginalHBA</td><td>2022</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Sand Cat Swarm Optimization</td><td>SCSO</td><td>OriginalSCSO</td><td>2022</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Tuna Swarm Optimization</td><td>TSO</td><td>OriginalTSO</td><td>2021</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>African Vultures Optimization Algorithm</td><td>AVOA</td><td>OriginalAVOA</td><td>2022</td><td>7</td><td>medium</td></tr><tr><th>Swarm</th><td>Artificial Gorilla Troops Optimization</td><td>AGTO</td><td>OriginalAGTO</td><td>2021</td><td>5</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>MGTO</td><td>2023</td><td>3</td><td>medium</td></tr><tr><th>Swarm</th><td>Artificial Rabbits Optimization</td><td>ARO</td><td>OriginalARO</td><td>2022</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>LARO</td><td>2022</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>IARO</td><td>2022</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Egret Swarm Optimization Algorithm</td><td>ESOA</td><td>OriginalESOA</td><td>2022</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>Fox Optimizer</td><td>FOX</td><td>OriginalFOX</td><td>2023</td><td>4</td><td>easy</td></tr><tr><th>Swarm</th><td>Golden Jackal Optimization</td><td>GJO</td><td>OriginalGJO</td><td>2022</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Giant Trevally Optimization</td><td>GTO</td><td>OriginalGTO</td><td>2022</td><td>4</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>Matlab101GTO</td><td>2022</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>Matlab102GTO</td><td>2023</td><td>2</td><td>hard</td></tr><tr><th>Swarm</th><td>Mountain Gazelle Optimizer</td><td>MGO</td><td>OriginalMGO</td><td>2022</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Sea-Horse Optimization</td><td>SeaHO</td><td>OriginalSeaHO</td><td>2022</td><td>2</td><td>medium</td></tr><tr><th>***</th><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td></tr><tr><th>Physics</th><td>Simulated Annealling</td><td>SA</td><td>OriginalSA</td><td>1983</td><td>9</td><td>medium</td></tr><tr><th>Physics</th><td>*</td><td>*</td><td>GaussianSA</td><td>*</td><td>5</td><td>medium</td></tr><tr><th>Physics</th><td>*</td><td>*</td><td>SwarmSA</td><td>1987</td><td>9</td><td>medium</td></tr><tr><th>Physics</th><td>Wind Driven Optimization</td><td>WDO</td><td>OriginalWDO</td><td>2013</td><td>7</td><td>easy</td></tr><tr><th>Physics</th><td>Multi*Verse Optimizer</td><td>MVO</td><td>OriginalMVO</td><td>2016</td><td>4</td><td>easy</td></tr><tr><th>Physics</th><td>*</td><td>*</td><td>BaseMVO</td><td>*</td><td>4</td><td>easy</td></tr><tr><th>Physics</th><td>Tug of War Optimization</td><td>TWO</td><td>OriginalTWO</td><td>2016</td><td>2</td><td>easy</td></tr><tr><th>Physics</th><td>*</td><td>*</td><td>OppoTWO</td><td>*</td><td>2</td><td>medium</td></tr><tr><th>Physics</th><td>*</td><td>*</td><td>LevyTWO</td><td>*</td><td>2</td><td>medium</td></tr><tr><th>Physics</th><td>*</td><td>*</td><td>EnhancedTWO</td><td>2020</td><td>2</td><td>medium</td></tr><tr><th>Physics</th><td>Electromagnetic Field Optimization</td><td>EFO</td><td>OriginalEFO</td><td>2016</td><td>6</td><td>easy</td></tr><tr><th>Physics</th><td>*</td><td>*</td><td>BaseEFO</td><td>*</td><td>6</td><td>medium</td></tr><tr><th>Physics</th><td>Nuclear Reaction Optimization</td><td>NRO</td><td>OriginalNRO</td><td>2019</td><td>2</td><td>hard*</td></tr><tr><th>Physics</th><td>Henry Gas Solubility Optimization</td><td>HGSO</td><td>OriginalHGSO</td><td>2019</td><td>3</td><td>medium</td></tr><tr><th>Physics</th><td>Atom Search Optimization</td><td>ASO</td><td>OriginalASO</td><td>2019</td><td>4</td><td>medium</td></tr><tr><th>Physics</th><td>Equilibrium Optimizer</td><td>EO</td><td>OriginalEO</td><td>2019</td><td>2</td><td>easy</td></tr><tr><th>Physics</th><td>*</td><td>*</td><td>ModifiedEO</td><td>2020</td><td>2</td><td>medium</td></tr><tr><th>Physics</th><td>*</td><td>*</td><td>AdaptiveEO</td><td>2020</td><td>2</td><td>medium</td></tr><tr><th>Physics</th><td>Archimedes Optimization Algorithm</td><td>ArchOA</td><td>OriginalArchOA</td><td>2021</td><td>8</td><td>medium</td></tr><tr><th>Physics</th><td>Chernobyl Disaster Optimization</td><td>CDO</td><td>OriginalCDO</td><td>2023</td><td>2</td><td>easy</td></tr><tr><th>Physics</th><td>Energy Valley Optimization</td><td>EVO</td><td>OriginalEVO</td><td>2023</td><td>2</td><td>medium</td></tr><tr><th>Physics</th><td>Fick&#39;s Law Algorithm</td><td>FLA</td><td>OriginalFLA</td><td>2023</td><td>8</td><td>hard</td></tr><tr><th>Physics</th><td>Physical Phenomenon of RIME-ice</td><td>RIME</td><td>OriginalRIME</td><td>2023</td><td>3</td><td>easy</td></tr><tr><th>***</th><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td></tr><tr><th>Human</th><td>Culture Algorithm</td><td>CA</td><td>OriginalCA</td><td>1994</td><td>3</td><td>easy</td></tr><tr><th>Human</th><td>Imperialist Competitive Algorithm</td><td>ICA</td><td>OriginalICA</td><td>2007</td><td>8</td><td>hard*</td></tr><tr><th>Human</th><td>Teaching Learning*based Optimization</td><td>TLO</td><td>OriginalTLO</td><td>2011</td><td>2</td><td>easy</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>BaseTLO</td><td>2012</td><td>2</td><td>easy</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>ITLO</td><td>2013</td><td>3</td><td>medium</td></tr><tr><th>Human</th><td>Brain Storm Optimization</td><td>BSO</td><td>OriginalBSO</td><td>2011</td><td>8</td><td>medium</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>ImprovedBSO</td><td>2017</td><td>7</td><td>medium</td></tr><tr><th>Human</th><td>Queuing Search Algorithm</td><td>QSA</td><td>OriginalQSA</td><td>2019</td><td>2</td><td>hard</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>BaseQSA</td><td>*</td><td>2</td><td>hard</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>OppoQSA</td><td>*</td><td>2</td><td>hard</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>LevyQSA</td><td>*</td><td>2</td><td>hard</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>ImprovedQSA</td><td>2021</td><td>2</td><td>hard</td></tr><tr><th>Human</th><td>Search And Rescue Optimization</td><td>SARO</td><td>OriginalSARO</td><td>2019</td><td>4</td><td>medium</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>BaseSARO</td><td>*</td><td>4</td><td>medium</td></tr><tr><th>Human</th><td>Life Choice*Based Optimization </td><td>LCO</td><td>OriginalLCO</td><td>2019</td><td>3</td><td>easy</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>BaseLCO</td><td>*</td><td>3</td><td>easy</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>ImprovedLCO</td><td>*</td><td>2</td><td>easy</td></tr><tr><th>Human</th><td>Social Ski*Driver Optimization</td><td>SSDO</td><td>OriginalSSDO</td><td>2019</td><td>2</td><td>easy</td></tr><tr><th>Human</th><td>Gaining Sharing Knowledge*based Algorithm</td><td>GSKA</td><td>OriginalGSKA</td><td>2019</td><td>6</td><td>medium</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>BaseGSKA</td><td>*</td><td>4</td><td>medium</td></tr><tr><th>Human</th><td>Coronavirus Herd Immunity Optimization</td><td>CHIO</td><td>OriginalCHIO</td><td>2020</td><td>4</td><td>medium</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>BaseCHIO</td><td>*</td><td>4</td><td>medium</td></tr><tr><th>Human</th><td>Forensic*Based Investigation Optimization</td><td>FBIO</td><td>OriginalFBIO</td><td>2020</td><td>2</td><td>medium</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>BaseFBIO</td><td>*</td><td>2</td><td>medium</td></tr><tr><th>Human</th><td>Battle Royale Optimization</td><td>BRO</td><td>OriginalBRO</td><td>2020</td><td>3</td><td>medium</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>BaseBRO</td><td>*</td><td>3</td><td>medium</td></tr><tr><th>Human</th><td>Student Psychology Based Optimization</td><td>SPBO</td><td>OriginalSPBO</td><td>2020</td><td>2</td><td>medium</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>DevSPBO</td><td>*</td><td>2</td><td>medium</td></tr><tr><th>Human</th><td>Heap-based Optimization</td><td>HBO</td><td>OriginalHBO</td><td>2020</td><td>3</td><td>medium</td></tr><tr><th>Human</th><td>Human Conception Optimization</td><td>HCO</td><td>OriginalHCO</td><td>2022</td><td>6</td><td>medium</td></tr><tr><th>Human</th><td>Dwarf Mongoose Optimization Algorithm</td><td>DMOA</td><td>OriginalDMOA</td><td>2022</td><td>4</td><td>medium</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>DevDMOA</td><td>*</td><td>3</td><td>medium</td></tr><tr><th>Human</th><td>War Strategy Optimization</td><td>WarSO</td><td>OriginalWarSO</td><td>2022</td><td>3</td><td>easy</td></tr><tr><th>***</th><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td></tr><tr><th>Bio</th><td>Invasive Weed Optimization</td><td>IWO</td><td>OriginalIWO</td><td>2006</td><td>7</td><td>easy</td></tr><tr><th>Bio</th><td>Biogeography*Based Optimization</td><td>BBO</td><td>OriginalBBO</td><td>2008</td><td>4</td><td>easy</td></tr><tr><th>Bio</th><td>*</td><td>*</td><td>BaseBBO</td><td>*</td><td>4</td><td>easy</td></tr><tr><th>Bio</th><td>Virus Colony Search</td><td>VCS</td><td>OriginalVCS</td><td>2016</td><td>4</td><td>hard*</td></tr><tr><th>Bio</th><td>*</td><td>*</td><td>BaseVCS</td><td>*</td><td>4</td><td>hard*</td></tr><tr><th>Bio</th><td>Satin Bowerbird Optimizer</td><td>SBO</td><td>OriginalSBO</td><td>2017</td><td>5</td><td>easy</td></tr><tr><th>Bio</th><td>*</td><td>*</td><td>BaseSBO</td><td>*</td><td>5</td><td>easy</td></tr><tr><th>Bio</th><td>Earthworm Optimisation Algorithm</td><td>EOA</td><td>OriginalEOA</td><td>2018</td><td>8</td><td>medium</td></tr><tr><th>Bio</th><td>Wildebeest Herd Optimization</td><td>WHO</td><td>OriginalWHO</td><td>2019</td><td>12</td><td>hard</td></tr><tr><th>Bio</th><td>Slime Mould Algorithm</td><td>SMA</td><td>OriginalSMA</td><td>2020</td><td>3</td><td>easy</td></tr><tr><th>Bio</th><td>*</td><td>*</td><td>BaseSMA</td><td>*</td><td>3</td><td>easy</td></tr><tr><th>Bio</th><td>Barnacles Mating Optimizer</td><td>BMO</td><td>OriginalBMO</td><td>2018</td><td>3</td><td>easy</td></tr><tr><th>Bio</th><td>Tunicate Swarm Algorithm</td><td>TSA</td><td>OriginalTSA</td><td>2020</td><td>2</td><td>easy</td></tr><tr><th>Bio</th><td>Symbiotic Organisms Search</td><td>SOS</td><td>OriginalSOS</td><td>2014</td><td>2</td><td>medium</td></tr><tr><th>Bio</th><td>Seagull Optimization Algorithm</td><td>SOA</td><td>OriginalSOA</td><td>2019</td><td>3</td><td>easy</td></tr><tr><th>Bio</th><td>*</td><td>*</td><td>DevSOA</td><td>*</td><td>3</td><td>easy</td></tr><tr><th>Bio</th><td>Brown-Bear Optimization Algorithm</td><td>BBOA</td><td>OriginalBBOA</td><td>2023</td><td>2</td><td>medium</td></tr><tr><th>Bio</th><td>Tree Physiology Optimization</td><td>TPO</td><td>OriginalTPO</td><td>2017</td><td>5</td><td>medium</td></tr><tr><th>***</th><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td></tr><tr><th>System</th><td>Germinal Center Optimization</td><td>GCO</td><td>OriginalGCO</td><td>2018</td><td>4</td><td>medium</td></tr><tr><th>System</th><td>*</td><td>*</td><td>BaseGCO</td><td>*</td><td>4</td><td>medium</td></tr><tr><th>System</th><td>Water Cycle Algorithm</td><td>WCA</td><td>OriginalWCA</td><td>2012</td><td>5</td><td>medium</td></tr><tr><th>System</th><td>Artificial Ecosystem*based Optimization</td><td>AEO</td><td>OriginalAEO</td><td>2019</td><td>2</td><td>easy</td></tr><tr><th>System</th><td>*</td><td>*</td><td>EnhancedAEO</td><td>2020</td><td>2</td><td>medium</td></tr><tr><th>System</th><td>*</td><td>*</td><td>ModifiedAEO</td><td>2020</td><td>2</td><td>medium</td></tr><tr><th>System</th><td>*</td><td>*</td><td>ImprovedAEO</td><td>2021</td><td>2</td><td>medium</td></tr><tr><th>System</th><td>*</td><td>*</td><td>AugmentedAEO</td><td>2022</td><td>2</td><td>medium</td></tr><tr><th>***</th><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td></tr><tr><th>Math</th><td>Hill Climbing</td><td>HC</td><td>OriginalHC</td><td>1993</td><td>3</td><td>easy</td></tr><tr><th>Math</th><td>*</td><td>*</td><td>SwarmHC</td><td>*</td><td>3</td><td>easy</td></tr><tr><th>Math</th><td>Cross-Entropy Method </td><td>CEM</td><td>OriginalCEM</td><td>1997</td><td>4</td><td>easy</td></tr><tr><th>Math</th><td>Tabu Search</td><td>TS</td><td>OriginalTS</td><td>2004</td><td>5</td><td>easy</td></tr><tr><th>Math</th><td>Sine Cosine Algorithm</td><td>SCA</td><td>OriginalSCA</td><td>2016</td><td>2</td><td>easy</td></tr><tr><th>Math</th><td>*</td><td>*</td><td>BaseSCA</td><td>*</td><td>2</td><td>easy</td></tr><tr><th>Math</th><td>*</td><td>*</td><td>QLE-SCA</td><td>2022</td><td>4</td><td>hard</td></tr><tr><th>Math</th><td>Gradient-Based Optimizer</td><td>GBO</td><td>OriginalGBO</td><td>2020</td><td>5</td><td>medium</td></tr><tr><th>Math</th><td>Arithmetic Optimization Algorithm</td><td>AOA</td><td>OrginalAOA</td><td>2021</td><td>6</td><td>easy</td></tr><tr><th>Math</th><td>Chaos Game Optimization</td><td>CGO</td><td>OriginalCGO</td><td>2021</td><td>2</td><td>easy</td></tr><tr><th>Math</th><td>Pareto-like Sequential Sampling</td><td>PSS</td><td>OriginalPSS</td><td>2021</td><td>4</td><td>medium</td></tr><tr><th>Math</th><td>weIghted meaN oF vectOrs</td><td>INFO</td><td>OriginalINFO</td><td>2022</td><td>2</td><td>medium</td></tr><tr><th>Math</th><td>RUNge Kutta optimizer</td><td>RUN</td><td>OriginalRUN</td><td>2021</td><td>2</td><td>hard</td></tr><tr><th>Math</th><td>Circle Search Algorithm</td><td>CircleSA</td><td>OriginalCircleSA</td><td>2022</td><td>3</td><td>easy</td></tr><tr><th>Math</th><td>Success History Intelligent Optimization</td><td>SHIO</td><td>OriginalSHIO</td><td>2022</td><td>2</td><td>easy</td></tr><tr><th>***</th><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td></tr><tr><th>Music</th><td>Harmony Search</td><td>HS</td><td>OriginalHS</td><td>2001</td><td>4</td><td>easy</td></tr><tr><th>Music</th><td>*</td><td>*</td><td>BaseHS</td><td>*</td><td>4</td><td>easy</td></tr><tr><th>+++</th><td>+++</td><td>+++</td><td>+++</td><td>+++</td><td>+++</td><td>+++</td></tr><tr><th>WARNING</th><td>PLEASE CHECK PLAGIARISM BEFORE USING BELOW ALGORITHMS</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td></tr><tr><th>Swarm</th><td>Coati Optimization Algorithm</td><td>CoatiOA</td><td>OriginalCoatiOA</td><td>2023</td><td>2</td><td>easy </td></tr><tr><th>Swarm</th><td>Fennec For Optimization</td><td>FFO</td><td>OriginalFFO</td><td>2022</td><td>2</td><td>easy </td></tr><tr><th>Swarm</th><td>Northern Goshawk Optimization</td><td>NGO</td><td>OriginalNGO</td><td>2021</td><td>2</td><td>easy </td></tr><tr><th>Swarm</th><td>Osprey Optimization Algorithm</td><td>OOA</td><td>OriginalOOA</td><td>2023</td><td>2</td><td>easy </td></tr><tr><th>Swarm</th><td>Pelican Optimization Algorithm </td><td>POA</td><td>OriginalPOA</td><td>2023</td><td>2</td><td>easy </td></tr><tr><th>Swarm</th><td>Serval Optimization Algorithm</td><td>ServalOA</td><td>OriginalServalOA</td><td>2022</td><td>2</td><td>easy </td></tr><tr><th>Swarm</th><td>Siberian Tiger Optimization</td><td>STO</td><td>OriginalSTO</td><td>2022</td><td>2</td><td>easy </td></tr><tr><th>Swarm</th><td>Tasmanian Devil Optimization</td><td>TDO</td><td>OriginalTDO</td><td>2022</td><td>2</td><td>easy </td></tr><tr><th>Swarm</th><td>Walrus Optimization Algorithm</td><td>WaOA</td><td>OriginalWaOA</td><td>2022</td><td>2</td><td>easy </td></tr><tr><th>Swarm</th><td>Zebra Optimization Algorithm </td><td>ZOA</td><td>OriginalZOA</td><td>2022</td><td>2</td><td>easy </td></tr><tr><th>Human</th><td>Teamwork Optimization Algorithm</td><td>TOA</td><td>OriginalTOA</td><td>2021</td><td>2</td><td>easy</td></tr></tbody></table>)
+
+
+<table>
+   <thead>
+      <tr>
+         <th>Group</th>
+         <th>Name</th>
+         <th>Module</th>
+         <th>Class</th>
+         <th>Year</th>
+         <th>Paras</th>
+         <th>Difficulty</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <th>Evolutionary</th>
+         <td>Evolutionary Programming</td>
+         <td>EP</td>
+         <td>OriginalEP</td>
+         <td>1964</td>
+         <td>3</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Evolutionary</th>
+         <td>*</td>
+         <td>*</td>
+         <td>LevyEP</td>
+         <td>*</td>
+         <td>3</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Evolutionary</th>
+         <td>Evolution Strategies</td>
+         <td>ES</td>
+         <td>OriginalES</td>
+         <td>1971</td>
+         <td>3</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Evolutionary</th>
+         <td>*</td>
+         <td>*</td>
+         <td>LevyES</td>
+         <td>*</td>
+         <td>3</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Evolutionary</th>
+         <td>*</td>
+         <td>*</td>
+         <td>CMA_ES</td>
+         <td>2003</td>
+         <td>2</td>
+         <td>hard</td>
+      </tr>
+      <tr>
+         <th>Evolutionary</th>
+         <td>*</td>
+         <td>*</td>
+         <td>Simple_CMA_ES</td>
+         <td>2023</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Evolutionary</th>
+         <td>Memetic Algorithm</td>
+         <td>MA</td>
+         <td>OriginalMA</td>
+         <td>1989</td>
+         <td>7</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Evolutionary</th>
+         <td>Genetic Algorithm</td>
+         <td>GA</td>
+         <td>BaseGA</td>
+         <td>1992</td>
+         <td>4</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Evolutionary</th>
+         <td>*</td>
+         <td>*</td>
+         <td>SingleGA</td>
+         <td>*</td>
+         <td>7</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Evolutionary</th>
+         <td>*</td>
+         <td>*</td>
+         <td>MultiGA</td>
+         <td>*</td>
+         <td>7</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Evolutionary</th>
+         <td>*</td>
+         <td>*</td>
+         <td>EliteSingleGA</td>
+         <td>*</td>
+         <td>10</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Evolutionary</th>
+         <td>*</td>
+         <td>*</td>
+         <td>EliteMultiGA</td>
+         <td>*</td>
+         <td>10</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Evolutionary</th>
+         <td>Differential Evolution</td>
+         <td>DE</td>
+         <td>BaseDE</td>
+         <td>1997</td>
+         <td>5</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Evolutionary</th>
+         <td>*</td>
+         <td>*</td>
+         <td>JADE</td>
+         <td>2009</td>
+         <td>6</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Evolutionary</th>
+         <td>*</td>
+         <td>*</td>
+         <td>SADE</td>
+         <td>2005</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Evolutionary</th>
+         <td>*</td>
+         <td>*</td>
+         <td>SAP_DE</td>
+         <td>2006</td>
+         <td>3</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Evolutionary</th>
+         <td>Success-History Adaptation Differential Evolution</td>
+         <td>SHADE</td>
+         <td>OriginalSHADE</td>
+         <td>2013</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Evolutionary</th>
+         <td>*</td>
+         <td>*</td>
+         <td>L_SHADE</td>
+         <td>2014</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Evolutionary</th>
+         <td>Flower Pollination Algorithm</td>
+         <td>FPA</td>
+         <td>OriginalFPA</td>
+         <td>2014</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Evolutionary</th>
+         <td>Coral Reefs Optimization</td>
+         <td>CRO</td>
+         <td>OriginalCRO</td>
+         <td>2014</td>
+         <td>11</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Evolutionary</th>
+         <td>*</td>
+         <td>*</td>
+         <td>OCRO</td>
+         <td>2019</td>
+         <td>12</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>***</th>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Particle Swarm Optimization</td>
+         <td>PSO</td>
+         <td>OriginalPSO</td>
+         <td>1995</td>
+         <td>6</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>PPSO</td>
+         <td>2019</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>HPSO_TVAC</td>
+         <td>2017</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>C_PSO</td>
+         <td>2015</td>
+         <td>6</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>CL_PSO</td>
+         <td>2006</td>
+         <td>6</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Bacterial Foraging Optimization</td>
+         <td>BFO</td>
+         <td>OriginalBFO</td>
+         <td>2002</td>
+         <td>10</td>
+         <td>hard</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>ABFO</td>
+         <td>2019</td>
+         <td>8</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Bees Algorithm</td>
+         <td>BeesA</td>
+         <td>OriginalBeesA</td>
+         <td>2005</td>
+         <td>8</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>ProbBeesA</td>
+         <td>2015</td>
+         <td>5</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>CleverBookBeesA</td>
+         <td>2006</td>
+         <td>8</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Cat Swarm Optimization</td>
+         <td>CSO</td>
+         <td>OriginalCSO</td>
+         <td>2006</td>
+         <td>11</td>
+         <td>hard</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Artificial Bee Colony</td>
+         <td>ABC</td>
+         <td>OriginalABC</td>
+         <td>2007</td>
+         <td>8</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Ant Colony Optimization</td>
+         <td>ACOR</td>
+         <td>OriginalACOR</td>
+         <td>2008</td>
+         <td>5</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Cuckoo Search Algorithm</td>
+         <td>CSA</td>
+         <td>OriginalCSA</td>
+         <td>2009</td>
+         <td>3</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Firefly Algorithm </td>
+         <td>FFA</td>
+         <td>OriginalFFA</td>
+         <td>2009</td>
+         <td>8</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Fireworks Algorithm</td>
+         <td>FA</td>
+         <td>OriginalFA</td>
+         <td>2010</td>
+         <td>7</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Bat Algorithm</td>
+         <td>BA</td>
+         <td>OriginalBA</td>
+         <td>2010</td>
+         <td>6</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>AdaptiveBA</td>
+         <td>2010</td>
+         <td>8</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>ModifiedBA</td>
+         <td>*</td>
+         <td>5</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Fruit-fly Optimization Algorithm</td>
+         <td>FOA</td>
+         <td>OriginalFOA</td>
+         <td>2012</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseFOA</td>
+         <td>*</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>WhaleFOA</td>
+         <td>2020</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Social Spider Optimization</td>
+         <td>SSpiderO</td>
+         <td>OriginalSSpiderO</td>
+         <td>2018</td>
+         <td>4</td>
+         <td>hard*</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Spider Monkey Optimization</td>
+         <td>SMO</td>
+         <td>DevSMO</td>
+         <td>2014</td>
+         <td>4</td>
+         <td>hard</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Grey Wolf Optimizer</td>
+         <td>GWO</td>
+         <td>OriginalGWO</td>
+         <td>2014</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>RW_GWO</td>
+         <td>2019</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>GWO_WOA</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>IGWO</td>
+         <td>2018</td>
+         <td>4</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>ChaoticGWO</td>
+         <td>2018</td>
+         <td>4</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>FuzzyGWO</td>
+         <td>2017</td>
+         <td>3</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>IncrementalGWO</td>
+         <td>2021</td>
+         <td>3</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>ExGWO</td>
+         <td>2021</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>DS_GWO</td>
+         <td>2022</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>IOBL_GWO</td>
+         <td>2021</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>OGWO</td>
+         <td>2021</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>ER_GWO</td>
+         <td>2020</td>
+         <td>5</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>CG_GWO</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>hard</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Social Spider Algorithm</td>
+         <td>SSpiderA</td>
+         <td>OriginalSSpiderA</td>
+         <td>2015</td>
+         <td>5</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Ant Lion Optimizer</td>
+         <td>ALO</td>
+         <td>OriginalALO</td>
+         <td>2015</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseALO</td>
+         <td>*</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Moth Flame Optimization</td>
+         <td>MFO</td>
+         <td>OriginalMFO</td>
+         <td>2015</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseMFO</td>
+         <td>*</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Elephant Herding Optimization</td>
+         <td>EHO</td>
+         <td>OriginalEHO</td>
+         <td>2015</td>
+         <td>5</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Jaya Algorithm</td>
+         <td>JA</td>
+         <td>OriginalJA</td>
+         <td>2016</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseJA</td>
+         <td>*</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>LevyJA</td>
+         <td>2021</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Whale Optimization Algorithm</td>
+         <td>WOA</td>
+         <td>OriginalWOA</td>
+         <td>2016</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>HI_WOA</td>
+         <td>2019</td>
+         <td>3</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Dragonfly Optimization</td>
+         <td>DO</td>
+         <td>OriginalDO</td>
+         <td>2016</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Bird Swarm Algorithm</td>
+         <td>BSA</td>
+         <td>OriginalBSA</td>
+         <td>2016</td>
+         <td>9</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Spotted Hyena Optimizer</td>
+         <td>SHO</td>
+         <td>OriginalSHO</td>
+         <td>2017</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Salp Swarm Optimization</td>
+         <td>SSO</td>
+         <td>OriginalSSO</td>
+         <td>2017</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Swarm Robotics Search And Rescue</td>
+         <td>SRSR</td>
+         <td>OriginalSRSR</td>
+         <td>2017</td>
+         <td>2</td>
+         <td>hard*</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Grasshopper Optimisation Algorithm</td>
+         <td>GOA</td>
+         <td>OriginalGOA</td>
+         <td>2017</td>
+         <td>4</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Coyote Optimization Algorithm</td>
+         <td>COA</td>
+         <td>OriginalCOA</td>
+         <td>2018</td>
+         <td>3</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Moth Search Algorithm</td>
+         <td>MSA</td>
+         <td>OriginalMSA</td>
+         <td>2018</td>
+         <td>5</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Squirrel Search Algorithm</td>
+         <td>SquirrelSA</td>
+         <td>OriginalSquirrelSA</td>
+         <td>2019</td>
+         <td>7</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Fitness Dependent Optimizer</td>
+         <td>FDO</td>
+         <td>OriginalFDO</td>
+         <td>2019</td>
+         <td>3</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Sea Lion Optimization</td>
+         <td>SLO</td>
+         <td>OriginalSLO</td>
+         <td>2019</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>ModifiedSLO</td>
+         <td>*</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>ImprovedSLO</td>
+         <td>2022</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Emperor Penguins Colony/td>
+         <td>EPC</td>
+         <td>DevEPC</td>
+         <td>2019</td>
+         <td>6</td>
+         <td>hard</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Nake Mole*Rat Algorithm</td>
+         <td>NMRA</td>
+         <td>OriginalNMRA</td>
+         <td>2019</td>
+         <td>3</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>ImprovedNMRA</td>
+         <td>*</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Pathfinder Algorithm</td>
+         <td>PFA</td>
+         <td>OriginalPFA</td>
+         <td>2019</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Sailfish Optimizer</td>
+         <td>SFO</td>
+         <td>OriginalSFO</td>
+         <td>2019</td>
+         <td>5</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>ImprovedSFO</td>
+         <td>*</td>
+         <td>3</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Harris Hawks Optimization</td>
+         <td>HHO</td>
+         <td>OriginalHHO</td>
+         <td>2019</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Manta Ray Foraging Optimization</td>
+         <td>MRFO</td>
+         <td>OriginalMRFO</td>
+         <td>2020</td>
+         <td>3</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Bald Eagle Search</td>
+         <td>BES</td>
+         <td>OriginalBES</td>
+         <td>2020</td>
+         <td>7</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Sparrow Search Algorithm</td>
+         <td>SSA</td>
+         <td>OriginalSSA</td>
+         <td>2020</td>
+         <td>5</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseSSA</td>
+         <td>*</td>
+         <td>5</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Hunger Games Search</td>
+         <td>HGS</td>
+         <td>OriginalHGS</td>
+         <td>2021</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Aquila Optimizer</td>
+         <td>AO</td>
+         <td>OriginalAO</td>
+         <td>2021</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>AAO</td>
+         <td>2024</td>
+         <td>4</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Hybrid Grey Wolf * Whale Optimization Algorithm</td>
+         <td>GWO</td>
+         <td>GWO_WOA</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Marine Predators Algorithm</td>
+         <td>MPA</td>
+         <td>OriginalMPA</td>
+         <td>2020</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Honey Badger Algorithm</td>
+         <td>HBA</td>
+         <td>OriginalHBA</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Sand Cat Swarm Optimization</td>
+         <td>SCSO</td>
+         <td>OriginalSCSO</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Tuna Swarm Optimization</td>
+         <td>TSO</td>
+         <td>OriginalTSO</td>
+         <td>2021</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>African Vultures Optimization Algorithm</td>
+         <td>AVOA</td>
+         <td>OriginalAVOA</td>
+         <td>2022</td>
+         <td>7</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Artificial Gorilla Troops Optimization</td>
+         <td>AGTO</td>
+         <td>OriginalAGTO</td>
+         <td>2021</td>
+         <td>5</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>MGTO</td>
+         <td>2023</td>
+         <td>3</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Artificial Rabbits Optimization</td>
+         <td>ARO</td>
+         <td>OriginalARO</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>LARO</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>IARO</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Egret Swarm Optimization Algorithm</td>
+         <td>ESOA</td>
+         <td>OriginalESOA</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Fox Optimizer</td>
+         <td>FOX</td>
+         <td>OriginalFOX</td>
+         <td>2023</td>
+         <td>4</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Golden Jackal Optimization</td>
+         <td>GJO</td>
+         <td>OriginalGJO</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Giant Trevally Optimization</td>
+         <td>GTO</td>
+         <td>OriginalGTO</td>
+         <td>2022</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>Matlab101GTO</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>*</td>
+         <td>*</td>
+         <td>Matlab102GTO</td>
+         <td>2023</td>
+         <td>2</td>
+         <td>hard</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Mountain Gazelle Optimizer</td>
+         <td>MGO</td>
+         <td>OriginalMGO</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Sea-Horse Optimization</td>
+         <td>SeaHO</td>
+         <td>OriginalSeaHO</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>***</th>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>Simulated Annealling</td>
+         <td>SA</td>
+         <td>OriginalSA</td>
+         <td>1983</td>
+         <td>9</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>*</td>
+         <td>*</td>
+         <td>GaussianSA</td>
+         <td>*</td>
+         <td>5</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>*</td>
+         <td>*</td>
+         <td>SwarmSA</td>
+         <td>1987</td>
+         <td>9</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>Wind Driven Optimization</td>
+         <td>WDO</td>
+         <td>OriginalWDO</td>
+         <td>2013</td>
+         <td>7</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>Multi*Verse Optimizer</td>
+         <td>MVO</td>
+         <td>OriginalMVO</td>
+         <td>2016</td>
+         <td>4</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseMVO</td>
+         <td>*</td>
+         <td>4</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>Tug of War Optimization</td>
+         <td>TWO</td>
+         <td>OriginalTWO</td>
+         <td>2016</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>*</td>
+         <td>*</td>
+         <td>OppoTWO</td>
+         <td>*</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>*</td>
+         <td>*</td>
+         <td>LevyTWO</td>
+         <td>*</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>*</td>
+         <td>*</td>
+         <td>EnhancedTWO</td>
+         <td>2020</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>Electromagnetic Field Optimization</td>
+         <td>EFO</td>
+         <td>OriginalEFO</td>
+         <td>2016</td>
+         <td>6</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseEFO</td>
+         <td>*</td>
+         <td>6</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>Nuclear Reaction Optimization</td>
+         <td>NRO</td>
+         <td>OriginalNRO</td>
+         <td>2019</td>
+         <td>2</td>
+         <td>hard*</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>Henry Gas Solubility Optimization</td>
+         <td>HGSO</td>
+         <td>OriginalHGSO</td>
+         <td>2019</td>
+         <td>3</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>Atom Search Optimization</td>
+         <td>ASO</td>
+         <td>OriginalASO</td>
+         <td>2019</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>Equilibrium Optimizer</td>
+         <td>EO</td>
+         <td>OriginalEO</td>
+         <td>2019</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>*</td>
+         <td>*</td>
+         <td>ModifiedEO</td>
+         <td>2020</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>*</td>
+         <td>*</td>
+         <td>AdaptiveEO</td>
+         <td>2020</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>Archimedes Optimization Algorithm</td>
+         <td>ArchOA</td>
+         <td>OriginalArchOA</td>
+         <td>2021</td>
+         <td>8</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>Chernobyl Disaster Optimization</td>
+         <td>CDO</td>
+         <td>OriginalCDO</td>
+         <td>2023</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>Energy Valley Optimization</td>
+         <td>EVO</td>
+         <td>OriginalEVO</td>
+         <td>2023</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>Fick&#39;s Law Algorithm</td>
+         <td>FLA</td>
+         <td>OriginalFLA</td>
+         <td>2023</td>
+         <td>8</td>
+         <td>hard</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>Physical Phenomenon of RIME-ice</td>
+         <td>RIME</td>
+         <td>OriginalRIME</td>
+         <td>2023</td>
+         <td>3</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Physics</th>
+         <td>Electrical Storm Optimization</td>
+         <td>ESO</td>
+         <td>OriginalESO</td>
+         <td>2025</td>
+         <td>2</td>
+         <td>hard</td>
+      </tr>
+      <tr>
+         <th>***</th>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>Culture Algorithm</td>
+         <td>CA</td>
+         <td>OriginalCA</td>
+         <td>1994</td>
+         <td>3</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>Imperialist Competitive Algorithm</td>
+         <td>ICA</td>
+         <td>OriginalICA</td>
+         <td>2007</td>
+         <td>8</td>
+         <td>hard*</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>Teaching Learning*based Optimization</td>
+         <td>TLO</td>
+         <td>OriginalTLO</td>
+         <td>2011</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseTLO</td>
+         <td>2012</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>*</td>
+         <td>*</td>
+         <td>ITLO</td>
+         <td>2013</td>
+         <td>3</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>Brain Storm Optimization</td>
+         <td>BSO</td>
+         <td>OriginalBSO</td>
+         <td>2011</td>
+         <td>8</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>*</td>
+         <td>*</td>
+         <td>ImprovedBSO</td>
+         <td>2017</td>
+         <td>7</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>Queuing Search Algorithm</td>
+         <td>QSA</td>
+         <td>OriginalQSA</td>
+         <td>2019</td>
+         <td>2</td>
+         <td>hard</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseQSA</td>
+         <td>*</td>
+         <td>2</td>
+         <td>hard</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>*</td>
+         <td>*</td>
+         <td>OppoQSA</td>
+         <td>*</td>
+         <td>2</td>
+         <td>hard</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>*</td>
+         <td>*</td>
+         <td>LevyQSA</td>
+         <td>*</td>
+         <td>2</td>
+         <td>hard</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>*</td>
+         <td>*</td>
+         <td>ImprovedQSA</td>
+         <td>2021</td>
+         <td>2</td>
+         <td>hard</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>Search And Rescue Optimization</td>
+         <td>SARO</td>
+         <td>OriginalSARO</td>
+         <td>2019</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseSARO</td>
+         <td>*</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>Life Choice*Based Optimization </td>
+         <td>LCO</td>
+         <td>OriginalLCO</td>
+         <td>2019</td>
+         <td>3</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseLCO</td>
+         <td>*</td>
+         <td>3</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>*</td>
+         <td>*</td>
+         <td>ImprovedLCO</td>
+         <td>*</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>Social Ski*Driver Optimization</td>
+         <td>SSDO</td>
+         <td>OriginalSSDO</td>
+         <td>2019</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>Gaining Sharing Knowledge*based Algorithm</td>
+         <td>GSKA</td>
+         <td>OriginalGSKA</td>
+         <td>2019</td>
+         <td>6</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseGSKA</td>
+         <td>*</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>Coronavirus Herd Immunity Optimization</td>
+         <td>CHIO</td>
+         <td>OriginalCHIO</td>
+         <td>2020</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseCHIO</td>
+         <td>*</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>Forensic*Based Investigation Optimization</td>
+         <td>FBIO</td>
+         <td>OriginalFBIO</td>
+         <td>2020</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseFBIO</td>
+         <td>*</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>Battle Royale Optimization</td>
+         <td>BRO</td>
+         <td>OriginalBRO</td>
+         <td>2020</td>
+         <td>3</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseBRO</td>
+         <td>*</td>
+         <td>3</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>Student Psychology Based Optimization</td>
+         <td>SPBO</td>
+         <td>OriginalSPBO</td>
+         <td>2020</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>*</td>
+         <td>*</td>
+         <td>DevSPBO</td>
+         <td>*</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>Heap-based Optimization</td>
+         <td>HBO</td>
+         <td>OriginalHBO</td>
+         <td>2020</td>
+         <td>3</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>Human Conception Optimization</td>
+         <td>HCO</td>
+         <td>OriginalHCO</td>
+         <td>2022</td>
+         <td>6</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>Ali baba and the Forty Thieves</td>
+         <td>AFT</td>
+         <td>OriginalAFT</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>Child Drawing Development Optimization</td>
+         <td>CDDO</td>
+         <td>OriginalCDDO</td>
+         <td>2022</td>
+         <td>4</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>Dwarf Mongoose Optimization Algorithm</td>
+         <td>DMOA</td>
+         <td>OriginalDMOA</td>
+         <td>2022</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>*</td>
+         <td>*</td>
+         <td>DevDMOA</td>
+         <td>*</td>
+         <td>3</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>War Strategy Optimization</td>
+         <td>WarSO</td>
+         <td>OriginalWarSO</td>
+         <td>2022</td>
+         <td>3</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>***</th>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+      </tr>
+      <tr>
+         <th>Bio</th>
+         <td>Invasive Weed Optimization</td>
+         <td>IWO</td>
+         <td>OriginalIWO</td>
+         <td>2006</td>
+         <td>7</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Bio</th>
+         <td>Biogeography*Based Optimization</td>
+         <td>BBO</td>
+         <td>OriginalBBO</td>
+         <td>2008</td>
+         <td>4</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Bio</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseBBO</td>
+         <td>*</td>
+         <td>4</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Bio</th>
+         <td>Virus Colony Search</td>
+         <td>VCS</td>
+         <td>OriginalVCS</td>
+         <td>2016</td>
+         <td>4</td>
+         <td>hard*</td>
+      </tr>
+      <tr>
+         <th>Bio</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseVCS</td>
+         <td>*</td>
+         <td>4</td>
+         <td>hard*</td>
+      </tr>
+      <tr>
+         <th>Bio</th>
+         <td>Satin Bowerbird Optimizer</td>
+         <td>SBO</td>
+         <td>OriginalSBO</td>
+         <td>2017</td>
+         <td>5</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Bio</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseSBO</td>
+         <td>*</td>
+         <td>5</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Bio</th>
+         <td>Earthworm Optimisation Algorithm</td>
+         <td>EOA</td>
+         <td>OriginalEOA</td>
+         <td>2018</td>
+         <td>8</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Bio</th>
+         <td>Wildebeest Herd Optimization</td>
+         <td>WHO</td>
+         <td>OriginalWHO</td>
+         <td>2019</td>
+         <td>12</td>
+         <td>hard</td>
+      </tr>
+      <tr>
+         <th>Bio</th>
+         <td>Slime Mould Algorithm</td>
+         <td>SMA</td>
+         <td>OriginalSMA</td>
+         <td>2020</td>
+         <td>3</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Bio</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseSMA</td>
+         <td>*</td>
+         <td>3</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Bio</th>
+         <td>Barnacles Mating Optimizer</td>
+         <td>BMO</td>
+         <td>OriginalBMO</td>
+         <td>2018</td>
+         <td>3</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Bio</th>
+         <td>Tunicate Swarm Algorithm</td>
+         <td>TSA</td>
+         <td>OriginalTSA</td>
+         <td>2020</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Bio</th>
+         <td>Symbiotic Organisms Search</td>
+         <td>SOS</td>
+         <td>OriginalSOS</td>
+         <td>2014</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Bio</th>
+         <td>Seagull Optimization Algorithm</td>
+         <td>SOA</td>
+         <td>OriginalSOA</td>
+         <td>2019</td>
+         <td>3</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Bio</th>
+         <td>*</td>
+         <td>*</td>
+         <td>DevSOA</td>
+         <td>*</td>
+         <td>3</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Bio</th>
+         <td>Brown-Bear Optimization Algorithm</td>
+         <td>BBOA</td>
+         <td>OriginalBBOA</td>
+         <td>2023</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Bio</th>
+         <td>Tree Physiology Optimization</td>
+         <td>TPO</td>
+         <td>OriginalTPO</td>
+         <td>2017</td>
+         <td>5</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>***</th>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+      </tr>
+      <tr>
+         <th>System</th>
+         <td>Germinal Center Optimization</td>
+         <td>GCO</td>
+         <td>OriginalGCO</td>
+         <td>2018</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>System</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseGCO</td>
+         <td>*</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>System</th>
+         <td>Water Cycle Algorithm</td>
+         <td>WCA</td>
+         <td>OriginalWCA</td>
+         <td>2012</td>
+         <td>5</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>System</th>
+         <td>Artificial Ecosystem*based Optimization</td>
+         <td>AEO</td>
+         <td>OriginalAEO</td>
+         <td>2019</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>System</th>
+         <td>*</td>
+         <td>*</td>
+         <td>EnhancedAEO</td>
+         <td>2020</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>System</th>
+         <td>*</td>
+         <td>*</td>
+         <td>ModifiedAEO</td>
+         <td>2020</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>System</th>
+         <td>*</td>
+         <td>*</td>
+         <td>ImprovedAEO</td>
+         <td>2021</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>System</th>
+         <td>*</td>
+         <td>*</td>
+         <td>AugmentedAEO</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>***</th>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+      </tr>
+      <tr>
+         <th>Math</th>
+         <td>Hill Climbing</td>
+         <td>HC</td>
+         <td>OriginalHC</td>
+         <td>1993</td>
+         <td>3</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Math</th>
+         <td>*</td>
+         <td>*</td>
+         <td>SwarmHC</td>
+         <td>*</td>
+         <td>3</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Math</th>
+         <td>Cross-Entropy Method </td>
+         <td>CEM</td>
+         <td>OriginalCEM</td>
+         <td>1997</td>
+         <td>4</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Math</th>
+         <td>Tabu Search</td>
+         <td>TS</td>
+         <td>OriginalTS</td>
+         <td>2004</td>
+         <td>5</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Math</th>
+         <td>Sine Cosine Algorithm</td>
+         <td>SCA</td>
+         <td>OriginalSCA</td>
+         <td>2016</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Math</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseSCA</td>
+         <td>*</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Math</th>
+         <td>*</td>
+         <td>*</td>
+         <td>QLE-SCA</td>
+         <td>2022</td>
+         <td>4</td>
+         <td>hard</td>
+      </tr>
+      <tr>
+         <th>Math</th>
+         <td>Gradient-Based Optimizer</td>
+         <td>GBO</td>
+         <td>OriginalGBO</td>
+         <td>2020</td>
+         <td>5</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Math</th>
+         <td>Arithmetic Optimization Algorithm</td>
+         <td>AOA</td>
+         <td>OrginalAOA</td>
+         <td>2021</td>
+         <td>6</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Math</th>
+         <td>Chaos Game Optimization</td>
+         <td>CGO</td>
+         <td>OriginalCGO</td>
+         <td>2021</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Math</th>
+         <td>Pareto-like Sequential Sampling</td>
+         <td>PSS</td>
+         <td>OriginalPSS</td>
+         <td>2021</td>
+         <td>4</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Math</th>
+         <td>weIghted meaN oF vectOrs</td>
+         <td>INFO</td>
+         <td>OriginalINFO</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>medium</td>
+      </tr>
+      <tr>
+         <th>Math</th>
+         <td>RUNge Kutta optimizer</td>
+         <td>RUN</td>
+         <td>OriginalRUN</td>
+         <td>2021</td>
+         <td>2</td>
+         <td>hard</td>
+      </tr>
+      <tr>
+         <th>Math</th>
+         <td>Circle Search Algorithm</td>
+         <td>CircleSA</td>
+         <td>OriginalCircleSA</td>
+         <td>2022</td>
+         <td>3</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Math</th>
+         <td>Success History Intelligent Optimization</td>
+         <td>SHIO</td>
+         <td>OriginalSHIO</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>***</th>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+         <td>***</td>
+      </tr>
+      <tr>
+         <th>Music</th>
+         <td>Harmony Search</td>
+         <td>HS</td>
+         <td>OriginalHS</td>
+         <td>2001</td>
+         <td>4</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>Music</th>
+         <td>*</td>
+         <td>*</td>
+         <td>BaseHS</td>
+         <td>*</td>
+         <td>4</td>
+         <td>easy</td>
+      </tr>
+      <tr>
+         <th>SOTA</th>
+         <td>Ensemble sinusoidal differential covariance matrix adaptation with Euclidean neighborhood</td>
+         <td>LSHADEcnEpSin</td>
+         <td>OriginalLSHADEcnEpSin</td>
+         <td>2017</td>
+         <td>9</td>
+         <td>hard</td>
+      </tr>
+      <tr>
+         <th>SOTA</th>
+         <td>Improved Multi-operator Differential Evolution Algorithm</td>
+         <td>IMODE</td>
+         <td>OriginalIMODE</td>
+         <td>2020</td>
+         <td>4</td>
+         <td>hard</td>
+      </tr>
+   </tbody>
+</table>
+
+### ❌ Warning: Algorithms Suspected of Plagiarism
+
+During our implementation and classification of metaheuristic optimization algorithms, we identified a set of methods that raise 
+serious concerns regarding **scientific integrity and originality**. These algorithms are typically published under **different names**, 
+but they appear to share:
+
+- The **same core mathematical models**, equations, and update rules.
+- Only superficial changes in naming, metaphors, or biological analogies.
+- Publications authored by **the same or overlapping research groups**.
+- **Heavy criticism** on public academic forums such as [PubPeer](https://pubpeer.com), where many of these papers are flagged for **self-plagiarism**, **redundant publication**, or **lack of novelty**.
+- Some of these papers may be **withdrawn or retracted in the future**, as investigations unfold.
+
+For these reasons, we strongly advise the **exclusion** of the following algorithms from scientific benchmarking, 
+comparative studies, or any applications unless their originality is transparently validated.
+
+**I have personally implemented these algorithms, which is why I can confidently say that they are nearly identical 
+and likely cases of plagiarism. For this reason, I will no longer spend time coding such algorithms in the future. 
+This warning is intended to help others avoid using or relying on these methods in their work.**
 
 
 
+<table>
+   <thead>
+      <tr>
+         <th>Group</th>
+         <th>Name</th>
+         <th>Module</th>
+         <th>Class</th>
+         <th>Year</th>
+         <th>Paras</th>
+         <th>Difficulty</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <th>Swarm</th>
+         <td>Coati Optimization Algorithm</td>
+         <td>CoatiOA</td>
+         <td>OriginalCoatiOA</td>
+         <td>2023</td>
+         <td>2</td>
+         <td>easy </td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Fennec For Optimization</td>
+         <td>FFO</td>
+         <td>OriginalFFO</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>easy </td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Northern Goshawk Optimization</td>
+         <td>NGO</td>
+         <td>OriginalNGO</td>
+         <td>2021</td>
+         <td>2</td>
+         <td>easy </td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Osprey Optimization Algorithm</td>
+         <td>OOA</td>
+         <td>OriginalOOA</td>
+         <td>2023</td>
+         <td>2</td>
+         <td>easy </td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Pelican Optimization Algorithm </td>
+         <td>POA</td>
+         <td>OriginalPOA</td>
+         <td>2023</td>
+         <td>2</td>
+         <td>easy </td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Serval Optimization Algorithm</td>
+         <td>ServalOA</td>
+         <td>OriginalServalOA</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>easy </td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Siberian Tiger Optimization</td>
+         <td>STO</td>
+         <td>OriginalSTO</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>easy </td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Tasmanian Devil Optimization</td>
+         <td>TDO</td>
+         <td>OriginalTDO</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>easy </td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Walrus Optimization Algorithm</td>
+         <td>WaOA</td>
+         <td>OriginalWaOA</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>easy </td>
+      </tr>
+      <tr>
+         <th>Swarm</th>
+         <td>Zebra Optimization Algorithm </td>
+         <td>ZOA</td>
+         <td>OriginalZOA</td>
+         <td>2022</td>
+         <td>2</td>
+         <td>easy </td>
+      </tr>
+      <tr>
+         <th>Human</th>
+         <td>Teamwork Optimization Algorithm</td>
+         <td>TOA</td>
+         <td>OriginalTOA</td>
+         <td>2021</td>
+         <td>2</td>
+         <td>easy</td>
+      </tr>
+   </tbody>
+</table>
+
+### ⚠️ Ethical Reminder
+
+Researchers and students are urged to **exercise caution** when referencing or applying the algorithms listed above. 
+Using unoriginal or unethical work can compromise the **scientific credibility** of any downstream research and introduce **misleading experimental results**.
+
+> 🔗 **Check [PubPeer1](https://pubpeer.com/publications/1F5DCE5BC42BF2D77A1B0C281A5295)** and [PubPeer2](https://pubpeer.com/publications/D47357D409AE273F9E03C7CBE30EB7) to 
+> find ongoing discussions and critiques from the academic community.
+
+---
 
 
-
-
-
-<details><summary><h3>Tuner class (GridSearchCV/ParameterSearch, Hyper-parameter tuning)</h3></summary>
-
-
-We build a dedicated class, Tuner, that can help you tune your algorithm's parameters.
+<details><summary><h3>💻 Define All Optimizers</h3></summary>
 
 ```python
-from opfunu.cec_based.cec2017 import F52017
-from mealpy import FloatVar, BBO, Tuner
 
-## You can define your own problem, here I took the F5 benchmark function in CEC-2017 as an example.
-f1 = F52017(30, f_bias=0)
-
-p1 = {
-    "bounds": FloatVar(lb=f1.lb, ub=f1.ub),
-    "obj_func": f1.evaluate,
-    "minmax": "min",
-    "name": "F5",
-    "log_to": "console",
-}
-
-paras_bbo_grid = {
-    "epoch": [10, 20, 30, 40],
-    "pop_size": [50, 100, 150],
-    "n_elites": [2, 3, 4, 5],
-    "p_m": [0.01, 0.02, 0.05]
-}
-
-term = {
-    "max_epoch": 200,
-    "max_time": 20,
-    "max_fe": 10000
-}
-
-if __name__ == "__main__":
-    model = BBO.OriginalBBO()
-    tuner = Tuner(model, paras_bbo_grid)
-    tuner.execute(problem=p1, termination=term, n_trials=5, n_jobs=4, mode="thread", n_workers=4, verbose=True)
-    ## Solve this problem 5 times (n_trials) using 5 processes (n_jobs), each process will handle 1 trial. 
-    ## The mode to run the solver is thread (mode), distributed to 4 threads 
-
-    print(tuner.best_row)
-    print(tuner.best_score)
-    print(tuner.best_params)
-    print(type(tuner.best_params))
-    print(tuner.best_algorithm)
-    
-    ## Save results to csv file 
-    tuner.export_results(save_path="history", file_name="tuning_best_fit.csv")
-    tuner.export_figures()
-    
-    ## Re-solve the best model on your problem 
-    g_best = tuner.resolve(mode="thread", n_workers=4, termination=term)
-    print(g_best.solution, g_best.target.fitness)
-    print(tuner.algorithm.problem.get_name())
-    print(tuner.best_algorithm.get_name())
-```
-
-</details>
-
-
-
-<details><summary><h3>Multitask class (Multitask solver)</h3></summary>
-
-
-We also build a dedicated class, Multitask, that can help you run several scenarios. For example:
-
-1. Run 1 algorithm with 1 problem, and multiple trials
-2. Run 1 algorithm with multiple problems, and multiple trials
-3. Run multiple algorithms with 1 problem, and multiple trials
-4. Run multiple algorithms with multiple problems, and multiple trials
-
-
-```python
-#### Using multiple algorithm to solve multiple problems with multiple trials
-
-## Import libraries
-from opfunu.cec_based.cec2017 import F52017, F102017, F292017
-from mealpy import FloatVar
-from mealpy import BBO, DE
-from mealpy import Multitask
-
-## Define your own problems
-f1 = F52017(30, f_bias=0)
-f2 = F102017(30, f_bias=0)
-f3 = F292017(30, f_bias=0)
-
-p1 = {
-    "bounds": FloatVar(lb=f1.lb, ub=f1.ub),
-    "obj_func": f1.evaluate,
-    "minmax": "min",
-    "name": "F5",
-    "log_to": "console",
-}
-
-p2 = {
-    "bounds": FloatVar(lb=f2.lb, ub=f2.ub),
-    "obj_func": f2.evaluate,
-    "minmax": "min",
-    "name": "F10",
-    "log_to": "console",
-}
-
-p3 = {
-    "bounds": FloatVar(lb=f3.lb, ub=f3.ub),
-    "obj_func": f3.evaluate,
-    "minmax": "min",
-    "name": "F29",
-    "log_to": "console",
-}
-
-## Define models
-model1 = BBO.DevBBO(epoch=10000, pop_size=50)
-model2 = BBO.OriginalBBO(epoch=10000, pop_size=50)
-model3 = DE.OriginalDE(epoch=10000, pop_size=50)
-model4 = DE.SAP_DE(epoch=10000, pop_size=50)
-
-## Define termination if needed
-term = {
-    "max_fe": 3000
-}
-
-## Define and run Multitask
-if __name__ == "__main__":
-    multitask = Multitask(algorithms=(model1, model2, model3, model4), problems=(p1, p2, p3), terminations=(term, ), modes=("thread", ), n_workers=4)
-    # default modes = "single", default termination = epoch (as defined in problem dictionary)
-    multitask.execute(n_trials=5, n_jobs=None, save_path="history", save_as="csv", save_convergence=True, verbose=False)
-    # multitask.execute(n_trials=5, save_path="history", save_as="csv", save_convergence=True, verbose=False)
-    
-    ## Check the directory: history/, you will see list of .csv result files
-```
-
-For more usage examples please look at [examples](/examples) folder.
-
-More advanced examples can also be found in the [Mealpy-examples repository](https://github.com/thieu1995/mealpy_examples).
-
-
-</details>
-
-
-
-
-
-<details><summary><h3>Get Visualize Figures</h3></summary>
-
-* [Tutorials](/examples/utils/visualize/all_charts.py)
-
-<p align="center"><img src="https://thieu1995.github.io/post/2022-04/19-mealpy-tutorials/mealpy2.png" alt="MEALPY"/>
-</p>
-
-</details>
-
-
-
-<details><summary><h3>All Optimizers</h3></summary>
-
-```python
-
-
-import numpy as np
-from opfunu.cec_based.cec2017 import F292017
-
-from mealpy import BBO, PSO, GA, ALO, AO, ARO, AVOA, BA, BBOA, BMO, EOA, IWO
-from mealpy import FloatVar
-from mealpy import GJO, FOX, FOA, FFO, FFA, FA, ESOA, EHO, DO, DMOA, CSO, CSA, CoatiOA, COA, BSA
-from mealpy import HCO, ICA, LCO, WarSO, TOA, TLO, SSDO, SPBO, SARO, QSA, ArchOA, ASO, CDO, EFO, EO, EVO, FLA
-from mealpy import HGSO, MVO, NRO, RIME, SA, WDO, TWO, ABC, ACOR, AGTO, BeesA, BES, BFO, ZOA, WOA, WaOA, TSO
-from mealpy import PFA, OOA, NGO, NMRA, MSA, MRFO, MPA, MGO, MFO, JA, HHO, HGS, HBA, GWO, GTO, GOA
-from mealpy import Problem
-from mealpy import SBO, SMA, SOA, SOS, TPO, TSA, VCS, WHO, AOA, CEM, CGO, CircleSA, GBO, HC, INFO, PSS, RUN, SCA
-from mealpy import SHIO, TS, HS, AEO, GCO, WCA, CRO, DE, EP, ES, FPA, MA, SHADE, BRO, BSO, CA, CHIO, FBIO, GSKA, HBO
-from mealpy import TDO, STO, SSpiderO, SSpiderA, SSO, SSA, SRSR, SLO, SHO, SFO, ServalOA, SeaHO, SCSO, POA
-from mealpy import (StringVar, FloatVar, BoolVar, PermutationVar, MixedSetVar, IntegerVar, BinaryVar,
+from mealpy import (StringVar, FloatVar, BoolVar, PermutationVar, CategoricalVar, IntegerVar, BinaryVar,
                     TransferBinaryVar, TransferBoolVar)
 from mealpy import Tuner, Multitask, Problem, Optimizer, Termination, ParameterGrid
 from mealpy import get_all_optimizers, get_optimizer_by_name
 
+from mealpy import BBO, PSO, GA, ALO, AO, ARO, AVOA, BA, BBOA, BMO, EOA, IWO
+from mealpy import GJO, FOX, FOA, FFO, FFA, FA, ESOA, EHO, DO, DMOA, CSO, CSA, CoatiOA, COA, BSA
+from mealpy import HCO, ICA, LCO, WarSO, TOA, TLO, SSDO, SPBO, SARO, QSA, ArchOA, ASO, CDO, EFO, EO, EVO, FLA
+from mealpy import HGSO, MVO, NRO, RIME, SA, WDO, TWO, ABC, ACOR, AGTO, BeesA, BES, BFO, ZOA, WOA, WaOA, TSO
+from mealpy import PFA, OOA, NGO, NMRA, MSA, MRFO, MPA, MGO, MFO, JA, HHO, HGS, HBA, GWO, GTO, GOA
+from mealpy import SBO, SMA, SOA, SOS, TPO, TSA, VCS, WHO, AOA, CEM, CGO, CircleSA, GBO, HC, INFO, PSS, RUN, SCA
+from mealpy import SHIO, TS, HS, AEO, GCO, WCA, CRO, DE, EP, ES, FPA, MA, SHADE, BRO, BSO, CA, CHIO, FBIO, GSKA, HBO
+from mealpy import TDO, STO, SSpiderO, SSpiderA, SSO, SSA, SRSR, SLO, SHO, SFO, ServalOA, SeaHO, SCSO, POA
+
+## Newly added module in version 3.0.3
+from mealpy import ESO, EPC, SMO, AFT, CDDO, SquirrelSA, FDO, LSHADEcnEpSin, IMODE
 
 
 if __name__ == "__main__":
@@ -1558,7 +2596,6 @@ if __name__ == "__main__":
     model = HGS.OriginalHGS(epoch=100, pop_size=50, PUP=0.08, LH=10000)
     model = HBA.OriginalHBA(epoch=100, pop_size=50)
     model = GWO.OriginalGWO(epoch=100, pop_size=50)
-    model = GWO.GWO_WOA(epoch=100, pop_size=50)
     model = GWO.RW_GWO(epoch=100, pop_size=50)
     model = GTO.OriginalGTO(epoch=100, pop_size=50, A=0.4, H=2.0)
     model = GTO.Matlab101GTO(epoch=100, pop_size=50)
@@ -1583,126 +2620,236 @@ if __name__ == "__main__":
     model = COA.OriginalCOA(epoch=100, pop_size=50, n_coyotes=5)
     model = BSA.OriginalBSA(epoch=100, pop_size=50, ff=10, pff=0.8, c1=1.5, c2=1.5, a1=1.0, a2=1.0, fc=0.5)
 
+    ## Newly added algorithms in version 3.0.3
+    model = GWO.GWO_WOA(epoch=100, pop_size=50)
+    model = GWO.IGWO(epoch=1000, pop_size=50, a_min = 0.02, a_max = 2.2)
+    model = GWO.ChaoticGWO(epoch=1000, pop_size=50, chaotic_name="chebyshev", initial_chaotic_value=0.7)
+    model = GWO.FuzzyGWO(epoch=1000, pop_size=50, fuzzy_name="increase")
+    model = GWO.IncrementalGWO(epoch=1000, pop_size=50, explore_factor=1.5)
+    model = GWO.ExGWO(epoch=1000, pop_size=50)
+    model = GWO.DS_GWO(epoch=1000, pop_size=50, explore_ratio=0.4, n_groups=5)
+    model = GWO.IOBL_GWO(epoch=1000, pop_size=50)
+    model = GWO.OGWO(epoch=1000, pop_size=50, miu_factor=2.0, jumping_rate=0.05)
+    model = GWO.ER_GWO(epoch=1000, pop_size=50, a_initial=2.0, a_final=0.0, miu_factor=1.0001)
+    model = GWO.CG_GWO(epoch=1000, pop_size=50)
+    
+    model = ESO.OriginalESO(epoch=1000, pop_size=50)
+    model = AO.AAO(epoch=1000, pop_size=50, sharpness=10.0, sigmoid_midpoint=0.5)
+    model = EPC.DevEPC(epoch=1000, pop_size=50, heat_damping_factor=0.95, mutation_factor=0.1, spiral_a=1.0, spiral_b=0.5) 
+    model = SMO.DevSMO(epoch=1000, pop_size=50, max_groups = 5, perturbation_rate = 0.7)
+    model = SquirrelSA.OriginalSquirrelSA(epoch=1000, pop_size=50, n_food_sources=4, predator_prob=0.1, gliding_constant=1.9, scaling_factor=18, beta=1.5)
+    model = AFT.OriginalAFT(epoch=1000, pop_size=50)
+    model = CDDO.OriginalCDDO(epoch=1000, pop_size=50, pattern_size=10, creativity_rate=0.1)
+    model = FDO.OriginalFDO(epoch=1000, pop_size=50, weight_factor=0.1)
+    model = LSHADEcnEpSin.OriginalLSHADEcnEpSin(epoch=1000, pop_size=50, miu_f = 0.5, miu_cr = 0.5, freq = 0.5, memory_size = 5, ps = 0.5, pc = 0.4, pop_size_min = 10)
+    model = IMODE.OriginalIMODE(epoch=1000, pop_size=50, memory_size=5, archive_size=20)
+    
+
 ```
 
 </details>
 
 
+## ✅ Examples
+
+### Simple Benchmark Function
+
+MEALPY allows you to define your optimization problem in a couple of ways.
+
+#### 1. Define Problem as a Dictionary
+
+You can quickly define your problem using a Python dictionary. However, this approach is only valid for problems with float decision variables.
+
+```python
+from mealpy import FloatVar, SMA
+import numpy as np
+
+def objective_function(solution):
+    return np.sum(solution**2)
+
+problem = {
+    "obj_func": objective_function,
+    "bounds": FloatVar(lb=(-100., )*30, ub=(100., )*30),
+    "minmax": "min",
+    "log_to": "console",
+}
+
+## Run the algorithm
+model = SMA.OriginalSMA(epoch=100, pop_size=50, pr=0.03)
+g_best = model.solve(problem)
+print(f"Best solution: {g_best.solution}, Best fitness: {g_best.target.fitness}")
+```
+
+#### 2. Define a Custom Problem Class
+
+For more complex scenarios, especially when your decision variables are not exclusively `FloatVar`, 
+**we recommend defining a custom class that inherits from the Problem class.**
+Let's demonstrate this with a simple "Squared" class.
+
+In the `__init__` method of your custom Problem class (e.g., Squared class), you must set the bounds and minmax attributes of the problem.
+
++ `bounds`: Defines the search space and the type of decision variables (e.g., `FloatVar`, `IntegerVar`).
+
++ `minmax`: A string indicating whether the problem is a minimization ("min") or maximization ("max") problem.
+
+After defining the initialization, you must override the abstract method `obj_func()`. This method is the core of your problem definition:
+
++ It takes a single parameter: solution (the encoded solution vector generated by the optimizer).
+
++ It must return the objective function value (or fitness) for the given solution.
+
+The resulting code structure for a custom problem class would look similar to the snippet below. 
+You can include any additional parameters you need in your custom class (like '`data`' or '`name`' in this example).
 
 
+```python
+from mealpy import Problem, FloatVar, BBO 
+import numpy as np
 
-<details><summary><h2>Mealpy Application</h2></summary>
+# Our custom problem class
+class Squared(Problem):
+    def __init__(self, bounds=None, minmax="min", data=None, **kwargs):
+        super().__init__(bounds, minmax, **kwargs)
+        self.data = data     # This is additional variable use for passing data to objective function
+
+    def obj_func(self, solution):
+        return np.sum(solution ** 2)
+
+    
+## Now, we define an algorithm, and pass an instance of our *Squared* class as the problem argument. 
+bound = FloatVar(lb=(-10., )*20, ub=(10., )*20, name="my_var")      # The `name` of variable is important when decoding.
+problem = Squared(bounds=bound, minmax="min", name="Squared", data="Amazing")
+model = BBO.OriginalBBO(epoch=100, pop_size=20)
+g_best = model.solve(problem)
+
+## Show some attributes
+print(g_best.solution)
+print(g_best.target.fitness)
+print(g_best.target.objectives)
+print(g_best)
+print(model.get_parameters())
+print(model.get_name())
+print(model.get_attributes()["g_best"])
+print(model.problem.get_name())
+print(model.problem.n_dims)
+print(model.problem.bounds)
+print(model.problem.lb)
+print(model.problem.ub)
+```
 
 
-### Mealpy + Neural Network (Replace the Gradient Descent Optimizer)
+We provide many examples for complicated applications that can use Mealpy to solve.
+
+
+## 🚀 Mealpy Applications
+
+MEALPY is a versatile library capable of solving a wide array of complex optimization problems across various domains. Below are examples showcasing its diverse applications.
+
+### 1. General Optimization Problems
+
+These examples demonstrate MEALPY's use in common optimization scenarios.
+
+1. Large-Scale Optimization [example](/examples/applications/run_large_scale_optimization.py)
+2. Distributed Optimization / Parallelization Optimization [example](/examples/applications/run_distributed_optimization.py)
+3. Constrained Benchmark Function [example](/examples/applications/run_constraint_functions.py)
+4. Multi-objective Benchmark Function [example](/examples/applications/run_multi_objective_functions.py)
+
+### 2. Machine Learning & AI Optimization
+
+MEALPY can be effectively used to optimize various aspects of Machine Learning and AI models.
+
+1. Optimize Machine Learning Model (SVM) Hyperparameters [example](/examples/applications/sklearn/svm_hyperparameter_optimization.py)
+2. Optimize Linear Regression Model with Pytorch: [example](/examples/applications/pytorch/linear_regression.py)
+
+### 3. Combinatorial Optimization Problems
+
+MEALPY excels at solving complex combinatorial problems, which involve finding an optimal object from a finite set of objects.
+
+1. Traveling Salesman Problem (TSP) [example](/examples/applications/discrete-problems/traveling_salesman_problem.py)
+2. Job Shop Scheduling Problem [example](/examples/applications/discrete-problems/job_shop_scheduling.py)
+3. Shortest Path Problem [example](/examples/applications/discrete-problems/shortest_path_problem.py)
+4. Location Optimization [example](/examples/applications/discrete-problems/location_optimization.py)
+5. Supply Chain Optimization [example](/examples/applications/discrete-problems/supply_chain_optimization.py)
+6. Healthcare Workflow Optimization Problem [example](/examples/applications/discrete-problems/workflow_optimization.py)
+7. Production Optimization Problem [example](/examples/applications/discrete-problems/production_optimization.py)
+8. Employee Rostering Problem [example](/examples/applications/discrete-problems/employee_rostering.py)
+9. Maintenance Scheduling [example](/examples/applications/discrete-problems/maintenance_scheduling.py)
+10. Cloud task scheduling [example](/examples/applications/discrete-problems/cloud_task_scheduling.py)
+
+### 4. Advanced Integration Examples
+
+MEALPY's flexibility allows for integration into more specialized systems and workflows.
+
+#### MEALPY + Neural Networks (Replacing Gradient Descent)
 
 * Time-series Problem:
-  * Traditional MLP
-    code: [Link](https://github.com/thieu1995/mealpy/tree/master/examples/applications/keras/traditional-mlp-time-series.py)
-  * Hybrid code (Mealpy +
-    MLP): [Link](https://github.com/thieu1995/mealpy/tree/master/examples/applications/keras/mha-hybrid-mlp-time-series.py)
+  * Traditional MLP [Link](/examples/applications/keras/traditional-mlp-time-series.py)
+  * Hybrid code (Mealpy + MLP): [Link](/examples/applications/keras/mha-hybrid-mlp-time-series.py)
 * Classification Problem:
-  * Traditional MLP
-    code: [Link](https://github.com/thieu1995/mealpy/blob/master/examples/applications/keras/traditional-mlp-classification.py)
-  * Hybrid code (Mealpy +
-    MLP): [Link](https://github.com/thieu1995/mealpy/blob/master/examples/applications/keras/mha-hybrid-mlp-classification.py)
+  * Traditional MLP [Link](/examples/applications/keras/traditional-mlp-classification.py)
+  * Hybrid code (Mealpy + MLP): [Link](/examples/applications/keras/mha-hybrid-mlp-classification.py)
 
-### Mealpy + Neural Network (Optimize Neural Network Hyper-parameter)
+#### MEALPY + Neural Network (Optimize Neural Network Hyper-parameter)
 
 Code: [Link](https://github.com/thieu1995/mealpy/blob/master/examples/applications/keras/mha-hyper-parameter-mlp-time-series.py)
 
-### Other Applications
 
-* Solving Knapsack Problem (Discrete
-  problems): [Link](https://github.com/thieu1995/mealpy/blob/master/examples/applications/discrete-problems/knapsack_problem.ipynb)
+### 5. Dedicated Utility Classes
 
-* Solving Product Planning Problem (Discrete
-  problems): [Link](https://github.com/thieu1995/mealpy/blob/master/examples/applications/discrete-problems/product_planning.ipynb)
+MEALPY includes specialized classes to streamline common optimization tasks.
 
-* Optimize SVM (SVC)
-  model: [Link](https://github.com/thieu1995/mealpy/blob/master/examples/applications/sklearn/svm_classification.py)
+1. Tuner class (GridSearchCV/ParameterSearch, Hyper-parameter tuning)  [example](/examples/run_tuner.py)
+2. Multitask class (Multitask solver) [example](/examples/run_multitask.py)
+3. Visualization [Tutorials](/examples/utils/visualize/all_charts.py)
 
-* Optimize Linear Regression
-  Model: [Link](https://github.com/thieu1995/mealpy/blob/master/examples/applications/pytorch/linear_regression.py)
+### 6. External Projects & More Examples
 
-* Travelling Salesman Problem: https://github.com/thieu1995/MHA-TSP 
+Explore additional advanced examples and dedicated projects showcasing MEALPY's capabilities.
 
-* Feature selection problem: https://github.com/thieu1995/MHA-FS
+* Travelling Salesman Problem: [link](https://github.com/thieu1995/MHA-TSP)
+* Feature selection problem: [link](https://github.com/thieu1995/MHA-FS)
 
-</details>
-
+For more usage examples please look at [examples](/examples) folder.
+More advanced examples can also be found in the [Mealpy-examples repository](https://github.com/thieu1995/mealpy_examples).
 
 
-
-<details><summary><h3>Get Visualize Figures</h3></summary>
-
-* [Tutorials](/examples/utils/visualize/all_charts.py)
-
-<p align="center"><img src="https://thieu1995.github.io/post/2022-04/19-mealpy-tutorials/mealpy2.png" alt="MEALPY"/>
-</p>
-
-</details>
-
-
-<details><summary><h3>Tutorial Videos</h3></summary>
+### 7. Tutorial Videos & Resources
 
 All tutorial videos: [Link](https://mealpy.readthedocs.io/en/latest/pages/general/video_tutorials.html)
 
-All code examples: [Link](https://github.com/thieu1995/mealpy/tree/master/examples)
+All code examples: [Link](/examples)
 
 All visualization examples: [Link](https://mealpy.readthedocs.io/en/latest/pages/visualization.html)
 
-</details>
+
+# 📚 Documents
+
+## 📎 Official channels 
+
+* 🔗 [Official source code repository](https://github.com/thieu1995/mealpy)
+* 📘 [Official document](https://mealpy.readthedocs.io/)
+* 📦 [Download releases](https://pypi.org/project/mealpy/) 
+* 🐞 [Issue tracker](https://github.com/thieu1995/mealpy/issues) 
+* 📝 [Notable changes log](/ChangeLog.md)
+* 📝 [Examples with different meapy version](/examples/EXAMPLES.md)
+* 💬 [Official discussion group](https://t.me/+fRVCJGuGJg1mNDg1)
 
 
-# Documents
+## 🌟 MEALPY ecosystem
 
-
-## Official Channels (questions, problems)
-
-* Official source code repo: https://github.com/thieu1995/mealpy
-* Official document: https://mealpy.readthedocs.io/
-* Download releases: https://pypi.org/project/mealpy/
-* Issue tracker: https://github.com/thieu1995/mealpy/issues
-* Notable changes log: https://github.com/thieu1995/mealpy/blob/master/ChangeLog.md
-* Examples with different meapy version: https://github.com/thieu1995/mealpy/blob/master/EXAMPLES.md
-* Official chat/support group: https://t.me/+fRVCJGuGJg1mNDg1
-
-* This project also related to our another projects which are optimization and machine learning. Check it here:
-    * https://github.com/thieu1995/opfunu
-    * https://github.com/thieu1995/metaheuristics
-    * https://github.com/mafese
-    * https://github.com/permetrics
-    * https://github.com/pfevaluator
-    * https://github.com/MetaCluster
-    * https://github.com/enoppy
-    * https://github.com/aiir-team
-
-
-## My Comments
-
-* Meta-heuristic Categories: (Based on this article: [link](https://doi.org/10.1016/j.procs.2020.09.075))
-    + Evolutionary-based: Idea from Darwin's law of natural selection, evolutionary computing 
-    + Swarm-based: Idea from movement, interaction of birds, organization of social ...
-    + Physics-based: Idea from physics law such as Newton's law of universal gravitation, black hole, multiverse 
-    + Human-based: Idea from human interaction such as queuing search, teaching learning, ... 
-    + Biology-based: Idea from biology creature (or microorganism),...
-    + System-based: Idea from eco-system, immune-system, network-system, ...
-    + Math-based: Idea from mathematical form or mathematical law such as sin-cosin 
-    + Music-based: Idea from music instrument
-
-* Difficulty - Difficulty Level (Personal Opinion): **Objective observation from author**. Depend on the number of 
-  parameters, number of equations, the original ideas, time spend for coding, source lines of code (SLOC).
-    + Easy: A few paras, few equations, SLOC very short
-    + Medium: more equations than Easy level, SLOC longer than Easy level
-    + Hard: Lots of equations, SLOC longer than Medium level, the paper hard to read.
-    + Hard* - Very hard: Lots of equations, SLOC too long, the paper is very hard to read.
-    
-** For newbie, we recommend to read the paper of algorithms which difficulty is "easy" or "medium" difficulty level.
-
-
-<table><thead><tr><th>Group</th><th>Name</th><th>Module</th><th>Class</th><th>Year</th><th>Paras</th><th>Difficulty</th></tr></thead><tbody><tr><th>Evolutionary</th><td>Evolutionary Programming</td><td>EP</td><td>OriginalEP</td><td>1964</td><td>3</td><td>easy</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>LevyEP</td><td>*</td><td>3</td><td>easy</td></tr><tr><th>Evolutionary</th><td>Evolution Strategies</td><td>ES</td><td>OriginalES</td><td>1971</td><td>3</td><td>easy</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>LevyES</td><td>*</td><td>3</td><td>easy</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>CMA_ES</td><td>2003</td><td>2</td><td>hard</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>Simple_CMA_ES</td><td>2023</td><td>2</td><td>medium</td></tr><tr><th>Evolutionary</th><td>Memetic Algorithm</td><td>MA</td><td>OriginalMA</td><td>1989</td><td>7</td><td>easy</td></tr><tr><th>Evolutionary</th><td>Genetic Algorithm</td><td>GA</td><td>BaseGA</td><td>1992</td><td>4</td><td>easy</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>SingleGA</td><td>*</td><td>7</td><td>easy</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>MultiGA</td><td>*</td><td>7</td><td>easy</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>EliteSingleGA</td><td>*</td><td>10</td><td>easy</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>EliteMultiGA</td><td>*</td><td>10</td><td>easy</td></tr><tr><th>Evolutionary</th><td>Differential Evolution</td><td>DE</td><td>BaseDE</td><td>1997</td><td>5</td><td>easy</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>JADE</td><td>2009</td><td>6</td><td>medium</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>SADE</td><td>2005</td><td>2</td><td>medium</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>SAP_DE</td><td>2006</td><td>3</td><td>medium</td></tr><tr><th>Evolutionary</th><td>Success-History Adaptation Differential Evolution</td><td>SHADE</td><td>OriginalSHADE</td><td>2013</td><td>4</td><td>medium</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>L_SHADE</td><td>2014</td><td>4</td><td>medium</td></tr><tr><th>Evolutionary</th><td>Flower Pollination Algorithm</td><td>FPA</td><td>OriginalFPA</td><td>2014</td><td>4</td><td>medium</td></tr><tr><th>Evolutionary</th><td>Coral Reefs Optimization</td><td>CRO</td><td>OriginalCRO</td><td>2014</td><td>11</td><td>medium</td></tr><tr><th>Evolutionary</th><td>*</td><td>*</td><td>OCRO</td><td>2019</td><td>12</td><td>medium</td></tr><tr><th>***</th><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td></tr><tr><th>Swarm</th><td>Particle Swarm Optimization</td><td>PSO</td><td>OriginalPSO</td><td>1995</td><td>6</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>PPSO</td><td>2019</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>HPSO_TVAC</td><td>2017</td><td>4</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>C_PSO</td><td>2015</td><td>6</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>CL_PSO</td><td>2006</td><td>6</td><td>medium</td></tr><tr><th>Swarm</th><td>Bacterial Foraging Optimization</td><td>BFO</td><td>OriginalBFO</td><td>2002</td><td>10</td><td>hard</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>ABFO</td><td>2019</td><td>8</td><td>medium</td></tr><tr><th>Swarm</th><td>Bees Algorithm</td><td>BeesA</td><td>OriginalBeesA</td><td>2005</td><td>8</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>ProbBeesA</td><td>2015</td><td>5</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>CleverBookBeesA</td><td>2006</td><td>8</td><td>medium</td></tr><tr><th>Swarm</th><td>Cat Swarm Optimization</td><td>CSO</td><td>OriginalCSO</td><td>2006</td><td>11</td><td>hard</td></tr><tr><th>Swarm</th><td>Artificial Bee Colony</td><td>ABC</td><td>OriginalABC</td><td>2007</td><td>8</td><td>medium</td></tr><tr><th>Swarm</th><td>Ant Colony Optimization</td><td>ACOR</td><td>OriginalACOR</td><td>2008</td><td>5</td><td>easy</td></tr><tr><th>Swarm</th><td>Cuckoo Search Algorithm</td><td>CSA</td><td>OriginalCSA</td><td>2009</td><td>3</td><td>medium</td></tr><tr><th>Swarm</th><td>Firefly Algorithm </td><td>FFA</td><td>OriginalFFA</td><td>2009</td><td>8</td><td>easy</td></tr><tr><th>Swarm</th><td>Fireworks Algorithm</td><td>FA</td><td>OriginalFA</td><td>2010</td><td>7</td><td>medium</td></tr><tr><th>Swarm</th><td>Bat Algorithm</td><td>BA</td><td>OriginalBA</td><td>2010</td><td>6</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>AdaptiveBA</td><td>2010</td><td>8</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>ModifiedBA</td><td>*</td><td>5</td><td>medium</td></tr><tr><th>Swarm</th><td>Fruit-fly Optimization Algorithm</td><td>FOA</td><td>OriginalFOA</td><td>2012</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>BaseFOA</td><td>*</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>WhaleFOA</td><td>2020</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>Social Spider Optimization</td><td>SSpiderO</td><td>OriginalSSpiderO</td><td>2018</td><td>4</td><td>hard*</td></tr><tr><th>Swarm</th><td>Grey Wolf Optimizer</td><td>GWO</td><td>OriginalGWO</td><td>2014</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>RW_GWO</td><td>2019</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Social Spider Algorithm</td><td>SSpiderA</td><td>OriginalSSpiderA</td><td>2015</td><td>5</td><td>medium</td></tr><tr><th>Swarm</th><td>Ant Lion Optimizer</td><td>ALO</td><td>OriginalALO</td><td>2015</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>BaseALO</td><td>*</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Moth Flame Optimization</td><td>MFO</td><td>OriginalMFO</td><td>2015</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>BaseMFO</td><td>*</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Elephant Herding Optimization</td><td>EHO</td><td>OriginalEHO</td><td>2015</td><td>5</td><td>easy</td></tr><tr><th>Swarm</th><td>Jaya Algorithm</td><td>JA</td><td>OriginalJA</td><td>2016</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>BaseJA</td><td>*</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>LevyJA</td><td>2021</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Whale Optimization Algorithm</td><td>WOA</td><td>OriginalWOA</td><td>2016</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>HI_WOA</td><td>2019</td><td>3</td><td>medium</td></tr><tr><th>Swarm</th><td>Dragonfly Optimization</td><td>DO</td><td>OriginalDO</td><td>2016</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>Bird Swarm Algorithm</td><td>BSA</td><td>OriginalBSA</td><td>2016</td><td>9</td><td>medium</td></tr><tr><th>Swarm</th><td>Spotted Hyena Optimizer</td><td>SHO</td><td>OriginalSHO</td><td>2017</td><td>4</td><td>medium</td></tr><tr><th>Swarm</th><td>Salp Swarm Optimization</td><td>SSO</td><td>OriginalSSO</td><td>2017</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Swarm Robotics Search And Rescue</td><td>SRSR</td><td>OriginalSRSR</td><td>2017</td><td>2</td><td>hard*</td></tr><tr><th>Swarm</th><td>Grasshopper Optimisation Algorithm</td><td>GOA</td><td>OriginalGOA</td><td>2017</td><td>4</td><td>easy</td></tr><tr><th>Swarm</th><td>Coyote Optimization Algorithm</td><td>COA</td><td>OriginalCOA</td><td>2018</td><td>3</td><td>medium</td></tr><tr><th>Swarm</th><td>Moth Search Algorithm</td><td>MSA</td><td>OriginalMSA</td><td>2018</td><td>5</td><td>easy</td></tr><tr><th>Swarm</th><td>Sea Lion Optimization</td><td>SLO</td><td>OriginalSLO</td><td>2019</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>ModifiedSLO</td><td>*</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>ImprovedSLO</td><td>2022</td><td>4</td><td>medium</td></tr><tr><th>Swarm</th><td>Nake Mole*Rat Algorithm</td><td>NMRA</td><td>OriginalNMRA</td><td>2019</td><td>3</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>ImprovedNMRA</td><td>*</td><td>4</td><td>medium</td></tr><tr><th>Swarm</th><td>Pathfinder Algorithm</td><td>PFA</td><td>OriginalPFA</td><td>2019</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>Sailfish Optimizer</td><td>SFO</td><td>OriginalSFO</td><td>2019</td><td>5</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>ImprovedSFO</td><td>*</td><td>3</td><td>medium</td></tr><tr><th>Swarm</th><td>Harris Hawks Optimization</td><td>HHO</td><td>OriginalHHO</td><td>2019</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>Manta Ray Foraging Optimization</td><td>MRFO</td><td>OriginalMRFO</td><td>2020</td><td>3</td><td>medium</td></tr><tr><th>Swarm</th><td>Bald Eagle Search</td><td>BES</td><td>OriginalBES</td><td>2020</td><td>7</td><td>easy</td></tr><tr><th>Swarm</th><td>Sparrow Search Algorithm</td><td>SSA</td><td>OriginalSSA</td><td>2020</td><td>5</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>BaseSSA</td><td>*</td><td>5</td><td>medium</td></tr><tr><th>Swarm</th><td>Hunger Games Search</td><td>HGS</td><td>OriginalHGS</td><td>2021</td><td>4</td><td>medium</td></tr><tr><th>Swarm</th><td>Aquila Optimizer</td><td>AO</td><td>OriginalAO</td><td>2021</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Hybrid Grey Wolf * Whale Optimization Algorithm</td><td>GWO</td><td>GWO_WOA</td><td>2022</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Marine Predators Algorithm</td><td>MPA</td><td>OriginalMPA</td><td>2020</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>Honey Badger Algorithm</td><td>HBA</td><td>OriginalHBA</td><td>2022</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Sand Cat Swarm Optimization</td><td>SCSO</td><td>OriginalSCSO</td><td>2022</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Tuna Swarm Optimization</td><td>TSO</td><td>OriginalTSO</td><td>2021</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>African Vultures Optimization Algorithm</td><td>AVOA</td><td>OriginalAVOA</td><td>2022</td><td>7</td><td>medium</td></tr><tr><th>Swarm</th><td>Artificial Gorilla Troops Optimization</td><td>AGTO</td><td>OriginalAGTO</td><td>2021</td><td>5</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>MGTO</td><td>2023</td><td>3</td><td>medium</td></tr><tr><th>Swarm</th><td>Artificial Rabbits Optimization</td><td>ARO</td><td>OriginalARO</td><td>2022</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>LARO</td><td>2022</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>IARO</td><td>2022</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Egret Swarm Optimization Algorithm</td><td>ESOA</td><td>OriginalESOA</td><td>2022</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>Fox Optimizer</td><td>FOX</td><td>OriginalFOX</td><td>2023</td><td>4</td><td>easy</td></tr><tr><th>Swarm</th><td>Golden Jackal Optimization</td><td>GJO</td><td>OriginalGJO</td><td>2022</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Giant Trevally Optimization</td><td>GTO</td><td>OriginalGTO</td><td>2022</td><td>4</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>Matlab101GTO</td><td>2022</td><td>2</td><td>medium</td></tr><tr><th>Swarm</th><td>*</td><td>*</td><td>Matlab102GTO</td><td>2023</td><td>2</td><td>hard</td></tr><tr><th>Swarm</th><td>Mountain Gazelle Optimizer</td><td>MGO</td><td>OriginalMGO</td><td>2022</td><td>2</td><td>easy</td></tr><tr><th>Swarm</th><td>Sea-Horse Optimization</td><td>SeaHO</td><td>OriginalSeaHO</td><td>2022</td><td>2</td><td>medium</td></tr><tr><th>***</th><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td></tr><tr><th>Physics</th><td>Simulated Annealling</td><td>SA</td><td>OriginalSA</td><td>1983</td><td>9</td><td>medium</td></tr><tr><th>Physics</th><td>*</td><td>*</td><td>GaussianSA</td><td>*</td><td>5</td><td>medium</td></tr><tr><th>Physics</th><td>*</td><td>*</td><td>SwarmSA</td><td>1987</td><td>9</td><td>medium</td></tr><tr><th>Physics</th><td>Wind Driven Optimization</td><td>WDO</td><td>OriginalWDO</td><td>2013</td><td>7</td><td>easy</td></tr><tr><th>Physics</th><td>Multi*Verse Optimizer</td><td>MVO</td><td>OriginalMVO</td><td>2016</td><td>4</td><td>easy</td></tr><tr><th>Physics</th><td>*</td><td>*</td><td>BaseMVO</td><td>*</td><td>4</td><td>easy</td></tr><tr><th>Physics</th><td>Tug of War Optimization</td><td>TWO</td><td>OriginalTWO</td><td>2016</td><td>2</td><td>easy</td></tr><tr><th>Physics</th><td>*</td><td>*</td><td>OppoTWO</td><td>*</td><td>2</td><td>medium</td></tr><tr><th>Physics</th><td>*</td><td>*</td><td>LevyTWO</td><td>*</td><td>2</td><td>medium</td></tr><tr><th>Physics</th><td>*</td><td>*</td><td>EnhancedTWO</td><td>2020</td><td>2</td><td>medium</td></tr><tr><th>Physics</th><td>Electromagnetic Field Optimization</td><td>EFO</td><td>OriginalEFO</td><td>2016</td><td>6</td><td>easy</td></tr><tr><th>Physics</th><td>*</td><td>*</td><td>BaseEFO</td><td>*</td><td>6</td><td>medium</td></tr><tr><th>Physics</th><td>Nuclear Reaction Optimization</td><td>NRO</td><td>OriginalNRO</td><td>2019</td><td>2</td><td>hard*</td></tr><tr><th>Physics</th><td>Henry Gas Solubility Optimization</td><td>HGSO</td><td>OriginalHGSO</td><td>2019</td><td>3</td><td>medium</td></tr><tr><th>Physics</th><td>Atom Search Optimization</td><td>ASO</td><td>OriginalASO</td><td>2019</td><td>4</td><td>medium</td></tr><tr><th>Physics</th><td>Equilibrium Optimizer</td><td>EO</td><td>OriginalEO</td><td>2019</td><td>2</td><td>easy</td></tr><tr><th>Physics</th><td>*</td><td>*</td><td>ModifiedEO</td><td>2020</td><td>2</td><td>medium</td></tr><tr><th>Physics</th><td>*</td><td>*</td><td>AdaptiveEO</td><td>2020</td><td>2</td><td>medium</td></tr><tr><th>Physics</th><td>Archimedes Optimization Algorithm</td><td>ArchOA</td><td>OriginalArchOA</td><td>2021</td><td>8</td><td>medium</td></tr><tr><th>Physics</th><td>Chernobyl Disaster Optimization</td><td>CDO</td><td>OriginalCDO</td><td>2023</td><td>2</td><td>easy</td></tr><tr><th>Physics</th><td>Energy Valley Optimization</td><td>EVO</td><td>OriginalEVO</td><td>2023</td><td>2</td><td>medium</td></tr><tr><th>Physics</th><td>Fick&#39;s Law Algorithm</td><td>FLA</td><td>OriginalFLA</td><td>2023</td><td>8</td><td>hard</td></tr><tr><th>Physics</th><td>Physical Phenomenon of RIME-ice</td><td>RIME</td><td>OriginalRIME</td><td>2023</td><td>3</td><td>easy</td></tr><tr><th>***</th><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td></tr><tr><th>Human</th><td>Culture Algorithm</td><td>CA</td><td>OriginalCA</td><td>1994</td><td>3</td><td>easy</td></tr><tr><th>Human</th><td>Imperialist Competitive Algorithm</td><td>ICA</td><td>OriginalICA</td><td>2007</td><td>8</td><td>hard*</td></tr><tr><th>Human</th><td>Teaching Learning*based Optimization</td><td>TLO</td><td>OriginalTLO</td><td>2011</td><td>2</td><td>easy</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>BaseTLO</td><td>2012</td><td>2</td><td>easy</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>ITLO</td><td>2013</td><td>3</td><td>medium</td></tr><tr><th>Human</th><td>Brain Storm Optimization</td><td>BSO</td><td>OriginalBSO</td><td>2011</td><td>8</td><td>medium</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>ImprovedBSO</td><td>2017</td><td>7</td><td>medium</td></tr><tr><th>Human</th><td>Queuing Search Algorithm</td><td>QSA</td><td>OriginalQSA</td><td>2019</td><td>2</td><td>hard</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>BaseQSA</td><td>*</td><td>2</td><td>hard</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>OppoQSA</td><td>*</td><td>2</td><td>hard</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>LevyQSA</td><td>*</td><td>2</td><td>hard</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>ImprovedQSA</td><td>2021</td><td>2</td><td>hard</td></tr><tr><th>Human</th><td>Search And Rescue Optimization</td><td>SARO</td><td>OriginalSARO</td><td>2019</td><td>4</td><td>medium</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>BaseSARO</td><td>*</td><td>4</td><td>medium</td></tr><tr><th>Human</th><td>Life Choice*Based Optimization </td><td>LCO</td><td>OriginalLCO</td><td>2019</td><td>3</td><td>easy</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>BaseLCO</td><td>*</td><td>3</td><td>easy</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>ImprovedLCO</td><td>*</td><td>2</td><td>easy</td></tr><tr><th>Human</th><td>Social Ski*Driver Optimization</td><td>SSDO</td><td>OriginalSSDO</td><td>2019</td><td>2</td><td>easy</td></tr><tr><th>Human</th><td>Gaining Sharing Knowledge*based Algorithm</td><td>GSKA</td><td>OriginalGSKA</td><td>2019</td><td>6</td><td>medium</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>BaseGSKA</td><td>*</td><td>4</td><td>medium</td></tr><tr><th>Human</th><td>Coronavirus Herd Immunity Optimization</td><td>CHIO</td><td>OriginalCHIO</td><td>2020</td><td>4</td><td>medium</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>BaseCHIO</td><td>*</td><td>4</td><td>medium</td></tr><tr><th>Human</th><td>Forensic*Based Investigation Optimization</td><td>FBIO</td><td>OriginalFBIO</td><td>2020</td><td>2</td><td>medium</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>BaseFBIO</td><td>*</td><td>2</td><td>medium</td></tr><tr><th>Human</th><td>Battle Royale Optimization</td><td>BRO</td><td>OriginalBRO</td><td>2020</td><td>3</td><td>medium</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>BaseBRO</td><td>*</td><td>3</td><td>medium</td></tr><tr><th>Human</th><td>Student Psychology Based Optimization</td><td>SPBO</td><td>OriginalSPBO</td><td>2020</td><td>2</td><td>medium</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>DevSPBO</td><td>*</td><td>2</td><td>medium</td></tr><tr><th>Human</th><td>Heap-based Optimization</td><td>HBO</td><td>OriginalHBO</td><td>2020</td><td>3</td><td>medium</td></tr><tr><th>Human</th><td>Human Conception Optimization</td><td>HCO</td><td>OriginalHCO</td><td>2022</td><td>6</td><td>medium</td></tr><tr><th>Human</th><td>Dwarf Mongoose Optimization Algorithm</td><td>DMOA</td><td>OriginalDMOA</td><td>2022</td><td>4</td><td>medium</td></tr><tr><th>Human</th><td>*</td><td>*</td><td>DevDMOA</td><td>*</td><td>3</td><td>medium</td></tr><tr><th>Human</th><td>War Strategy Optimization</td><td>WarSO</td><td>OriginalWarSO</td><td>2022</td><td>3</td><td>easy</td></tr><tr><th>***</th><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td></tr><tr><th>Bio</th><td>Invasive Weed Optimization</td><td>IWO</td><td>OriginalIWO</td><td>2006</td><td>7</td><td>easy</td></tr><tr><th>Bio</th><td>Biogeography*Based Optimization</td><td>BBO</td><td>OriginalBBO</td><td>2008</td><td>4</td><td>easy</td></tr><tr><th>Bio</th><td>*</td><td>*</td><td>BaseBBO</td><td>*</td><td>4</td><td>easy</td></tr><tr><th>Bio</th><td>Virus Colony Search</td><td>VCS</td><td>OriginalVCS</td><td>2016</td><td>4</td><td>hard*</td></tr><tr><th>Bio</th><td>*</td><td>*</td><td>BaseVCS</td><td>*</td><td>4</td><td>hard*</td></tr><tr><th>Bio</th><td>Satin Bowerbird Optimizer</td><td>SBO</td><td>OriginalSBO</td><td>2017</td><td>5</td><td>easy</td></tr><tr><th>Bio</th><td>*</td><td>*</td><td>BaseSBO</td><td>*</td><td>5</td><td>easy</td></tr><tr><th>Bio</th><td>Earthworm Optimisation Algorithm</td><td>EOA</td><td>OriginalEOA</td><td>2018</td><td>8</td><td>medium</td></tr><tr><th>Bio</th><td>Wildebeest Herd Optimization</td><td>WHO</td><td>OriginalWHO</td><td>2019</td><td>12</td><td>hard</td></tr><tr><th>Bio</th><td>Slime Mould Algorithm</td><td>SMA</td><td>OriginalSMA</td><td>2020</td><td>3</td><td>easy</td></tr><tr><th>Bio</th><td>*</td><td>*</td><td>BaseSMA</td><td>*</td><td>3</td><td>easy</td></tr><tr><th>Bio</th><td>Barnacles Mating Optimizer</td><td>BMO</td><td>OriginalBMO</td><td>2018</td><td>3</td><td>easy</td></tr><tr><th>Bio</th><td>Tunicate Swarm Algorithm</td><td>TSA</td><td>OriginalTSA</td><td>2020</td><td>2</td><td>easy</td></tr><tr><th>Bio</th><td>Symbiotic Organisms Search</td><td>SOS</td><td>OriginalSOS</td><td>2014</td><td>2</td><td>medium</td></tr><tr><th>Bio</th><td>Seagull Optimization Algorithm</td><td>SOA</td><td>OriginalSOA</td><td>2019</td><td>3</td><td>easy</td></tr><tr><th>Bio</th><td>*</td><td>*</td><td>DevSOA</td><td>*</td><td>3</td><td>easy</td></tr><tr><th>Bio</th><td>Brown-Bear Optimization Algorithm</td><td>BBOA</td><td>OriginalBBOA</td><td>2023</td><td>2</td><td>medium</td></tr><tr><th>Bio</th><td>Tree Physiology Optimization</td><td>TPO</td><td>OriginalTPO</td><td>2017</td><td>5</td><td>medium</td></tr><tr><th>***</th><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td></tr><tr><th>System</th><td>Germinal Center Optimization</td><td>GCO</td><td>OriginalGCO</td><td>2018</td><td>4</td><td>medium</td></tr><tr><th>System</th><td>*</td><td>*</td><td>BaseGCO</td><td>*</td><td>4</td><td>medium</td></tr><tr><th>System</th><td>Water Cycle Algorithm</td><td>WCA</td><td>OriginalWCA</td><td>2012</td><td>5</td><td>medium</td></tr><tr><th>System</th><td>Artificial Ecosystem*based Optimization</td><td>AEO</td><td>OriginalAEO</td><td>2019</td><td>2</td><td>easy</td></tr><tr><th>System</th><td>*</td><td>*</td><td>EnhancedAEO</td><td>2020</td><td>2</td><td>medium</td></tr><tr><th>System</th><td>*</td><td>*</td><td>ModifiedAEO</td><td>2020</td><td>2</td><td>medium</td></tr><tr><th>System</th><td>*</td><td>*</td><td>ImprovedAEO</td><td>2021</td><td>2</td><td>medium</td></tr><tr><th>System</th><td>*</td><td>*</td><td>AugmentedAEO</td><td>2022</td><td>2</td><td>medium</td></tr><tr><th>***</th><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td></tr><tr><th>Math</th><td>Hill Climbing</td><td>HC</td><td>OriginalHC</td><td>1993</td><td>3</td><td>easy</td></tr><tr><th>Math</th><td>*</td><td>*</td><td>SwarmHC</td><td>*</td><td>3</td><td>easy</td></tr><tr><th>Math</th><td>Cross-Entropy Method </td><td>CEM</td><td>OriginalCEM</td><td>1997</td><td>4</td><td>easy</td></tr><tr><th>Math</th><td>Tabu Search</td><td>TS</td><td>OriginalTS</td><td>2004</td><td>5</td><td>easy</td></tr><tr><th>Math</th><td>Sine Cosine Algorithm</td><td>SCA</td><td>OriginalSCA</td><td>2016</td><td>2</td><td>easy</td></tr><tr><th>Math</th><td>*</td><td>*</td><td>BaseSCA</td><td>*</td><td>2</td><td>easy</td></tr><tr><th>Math</th><td>*</td><td>*</td><td>QLE-SCA</td><td>2022</td><td>4</td><td>hard</td></tr><tr><th>Math</th><td>Gradient-Based Optimizer</td><td>GBO</td><td>OriginalGBO</td><td>2020</td><td>5</td><td>medium</td></tr><tr><th>Math</th><td>Arithmetic Optimization Algorithm</td><td>AOA</td><td>OrginalAOA</td><td>2021</td><td>6</td><td>easy</td></tr><tr><th>Math</th><td>Chaos Game Optimization</td><td>CGO</td><td>OriginalCGO</td><td>2021</td><td>2</td><td>easy</td></tr><tr><th>Math</th><td>Pareto-like Sequential Sampling</td><td>PSS</td><td>OriginalPSS</td><td>2021</td><td>4</td><td>medium</td></tr><tr><th>Math</th><td>weIghted meaN oF vectOrs</td><td>INFO</td><td>OriginalINFO</td><td>2022</td><td>2</td><td>medium</td></tr><tr><th>Math</th><td>RUNge Kutta optimizer</td><td>RUN</td><td>OriginalRUN</td><td>2021</td><td>2</td><td>hard</td></tr><tr><th>Math</th><td>Circle Search Algorithm</td><td>CircleSA</td><td>OriginalCircleSA</td><td>2022</td><td>3</td><td>easy</td></tr><tr><th>Math</th><td>Success History Intelligent Optimization</td><td>SHIO</td><td>OriginalSHIO</td><td>2022</td><td>2</td><td>easy</td></tr><tr><th>***</th><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td><td>***</td></tr><tr><th>Music</th><td>Harmony Search</td><td>HS</td><td>OriginalHS</td><td>2001</td><td>4</td><td>easy</td></tr><tr><th>Music</th><td>*</td><td>*</td><td>BaseHS</td><td>*</td><td>4</td><td>easy</td></tr><tr><th>+++</th><td>+++</td><td>+++</td><td>+++</td><td>+++</td><td>+++</td><td>+++</td></tr><tr><th>WARNING</th><td>PLEASE CHECK PLAGIARISM BEFORE USING BELOW ALGORITHMS</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td></tr><tr><th>Swarm</th><td>Coati Optimization Algorithm</td><td>CoatiOA</td><td>OriginalCoatiOA</td><td>2023</td><td>2</td><td>easy </td></tr><tr><th>Swarm</th><td>Fennec For Optimization</td><td>FFO</td><td>OriginalFFO</td><td>2022</td><td>2</td><td>easy </td></tr><tr><th>Swarm</th><td>Northern Goshawk Optimization</td><td>NGO</td><td>OriginalNGO</td><td>2021</td><td>2</td><td>easy </td></tr><tr><th>Swarm</th><td>Osprey Optimization Algorithm</td><td>OOA</td><td>OriginalOOA</td><td>2023</td><td>2</td><td>easy </td></tr><tr><th>Swarm</th><td>Pelican Optimization Algorithm </td><td>POA</td><td>OriginalPOA</td><td>2023</td><td>2</td><td>easy </td></tr><tr><th>Swarm</th><td>Serval Optimization Algorithm</td><td>ServalOA</td><td>OriginalServalOA</td><td>2022</td><td>2</td><td>easy </td></tr><tr><th>Swarm</th><td>Siberian Tiger Optimization</td><td>STO</td><td>OriginalSTO</td><td>2022</td><td>2</td><td>easy </td></tr><tr><th>Swarm</th><td>Tasmanian Devil Optimization</td><td>TDO</td><td>OriginalTDO</td><td>2022</td><td>2</td><td>easy </td></tr><tr><th>Swarm</th><td>Walrus Optimization Algorithm</td><td>WaOA</td><td>OriginalWaOA</td><td>2022</td><td>2</td><td>easy </td></tr><tr><th>Swarm</th><td>Zebra Optimization Algorithm </td><td>ZOA</td><td>OriginalZOA</td><td>2022</td><td>2</td><td>easy </td></tr><tr><th>Human</th><td>Teamwork Optimization Algorithm</td><td>TOA</td><td>OriginalTOA</td><td>2021</td><td>2</td><td>easy</td></tr></tbody></table>
-
+* [Mealpy + Multi-Layer Perceptron](https://github.com/thieu1995/MetaPerceptron)
+* [Mealpy + Extreme Learning Machine](https://github.com/thieu1995/IntelELM)
+* [Mealpy + Random Vector Functional Link Neural Network](https://github.com/thieu1995/GrafoRVFL)
+* [Mealpy + KMeans clustering](https://github.com/thieu1995/MetaCluster)
+* [Mealpy + Cascade-Forward Neural Network](https://github.com/thieu1995/deforce)
+* [Mealpy + Higher Order Functional Link Neural Network](https://github.com/thieu1995/reflame)
+* [Mealpy + Radial Basis Function](https://github.com/thieu1995/EvoRBF)
+* [Mealpy + Adaptive Neuro Fuzzy Inference System](https://github.com/thieu1995/X-ANFIS)
+* [Mealpy + Wavelet Neural Network](https://github.com/thieu1995/WaveletML)
+* [Mealpy + Kolmogorov–Arnold Network](https://github.com/thieu1995/MetaKan)
+* [Mealpy + Feature Selection](https://github.com/thieu1995/mafese)
+* [Mealpy + Scikit-Learn](https://github.com/thieu1995/MetaSklearn)
+* [Mealpy + Immune Algorithm-Inspired Neural Network](https://github.com/thieu1995/IMAINET)
 
 
 
@@ -1738,6 +2885,7 @@ All visualization examples: [Link](https://mealpy.readthedocs.io/en/latest/pages
 
 * **AO - Aquila Optimizer**
   * **OriginalAO**: Abualigah, L., Yousri, D., Abd Elaziz, M., Ewees, A. A., Al-qaness, M. A., & Gandomi, A. H. (2021). Aquila Optimizer: A novel meta-heuristic optimization Algorithm. Computers & Industrial Engineering, 157, 107250.
+  * **AAO**: Al-Selwi, S. M., Hassan, M. F., Abdulkadir, S. J., Ragab, M. G., Alqushaibi, A., & Sumiea, E. H. (2024). Smart grid stability prediction using adaptive aquila optimizer and ensemble stacked bilstm. Results in Engineering, 24, 103261.
 
 * **AVOA - African Vultures Optimization Algorithm**
   * **OriginalAVOA**: Abdollahzadeh, B., Gharehchopogh, F. S., & Mirjalili, S. (2021). African vultures optimization algorithm: A new nature-inspired metaheuristic algorithm for global optimization problems. Computers & Industrial Engineering, 158, 107408.
@@ -1748,6 +2896,8 @@ All visualization examples: [Link](https://mealpy.readthedocs.io/en/latest/pages
 * **ARO - Artificial Rabbits Optimization**:
   * **OriginalARO**: Wang, L., Cao, Q., Zhang, Z., Mirjalili, S., & Zhao, W. (2022). Artificial rabbits optimization: A new bio-inspired meta-heuristic algorithm for solving engineering optimization problems. Engineering Applications of Artificial Intelligence, 114, 105082.
 
+* **AFT - Ali baba and the Forty Thieves**:
+  * **OriginalAFT**: Braik, M., Ryalat, M. H., & Al-Zoubi, H. (2022). A novel meta-heuristic algorithm for solving numerical optimization problems: Ali Baba and the forty thieves. Neural Computing and Applications, 34(1), 409-455.
 
 
 ### B
@@ -1818,6 +2968,10 @@ All visualization examples: [Link](https://mealpy.readthedocs.io/en/latest/pages
 * **CSA - Circle Search Algorithm**
   * **OriginalCSA**: Qais, M. H., Hasanien, H. M., Turky, R. A., Alghuwainem, S., Tostado-Véliz, M., & Jurado, F. (2022). Circle Search Algorithm: A Geometry-Based Metaheuristic Optimization Algorithm. Mathematics, 10(10), 1626.
 
+* **CDDO - Child Drawing Development Optimization**
+  * **OriginalCDDO**: Abdulhameed, S., Rashid, T.A. Child Drawing Development Optimization Algorithm Based on Child’s Cognitive Development. Arab J Sci Eng 47, 1337–1351 (2022). https://doi.org/10.1007/s13369-021-05928-6
+
+
 ### D
 
 * **DE - Differential Evolution** 
@@ -1863,6 +3017,13 @@ All visualization examples: [Link](https://mealpy.readthedocs.io/en/latest/pages
   * **ModifiedEO**: Gupta, S., Deep, K., & Mirjalili, S. (2020). An efficient equilibrium optimizer with mutation strategy for numerical optimization. Applied Soft Computing, 96, 106542.
   * **AdaptiveEO**: Wunnava, A., Naik, M. K., Panda, R., Jena, B., & Abraham, A. (2020). A novel interdependence based multilevel thresholding technique using adaptive equilibrium optimizer. Engineering Applications of Artificial Intelligence, 94, 103836.
 
+* **ESO - Electrical Storm Optimization** .
+  * **OriginalESO**: Soto Calvo, M., & Lee, H. S. (2025). Electrical Storm Optimization (ESO) Algorithm: Theoretical Foundations, Analysis, and Application to Engineering Problems. Machine Learning and Knowledge Extraction, 7(1), 24. https://doi.org/10.3390/make7010024
+
+* **EPC - Emperor Penguins Colony** .
+  * **DevEPC**: Harifi, S., Khalilian, M., Mohammadzadeh, J. and Ebrahimnejad, S., 2019. Emperor Penguins Colony: a new metaheuristic algorithm for optimization. Evolutionary intelligence, 12(2), pp.211-226.
+
+
 ### F
 
 * **FFA - Firefly Algorithm** 
@@ -1878,6 +3039,9 @@ All visualization examples: [Link](https://mealpy.readthedocs.io/en/latest/pages
   * **OriginalFOA**: Pan, W. T. (2012). A new fruit fly optimization algorithm: taking the financial distress model as an example. Knowledge-Based Systems, 26, 69-74.
   * **BaseFOA**: The developed version
   * **WhaleFOA**: Fan, Y., Wang, P., Heidari, A. A., Wang, M., Zhao, X., Chen, H., & Li, C. (2020). Boosted hunting-based fruit fly optimization and advances in real-world problems. Expert Systems with Applications, 159, 113502.
+
+* **FDO - Fitness Dependent Optimizer**
+  * **OriginalFDO**: Abdullah, J. M., & Ahmed, T. (2019). Fitness dependent optimizer: inspired by the bee swarming reproductive process. IEEe Access, 7, 43473-43486.
 
 * **FBIO - Forensic-Based Investigation Optimization** 
   * **OriginalFBIO**: Chou, J.S. and Nguyen, N.M., 2020. FBI inspired meta-optimization. Applied Soft Computing, p.106339.
@@ -1900,6 +3064,15 @@ All visualization examples: [Link](https://mealpy.readthedocs.io/en/latest/pages
   * **RW_GWO**: Gupta, S., & Deep, K. (2019). A novel random walk grey wolf optimizer. Swarm and evolutionary computation, 44, 101-112.
   * **GWO_WOA**: Obadina, O. O., Thaha, M. A., Althoefer, K., & Shaheed, M. H. (2022). Dynamic characterization of a master–slave robotic manipulator using a hybrid grey wolf–whale optimization algorithm. Journal of Vibration and Control, 28(15-16), 1992-2003.
   * **IGWO**: Kaveh, A. & Zakian, P.. (2018). Improved GWO algorithm for optimal design of truss structures. Engineering with Computers. 34. 10.1007/s00366-017-0567-1.
+  * **ChaoticGWO**: Kohli, M., & Arora, S. (2018). Chaotic grey wolf optimization algorithm for constrained optimization problems. Journal of computational design and engineering, 5(4), 458-472.
+  * **FuzzyGWO**: Rodríguez, Luis, Oscar Castillo, José Soria, Patricia Melin, Fevrier Valdez, Claudia I. Gonzalez, Gabriela E. Martinez, and Jesus Soto. "A fuzzy hierarchical operator in the grey wolf optimizer algorithm." Applied Soft Computing 57 (2017): 315-328.
+  * **IncrementalGWO**: Seyyedabbasi, A., & Kiani, F. (2021). I-GWO and Ex-GWO: improved algorithms of the Grey Wolf Optimizer to solve global optimization problems. Engineering with Computers, 37(1), 509-532.
+  * **ExGWO**: Seyyedabbasi, A., & Kiani, F. (2021). I-GWO and Ex-GWO: improved algorithms of the Grey Wolf Optimizer to solve global optimization problems. Engineering with Computers, 37(1), 509-532.
+  * **DS_GWO**: Jiang, Jianhua, Ziying Zhao, Yutong Liu, Weihua Li, and Huan Wang. "DSGWO: An improved grey wolf optimizer with diversity enhanced strategy based on group-stage competition and balance mechanisms." Knowledge-Based Systems 250 (2022): 109100.
+  * **IOBL_GWO**: Bansal, J. C., & Singh, S. (2021). A better exploration strategy in Grey Wolf Optimizer. Journal of Ambient Intelligence and Humanized Computing, 12(1), 1099-1118.
+  * **OGWO**: Yu, X., Xu, W., & Li, C. (2021). Opposition-based learning grey wolf optimizer for global optimization. Knowledge-Based Systems, 226, 107139.
+  * **ER_GWO**: Long, W., Cai, S., Jiao, J. et al. An efficient and robust grey wolf optimizer algorithm for large-scale numerical optimization. Soft Comput 24, 997–1026 (2020).
+  * **CG_GWO**: Li, K., Li, S., Huang, Z. et al. Grey Wolf Optimization algorithm based on Cauchy-Gaussian mutation and improved search strategy. Sci Rep 12, 18961 (2022).
 
 * **GOA - Grasshopper Optimisation Algorithm** 
   * **OriginalGOA**: Saremi, S., Mirjalili, S., & Lewis, A. (2017). Grasshopper optimisation algorithm: theory and application. Advances in Engineering Software, 105, 30-47.
@@ -1949,6 +3122,9 @@ All visualization examples: [Link](https://mealpy.readthedocs.io/en/latest/pages
 * **ICA - Imperialist Competitive Algorithm** 
   * **OriginalICA**: Atashpaz-Gargari, E., & Lucas, C. (2007, September). Imperialist competitive algorithm: an algorithm for optimization inspired by imperialistic competition. In 2007 IEEE congress on evolutionary computation (pp. 4661-4667). Ieee.
 
+* **IMODE - Improved Multi-operator Differential Evolution Algorithm**:
+  * **OriginalIMODE**: Sallam, K. M., Elsayed, S. M., Chakrabortty, R. K., & Ryan, M. J. (2020, July). Improved multi-operator differential evolution algorithm for solving unconstrained problems. In 2020 IEEE congress on evolutionary computation (CEC) (pp. 1-8). IEEE.
+
 * **INFO - weIghted meaN oF vectOrs**:
   * **OriginalINFO**: Ahmadianfar, I., Heidari, A. A., Gandomi, A. H., Chu, X., & Chen, H. (2021). RUN beyond the metaphor: An efficient     optimization algorithm based on Runge Kutta method. Expert Systems with Applications, 181, 115079.
 
@@ -1962,6 +3138,9 @@ All visualization examples: [Link](https://mealpy.readthedocs.io/en/latest/pages
 ### K
 
 ### L
+
+* **LSHADEcnEpSin - Ensemble sinusoidal differential covariance matrix adaptation with Euclidean neighborhood** 
+  * **OriginalLSHADEcnEpSin**: Awad, N. H., Ali, M. Z., & Suganthan, P. N. (2017, June). Ensemble sinusoidal differential covariance matrix adaptation with Euclidean neighborhood for solving CEC2017 benchmark problems. In 2017 IEEE congress on evolutionary computation (CEC) (pp. 372-379). IEEE.
 
 * **LCO - Life Choice-based Optimization** 
   * **OriginalLCO**: Khatri, A., Gaba, A., Rana, K. P. S., & Kumar, V. (2019). A novel life choice-based optimizer. Soft Computing, 1-21.
@@ -2045,6 +3224,9 @@ All visualization examples: [Link](https://mealpy.readthedocs.io/en/latest/pages
 * **SSpiderO - Social Spider Optimization** 
   * **OriginalSSpiderO**: Cuevas, E., Cienfuegos, M., ZaldíVar, D., & Pérez-Cisneros, M. (2013). A swarm optimization algorithm inspired in the behavior of the social-spider. Expert Systems with Applications, 40(16), 6374-6384.
 
+* **SMO - Spider Monkey Optimization** 
+  * **DevSMO**: Bansal, J. C., Sharma, H., Jadon, S. S., & Clerc, M. (2014). Spider monkey optimization algorithm for numerical optimization. Memetic computing, 6(1), 31-47.
+  
 * **SOS - Symbiotic Organisms Search**:
   * **OriginalSOS**: Cheng, M. Y., & Prayogo, D. (2014). Symbiotic organisms search: a new metaheuristic optimization algorithm. Computers & Structures, 139, 98-112.
 
@@ -2087,6 +3269,9 @@ All visualization examples: [Link](https://mealpy.readthedocs.io/en/latest/pages
 * **Seagull Optimization Algorithm**
   * **OriginalSOA**: Dhiman, G., & Kumar, V. (2019). Seagull optimization algorithm: Theory and its applications for large-scale industrial engineering problems. Knowledge-based systems, 165, 169-196.
   * **DevSOA**: The developed version
+
+* **Squirrel Search Algorithm**
+  * **OriginalSquirrelSA**: Jain, M., Singh, V., & Rani, A. (2019). A novel nature-inspired algorithm for optimization: Squirrel search algorithm. Swarm and evolutionary computation, 44, 148-175.
 
 * **SMA - Slime Mould Algorithm**
   * **OriginalSMA**: Li, S., Chen, H., Wang, M., Heidari, A. A., & Mirjalili, S. (2020). Slime mould algorithm: A new method for stochastic optimization. Future Generation Computer Systems.
@@ -2217,3 +3402,7 @@ All visualization examples: [Link](https://mealpy.readthedocs.io/en/latest/pages
 - Sallam, N. M., Saleh, A. I., Ali, H. A., & Abdelsalam, M. M. (2023). An efficient EGWO algorithm as feature selection for B-ALL diagnoses and its subtypes classification using peripheral blood smear images. Alexandria Engineering Journal, 68, 39-66.
 
 </details>
+
+---
+
+Developed by: [Thieu](mailto:nguyenthieu2102@gmail.com?Subject=MEALPY_QUESTIONS) @ 2022

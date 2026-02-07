@@ -1,8 +1,7 @@
 Welcome to MEALPY's documentation!
 ==================================
 
-
-.. image:: https://img.shields.io/badge/release-3.0.1-yellow.svg
+.. image:: https://img.shields.io/badge/release-3.0.3-yellow.svg
    :target: https://github.com/thieu1995/mealpy/releases
 
 .. image:: https://img.shields.io/pypi/wheel/gensim.svg
@@ -16,9 +15,6 @@ Welcome to MEALPY's documentation!
 
 .. image:: https://img.shields.io/pypi/status/mealpy.svg
    :target: https://img.shields.io/pypi/status/mealpy.svg
-
-.. image:: https://img.shields.io/pypi/dm/mealpy.svg
-   :target: https://img.shields.io/pypi/dm/mealpy.svg
 
 .. image:: https://github.com/thieu1995/mealpy/actions/workflows/publish-package.yaml/badge.svg
    :target: https://github.com/thieu1995/mealpy/actions/workflows/publish-package.yaml
@@ -50,8 +46,8 @@ Welcome to MEALPY's documentation!
 .. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.3711948.svg
    :target: https://doi.org/10.1016/j.sysarc.2023.102871
 
-.. image:: https://img.shields.io/badge/License-GPLv3-blue.svg
-   :target: https://www.gnu.org/licenses/gpl-3.0
+.. image:: https://img.shields.io/badge/License-MIT-yellow.svg
+   :target: https://opensource.org/licenses/MIT
 
 ::
 

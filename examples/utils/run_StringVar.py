@@ -21,6 +21,14 @@ bounds = [
                           ("random", "tournament", "roulette", "round-robin")), name="delta")
 ]
 
+## 3. Multiple variables
+bounds = [
+    StringVar(valid_sets=(("auto", "backward", "forward"),
+                          ("haha", "branch", "nice"),
+                          ("auto", "None", "modified"),
+                          ("random", "damn", "roulette", "huhu")), name="delta")
+]
+
 problem = Problem(bounds, obj_func=lambda sol: np.sum(sol**2))
 print(f"Problem: {problem}")
 print(f"Bounds: {problem.bounds}")

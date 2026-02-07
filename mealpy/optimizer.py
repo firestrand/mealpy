@@ -4,8 +4,10 @@
 #       Github: https://github.com/thieu1995        %
 # --------------------------------------------------%
 
-import numpy as np
 from typing import List, Union, Tuple, Dict
+import random
+import numpy as np
+from tqdm import tqdm
 from mealpy.utils.agent import Agent
 from mealpy.utils.problem import Problem
 from math import gamma
@@ -52,9 +54,10 @@ class Optimizer:
 
         if self.name is None: self.name = self.__class__.__name__
         self.sort_flag = False
-        self.nfe_counter = -1  # The first one is tested in Problem class
+        self.nfe_counter = 1  # The first one is tested in Problem class
         self.parameters, self.params_name_ordered = {}, None
         self.is_parallelizable = True
+        self.generator, self.rng = None, None     # random module for numpy and random (python)
 
     def __set_keyword_arguments(self, kwargs):
         for key, value in kwargs.items():
@@ -124,7 +127,11 @@ class Optimizer:
             pass
         elif type(starting_solutions) in self.SUPPORTED_ARRAYS and len(starting_solutions) == self.pop_size:
             if type(starting_solutions[0]) in self.SUPPORTED_ARRAYS and len(starting_solutions[0]) == self.problem.n_dims:
-                self.pop = [self.generate_agent(solution) for solution in starting_solutions]
+                if self.mode in self.AVAILABLE_MODES:
+                    self.pop = [self.generate_empty_agent(solution) for solution in starting_solutions]
+                    self.pop = self.update_target_for_population(self.pop)
+                else:
+                    self.pop = [self.generate_agent(solution) for solution in starting_solutions]
             else:
                 raise ValueError("Invalid starting_solutions. It should be a list of positions or 2D matrix of positions only.")
         else:
@@ -158,8 +165,9 @@ class Optimizer:
         else:
             raise ValueError("problem needs to be a dict or an instance of Problem class.")
         self.generator = np.random.default_rng(seed)
+        self.rng = random.Random(seed)  # local RNG for random module
         self.logger = Logger(self.problem.log_to, log_file=self.problem.log_file).create_logger(name=f"{self.__module__}.{self.__class__.__name__}")
-        self.logger.info(self.problem.msg)
+        self.logger.info(self)
         self.history = History(log_to=self.problem.log_to, log_file=self.problem.log_file)
         self.pop, self.g_best, self.g_worst = None, None, None
 
@@ -174,6 +182,7 @@ class Optimizer:
                     self.n_workers = self.validator.check_int("n_workers", n_workers, [2, min(61, os.cpu_count() - 1)])
                 if self.mode == "thread":
                     self.n_workers = self.validator.check_int("n_workers", n_workers, [2, min(32, os.cpu_count() + 4)])
+                self.logger.info(f"The parallel mode '{self.mode}' is selected with {self.n_workers} workers.")
             else:
                 self.logger.warning(f"The parallel mode: {self.mode} is selected. But n_workers is not set. The default n_workers = 4 is used.")
                 self.n_workers = 4
@@ -230,7 +239,15 @@ class Optimizer:
         self.after_initialization()
 
         self.before_main_loop()
-        for epoch in range(1, self.epoch + 1):
+
+        # Check tqdm
+        use_tqdm = self.problem.log_to != "console"
+        loop = range(1, self.epoch + 1)
+        if use_tqdm:
+            desc = f"{self.__module__}.{self.__class__.__name__}"
+            loop = tqdm(loop, desc=desc, unit="epoch")
+
+        for epoch in loop:
             time_epoch = time.perf_counter()
 
             ## Evolve method will be called in child class
@@ -242,6 +259,14 @@ class Optimizer:
 
             time_epoch = time.perf_counter() - time_epoch
             self.track_optimize_step(self.pop, epoch, time_epoch)
+
+            # update tqdm postfix để hiển thị fitness
+            if use_tqdm:
+                loop.set_postfix({
+                    "c_best": f"{self.history.list_current_best[-1].target.fitness:.6f}",
+                    "g_best": f"{self.g_best.target.fitness:.6f}"
+                })
+
             if self.check_termination("end", None, epoch):
                 break
         self.track_optimize_process()
@@ -628,9 +653,9 @@ class Optimizer:
         Returns:
             int: Index of selected solution
         """
-        if type(list_fitness) in [list, tuple, np.ndarray]:
-            list_fitness = np.array(list_fitness).flatten()
-        if list_fitness.ptp() == 0:
+        if isinstance(list_fitness, (list, tuple, np.ndarray)):
+            list_fitness = np.array(list_fitness).ravel()
+        if np.ptp(list_fitness) == 0:
             return int(self.generator.integers(0, len(list_fitness)))
         if np.any(list_fitness < 0):
             list_fitness = list_fitness - np.min(list_fitness)
@@ -691,9 +716,9 @@ class Optimizer:
         # sigma_v : standard deviation of v
         sigma_v = 1
         size = 1 if size is None else size
-        u = self.generator.normal(0, sigma_u ** 2, size)
-        v = self.generator.normal(0, sigma_v ** 2, size)
-        s = u / np.power(np.abs(v), 1 / beta)
+        u = self.generator.normal(0, sigma_u, size)
+        v = self.generator.normal(0, sigma_v, size)
+        s = u / np.power(np.abs(v) + self.EPSILON, 1 / beta)
         if case == 0:
             step = multiplier * s * self.generator.uniform()
         elif case == 1:
